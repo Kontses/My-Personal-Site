@@ -9,7 +9,7 @@ export const items: Array<Education> = [
 		logo: Assets.Unknown, 													// TODO
 		name: '',
 		organization: 'International Hellenic University',
-		period: { from: new Date(2020, 0, 1), to: new Date(2022, 5, 1) }, 		// TODO
+		period: { from: new Date(2016, 1, 1), to: new Date() }, 		// TODO
 		shortDescription: '',
 		slug: 'dummy-education-item',
 		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java']
@@ -21,19 +21,19 @@ export const items: Array<Education> = [
 		logo: Assets.Unknown, 													// TODO
 		name: '',
 		organization: 'Conservatory of Stavroupolis',
-		period: { from: new Date(2016, 1, 1), to: new Date(2018, 5, 1) },		// TODO
+		period: { from: new Date(2015, 9, 1), to: new Date(2022, 2, 1) },		// TODO
 		shortDescription: '',
 		slug: 'dummy-education-item-2',
 		subjects: ['Saxophone', 'Music Theory']
 	},
 	{
-		degree: ' Studying ',
-		description: '',
+		degree: ' School ',
+		description: 'opa opa re',
 		location: 'Katerini, Greece',
 		logo: Assets.Unknown, 													// TODO
 		name: '',
 		organization: 'Music School of Katerini',
-		period: { from: new Date(2006, 0, 1), to: new Date(2018, 5, 1) },		// TODO
+		period: { from: new Date(2009, 9, 1), to: new Date(2015, 6, 1) },		// TODO
 		shortDescription: '',
 		slug: 'dummy-education-item-3',
 		subjects: ['Saxophone', 'Music Theory']
