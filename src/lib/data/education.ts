@@ -6,19 +6,19 @@ export const items: Array<Education> = [
 		degree: 'BSc on Department of Information and Electronic Engineering',
 		description: '',
 		location: 'Thessaloniki, Greece',
-		logo: Assets.Unknown, 													// TODO
+		logo: Assets.IHU,
 		name: '',
 		organization: 'International Hellenic University',
-		period: { from: new Date(2016, 1, 1), to: new Date() }, 		// TODO
+		period: { from: new Date(2016, 1, 1) }, 								// TODO
 		shortDescription: '',
 		slug: 'dummy-education-item',
-		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java']
+		subjects: ['Algorithm', 'Assembly', 'C++', 'C#', 'Java', 'Python', 'Prolog', 'SQL', ]
 	},
 	{
 		degree: ' Diploma in Classical Saxophone',
 		description: '',
 		location: 'Thessaloniki, Greece',
-		logo: Assets.Unknown, 													// TODO
+		logo: Assets.ConservatoryOfStavroupolis,
 		name: '',
 		organization: 'Conservatory of Stavroupolis',
 		period: { from: new Date(2015, 9, 1), to: new Date(2022, 2, 1) },		// TODO
@@ -30,7 +30,7 @@ export const items: Array<Education> = [
 		degree: ' School ',
 		description: 'opa opa re',
 		location: 'Katerini, Greece',
-		logo: Assets.Unknown, 													// TODO
+		logo: Assets.MusicSchoolOfKaterini,
 		name: '',
 		organization: 'Music School of Katerini',
 		period: { from: new Date(2009, 9, 1), to: new Date(2015, 6, 1) },		// TODO
