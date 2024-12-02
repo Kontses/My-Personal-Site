@@ -4,36 +4,52 @@ import type { Project } from '../types';
 
 export const items: Array<Project> = [
 	{
-		slug: 'slick-portfolio-angular',
+		slug: 'slick-portfolio-svelte',
 		color: '#5e95e3',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
 		shortDescription:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
-		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
-		logo: Assets.Unknown,
-		name: 'Slick Portfolio',
+			'This is my personal portfolio site that you are surfiiing. I hope you like it!',
+		links: [{ to: 'https://users.it.teithe.gr/~it154608', label: 'Site' }, {to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
+		logo: Assets.Site,
+		name: 'My Personal Portfolio',
 		period: {
-			from: new Date()
+			from: new Date(2024, 10, 26)
 		},
-		skills: getSkills('angular', 'ts', 'tailwind'),
-		type: 'Website Template'
+		skills: getSkills('svelte', 'ts', 'html', 'css', 'javascript', 'sass'),
+		type: 'Portofolio Website'
 	},
 	{
-		slug: 'slick-portfolio-svelte',
+		slug: 'adroid-app',
 		color: '#ff3e00',
 		description:
-			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
+			'A fanmade made app',
 		shortDescription:
-			'A Vercel-like developer portfolio website template made with Typescript and SvelteKit.',
-		links: [{ to: 'https://github.com/RiadhAdrani/slick-portfolio-svelte', label: 'GitHub' }],
-		logo: Assets.Svelte,
-		name: 'Slick Portfolio',
+			'The Android App for finding every KCHC artist.',
+		links: [{ to: 'https://github.com/GSmyrlis/KCHC_219_App', label: 'GitHub' }],
+		logo: Assets.Unknown,		//kchc logo
+		name: 'KCHC Adroid App',
 		period: {
-			from: new Date()
+			from: new Date(2023, 10, 14)
 		},
-		skills: getSkills('svelte', 'ts', 'tailwind', 'sass'),
-		type: 'Website Template',
+		skills: getSkills('c#', 'json', '.NET', 'Xamarin'), //TODO
+		type: 'Android Application'
+	},
+	{
+		slug: 'game',
+		color: '#5e95e3',
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
+		shortDescription:
+			'This is my personal portfolio site that you are surfiiing. I hope you like it!',
+		links: [{to: 'https://github.com/Kontses/My-Personal-Site', label: 'CORE'} ],
+		logo: Assets.Site,
+		name: 'My Personal Portfolio',
+		period: {
+			from: new Date(2024, 10, 26)
+		},
+		skills: getSkills('svelte', 'ts', 'html', 'css', 'javascript', 'sass'),
+		type: 'Portofolio Website',
 		screenshots: [
 			{
 				label: 'screen 1',

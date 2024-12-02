@@ -74,12 +74,16 @@ const Assets = {
 	Ruvy: a('ruvy.svg'),
 	Postcss: a('postcss.svg'),
 	unix: a('shell_unix_code.png'),
+	Wordpress: a('wordpress.png'),
+	XML: a('xml.png'),
 
 	//icons
 	ConservatoryOfStavroupolis: a('ConservatoryOfStavroupolis.jpg'),
 	IHU: a('international-hellenic-university-logo.jpg'),
 	MusicSchoolOfKaterini: a('music-school-of-katerini.png'),
-	Traxis: a('traxis_engineering_logo.jpg')
+	Traxis: a('traxis_engineering_logo.jpg'),
+	Artsound: a('artsound.jpg'),
+	Site: a('home.png')
 };
 
 export default Assets;

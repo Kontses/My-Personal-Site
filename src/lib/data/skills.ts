@@ -100,12 +100,62 @@ export const items = [
 		category: 'library'
 	}),
 	defineSkill({
+		slug: 'wordpress',
+		color: 'blue',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		logo: Assets.Wordpress,
+		name: 'Wordpress',
+		category: 'markup-style'
+	}),
+	defineSkill({
+		slug: 'xml',
+		color: 'black',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		logo: Assets.XML,
+		name: 'XML',
+		category: 'markup-style'
+	}),
+	defineSkill({
 		slug: 'unix',
 		color: 'white',
 		description: 'asdasdasdasd',
 		logo: Assets.unix,
 		name: 'Unix',
 		category: 'op'
+	}),
+	defineSkill({
+		slug: 'c#',
+		color: 'blue',
+		description: 'asdasdasdasd',
+		logo: Assets.Unknown,					//todo
+		name: 'C#',
+		category: 'pro-lang'
+	}),
+	defineSkill({
+		slug: 'json',
+		color: 'yellow',
+		description: 'asdasdasdasd',
+		logo: Assets.Unknown,					//todo
+		name: 'JSON',
+		category: 'markup-style'
+	}),
+	defineSkill({
+		slug: '.NET',
+		color: 'blue',
+		description: 'asdasdasdasd',
+		logo: Assets.Unknown,					//todo
+		name: '.NET',
+		category: 'framework'
+	}),
+	defineSkill({
+		slug: 'xamarin',
+		color: 'purple',
+		description: 'asdasdasdasd',
+		logo: Assets.Unknown,					//todo
+		name: 'Xamarin',
+		category: 'li'
 	})
 ] as const;
 
