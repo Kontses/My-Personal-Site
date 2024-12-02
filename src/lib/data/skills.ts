@@ -38,6 +38,14 @@ const defineSkill = <S extends string>(
 
 export const items = [
 	defineSkill({
+		slug: 'java',
+		color: 'red',
+		description:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+		logo: Assets.Java,
+		name: 'Java',
+		category: 'pro-lang'
+	}),defineSkill({
 		slug: 'js',
 		color: 'yellow',
 		description:
@@ -81,7 +89,7 @@ export const items = [
 		logo: Assets.Sass,
 		name: 'Sass',
 		category: 'markup-style'
-	}),
+	}),	/*
 	defineSkill({
 		slug: 'reactjs',
 		color: 'cyan',
@@ -90,7 +98,7 @@ export const items = [
 		logo: Assets.ReactJs,
 		name: 'React Js',
 		category: 'library'
-	}),
+	}),	*/
 	defineSkill({
 		slug: 'svelte',
 		color: 'orange',
@@ -127,35 +135,51 @@ export const items = [
 	}),
 	defineSkill({
 		slug: 'c#',
-		color: 'blue',
+		color: 'purple',
 		description: 'asdasdasdasd',
-		logo: Assets.Unknown,					//todo
+		logo: Assets.csharp,
 		name: 'C#',
 		category: 'pro-lang'
 	}),
 	defineSkill({
 		slug: 'json',
-		color: 'yellow',
+		color: 'white',
 		description: 'asdasdasdasd',
-		logo: Assets.Unknown,					//todo
+		logo: Assets.json,
 		name: 'JSON',
 		category: 'markup-style'
 	}),
 	defineSkill({
 		slug: '.NET',
-		color: 'blue',
+		color: 'putple',
 		description: 'asdasdasdasd',
-		logo: Assets.Unknown,					//todo
+		logo: Assets.dotnet,
 		name: '.NET',
 		category: 'framework'
 	}),
 	defineSkill({
 		slug: 'xamarin',
+		color: 'blue',
+		description: 'asdasdasdasd',
+		logo: Assets.xamarin,
+		name: 'Xamarin',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'unreal',
+		color: 'black',
+		description: 'asdasdasdasd',
+		logo: Assets.unreal,
+		name: 'Unreal Engine',
+		category: 'soft'
+	}),
+	defineSkill({
+		slug: 'lua',
 		color: 'purple',
 		description: 'asdasdasdasd',
-		logo: Assets.Unknown,					//todo
-		name: 'Xamarin',
-		category: 'li'
+		logo: Assets.lua,
+		name: 'Lua',
+		category: 'pro-lang'
 	})
 ] as const;
 

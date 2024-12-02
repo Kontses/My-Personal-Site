@@ -10,7 +10,7 @@ export const items: Array<Experience> = [
 		contract: ContractType.Contract,
 		type: 'ATS Support Engineer',
 		location: 'Thessaloniki',
-		period: { from: new Date( 2024, 10, 26), to: new Date() },
+		period: { from: new Date( 2024, 10, 26) },
 		skills: getSkills('unix'),
 		name: 'IT Support Engineer',
 		color: 'red',

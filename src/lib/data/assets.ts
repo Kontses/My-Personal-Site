@@ -76,6 +76,12 @@ const Assets = {
 	unix: a('shell_unix_code.png'),
 	Wordpress: a('wordpress.png'),
 	XML: a('xml.png'),
+	csharp: a('c-sharp.svg'),
+	json: a('jason.png'),
+	dotnet: a('dotnet.png'),
+	xamarin: a('xamarin.png'),
+	unreal: a('unreal.jpg'),
+	lua: a('Lua.png'),
 
 	//icons
 	ConservatoryOfStavroupolis: a('ConservatoryOfStavroupolis.jpg'),
@@ -83,7 +89,9 @@ const Assets = {
 	MusicSchoolOfKaterini: a('music-school-of-katerini.png'),
 	Traxis: a('traxis_engineering_logo.jpg'),
 	Artsound: a('artsound.jpg'),
-	Site: a('home.png')
+	Site: a('home.png'),
+	kchc: a('KCHC.jpg'),
+	core: a('core.png')
 };
 
 export default Assets;
