@@ -111,13 +111,6 @@
 					<span>Light Theme</span>
 				{/if}
 			</button>
-			<!-- eglish/greek button
-			<button
-				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
-				on:click={() => toggleLanguage()}
-			>
-
-			</button> -->
 		</div>
 	</div>
 </div>
