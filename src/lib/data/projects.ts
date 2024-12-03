@@ -80,14 +80,14 @@ export const items: Array<Project> = [
 		logo: Assets.blender,
 		name: '3D Modeling',
 		period: {
-			from: new Date(2022, 5, 30), to: new Date(2022, 4, 31)
+			from: new Date(2022, 5, 30), to: new Date(2022, 4, 31)// TODO
 		},
-		skills: getSkills(''),
+		skills: getSkills('blender'),
 		type: 'Blender Portofolio',
 		screenshots: [
 			{
 				label: 'Model 1',
-				src: './static/Blender Portofolio/Obj_1.jpg'	// TODO
+				src: './Blender Portofolio/Obj_1.jpg'			// TODO
 			},
 			{
 				label: 'Model 2',								// TODO
