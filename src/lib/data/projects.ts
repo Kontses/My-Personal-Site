@@ -12,12 +12,12 @@ export const items: Array<Project> = [
 			'This is my personal portfolio website that you are surfiiing, I hope you like it!',
 		links: [{ to: 'https://users.it.teithe.gr/~it154608', label: 'Site' }, {to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
 		logo: Assets.Site,
-		name: 'My Personal Website',
+		name: 'Portofolio',
 		period: {
 			from: new Date(2024, 10, 26)
 		},
 		skills: getSkills('svelte', 'ts', 'html', 'css', 'javascript', 'sass'),
-		type: 'Portofolio Website'
+		type: 'My Personal Website'
 	},
 	{
 		slug: 'adroid-app',
@@ -28,7 +28,7 @@ export const items: Array<Project> = [
 			'The Android App for finding every KCHC artist.',
 		links: [{ to: 'https://github.com/GSmyrlis/KCHC_219_App', label: 'GitHub' }],
 		logo: Assets.kchc,
-		name: 'KCHC Adroid App',
+		name: 'KCHC App',
 		period: {
 			from: new Date(2023, 10, 14)
 		},
@@ -44,7 +44,7 @@ export const items: Array<Project> = [
 			'An indie third-person action role-playing game!',
 		links: [{to: 'https://www.coregames.com/games/652fb7/daaank-souls', label: 'CORE'} ],
 		logo: Assets.core,
-		name: 'Daaank Souls',
+		name: 'Dank Souls',
 		period: {
 			from: new Date(2023, 9, 3), to: new Date(2023, 10, 2)
 		},
@@ -75,15 +75,29 @@ export const items: Array<Project> = [
 		description:
 			'A fanmade made app',
 		shortDescription:
-			'The Android App for finding every KCHC artist.',
+			'Portofolio of 3D models created on Blender.',
 		links: [],
-		logo: Assets.Unknown,
-		name: 'KCHC Adroid App',
+		logo: Assets.blender,
+		name: '3D Modeling',
 		period: {
-			from: new Date(2023, 10, 14)
+			from: new Date(2022, 5, 30), to: new Date(2022, 4, 31)
 		},
 		skills: getSkills(''),
-		type: 'Android Application'
+		type: 'Blender Portofolio',
+		screenshots: [
+			{
+				label: 'Model 1',
+				src: './static/Blender Portofolio/Obj_1.jpg'	// TODO
+			},
+			{
+				label: 'Model 2',								// TODO
+				src: ''
+			},
+			{
+				label: 'Model 3',								// TODO
+				src: ''
+			}
+		]
 	}
 ];
 

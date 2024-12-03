@@ -82,6 +82,11 @@ const Assets = {
 	xamarin: a('xamarin.png'),
 	unreal: a('unreal.jpg'),
 	lua: a('Lua.png'),
+	core: a('core.png'),
+	blender: a('blender.png'),
+	juce: a('juce.png'),
+	unity: a('unity.jpg'),
+	vuforia: a('vuforia.png'),
 
 	//icons
 	ConservatoryOfStavroupolis: a('ConservatoryOfStavroupolis.jpg'),
@@ -90,8 +95,8 @@ const Assets = {
 	Traxis: a('traxis_engineering_logo.jpg'),
 	Artsound: a('artsound.jpg'),
 	Site: a('home.png'),
-	kchc: a('KCHC.jpg'),
-	core: a('core.png')
+	kchc: a('KCHC.jpg')
+	
 };
 
 export default Assets;

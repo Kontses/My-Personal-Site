@@ -42,7 +42,7 @@ export const items: Array<Experience> = [
 		location: 'Thessaloniki',
 		period: { from: new Date(2023, 3, 1), to: new Date(2023, 9, 10) },
 		skills: getSkills('wordpress', 'html', 'css', 'xml'),
-		name: 'Junior Developer',
+		name: 'Web Developer',
 		color: 'yellow',
 		links: [{ to: 'https://artsound.gr/', label: 'Artsound & Lights' }],
 		logo: Assets.Artsound,
