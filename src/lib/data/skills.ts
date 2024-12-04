@@ -41,23 +41,23 @@ export const items = [
 		slug: 'java',
 		color: 'red',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'Java is a class-based object-oriented programming language that is used a lot for creating desktop software and android applications.<br>It is the main language we learned and used at university, so I have a good knowledge of its syntax and its application on several university projects.',
 		logo: Assets.Java,
 		name: 'Java',
 		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: 'c#',
+		slug: 'csharp',
 		color: 'purple',
-		description: 'asdasdasdasd',
+		description: 'C\u0023 is a modern, innovative, open-source, cross-platform object-oriented programming language where it was created by Microsoft through the .NET platform.<br>I met C\u0023 in the creation of the KCHC App, an android application using the Xamarin platform, and also on a Unity AR demo project.\n With the experience I gained I could use it to develop web apps, desktop apps, mobile apps, games and much more.',
 		logo: Assets.csharp,
-		name: 'C#',
+		name: 'C\u0023',
 		category: 'pro-lang'
 	}),
 	defineSkill({
 		slug: 'c++',
 		color: 'blue',
-		description: 'asdasdasdasd',
+		description: 'C++ is a general purpose object-oriented programming language, enabling you to create modular and reusable code, that was developed as an extension of C.<br><br>In JUCE Frammework i write an audio plugin using only C++.',
 		logo: Assets.Cpp,
 		name: 'C++',
 		category: 'pro-lang'
@@ -66,7 +66,7 @@ export const items = [
 		slug: 'js',
 		color: 'yellow',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'Javascript is a lightweight interpreted programming language with first-class functions, dynamic typing, prototype-based object-orientation, and first-class variables, that can be used for creating interactive effects and animations on the web.<br><br> I used it a lot for creating websites, along with it and the website you are currently surfing on.',
 		logo: Assets.JavaScript,
 		name: 'Javascript',
 		category: 'pro-lang'
@@ -75,34 +75,34 @@ export const items = [
 		slug: 'ts',
 		color: 'blue',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'Typescript is a statically typed programming language that builds on JavaScript, giving you better tooling around types, static type checking, and more.<br><br> I used it a lot for creating websites, along with it and the website you are currently surfing on.',
 		logo: Assets.TypeScript,
 		name: 'Typescript',
 		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: 'css',
-		color: 'blue',
-		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
-		logo: Assets.CSS,
-		name: 'CSS',
-		category: 'markup-style'
-	}),
-	defineSkill({
 		slug: 'html',
 		color: 'orange',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'HTML is the standard markup language for creating web pages and web applications. Defines the content and structure of web content, and is probably the most basic and first web technology to learn<br><br> I used it a lot for creating websites, of course along with it and the website you are currently surfing on.',
 		logo: Assets.HTML,
 		name: 'HTML',
+		category: 'markup-style'
+	}),
+	defineSkill({
+		slug: 'css',
+		color: 'blue',
+		description:
+			'CSS is a stylesheet language that describes how HTML elements should be displayed or XML. CSS is a core language of the open web and is standardized across web browsers.<br><br>Of course and I used it a lot for creating websites, along with it and the SUPER website you are currently surfing on.',
+		logo: Assets.CSS,
+		name: 'CSS',
 		category: 'markup-style'
 	}),
 	defineSkill({
 		slug: 'sass',
 		color: 'pink',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'Sass is a stylesheet language that is interpreted or compiled into Cascading Style Sheets (CSS). It is a preprocessor that is used to create, maintain and maintainable CSS code.<br><br>I used it a lot for creating websites, along with it and the SUPER FC\*KNG website you are currently surfing on.',
 		logo: Assets.Sass,
 		name: 'Sass',
 		category: 'markup-style'
@@ -110,7 +110,7 @@ export const items = [
 	defineSkill({
 		slug: 'svelte',
 		color: 'orange',
-		description: svelte,
+		description: 'Svelte is a free and open-source front end component framework or language is not a monolithic JavaScript library imported by applications: instead, Svelte compiles HTML templates to specialized code that manipulates the DOM directly, which may reduce the size of transferred files and give better client performance.<br><br> I used it a lot for creating websites, along with it and the SUPER FC\*KNG BEAUTIFULL website you are currently surfing on.',
 		logo: Assets.Svelte,
 		name: 'Svelte',
 		category: 'library'
@@ -212,6 +212,14 @@ export const items = [
 		logo: Assets.vuforia,
 		name: 'Vuforia',
 		category: 'library'
+	}),
+	defineSkill({
+		slug: 'Photoshop',
+		color: 'blue',
+		description: 'asdasdasdasd',
+		logo: Assets.Photoshop,
+		name: 'Photoshop',
+		category: 'soft'
 	})
 ] as const;
 

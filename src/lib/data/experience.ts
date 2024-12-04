@@ -4,9 +4,9 @@ import { ContractType, type Experience } from '../types';
 
 export const items: Array<Experience> = [
 	{
-		slug: 'open-sourcer',
+		slug: 'traxis',
 		company: 'Traxis Engineering',
-		description: 'The ATS Support Engineer is a full-time role based in the city of Thessaloniki, within the Metro Station. Daily tasks include supporting the Automatic Train Supervision (ATS) systems, troubleshooting technical problems, carrying out system maintenance and ensuring the smooth operation of the railway systems at Metro\'s Operations Control Centre (OCC).',
+		description: 'The ATS Support Engineer is a full-time role based for the Metro of Thessaloniki. Daily tasks include supporting the Automatic Train Supervision (ATS) systems, troubleshooting technical problems, carrying out system maintenance and ensuring the smooth operation of the railway systems at Metro\'s Operations Control Centre (OCC).',
 		contract: ContractType.Contract,
 		type: 'ATS Support Engineer',
 		location: 'Thessaloniki',
@@ -34,9 +34,9 @@ export const items: Array<Experience> = [
 		shortDescription: 'Creating awesome applications for customers.'
 	},	
 	{	*/
-		slug: 'web-developer-junior',
+		slug: 'artsound',
 		company: 'Artsound & Lights',
-		description: 'Στην Artsound & Lights βρέθηκα για την εξάμηνη πρακτική που μου καθιερωθηκε από το πανεπιστήμιο. Ηταν η πρώη μου εργασιακή εμπειρία που ασχολήθηκα με τονν κώδικα, από τα εγαστήριο του πανεπιστημίου, σε ένα πραματικό εργασιακό περιβαλλόν με άλλους συναδέλφους και deadlines.',
+		description: 'I was at Artsound & Lights for the six-month internship established by the university. It was my first work experience working with code, from the university\'s classrooms, in a hands-on work environment with other co-workers and deadlines. The website is an e-shop mainly for audio equipment and lights, built in wordpress by choice of the boss, using several e-commerce plugins.<br><br>It needed HTML knowledge for a specific lay out, css understanding for style, and a lot of XML usage and table editing for linking products and other vendors to the shop.',
 		contract: ContractType.Internship,
 		type: 'Web Development',
 		location: 'Thessaloniki',

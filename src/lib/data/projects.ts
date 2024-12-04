@@ -4,42 +4,42 @@ import type { Project } from '../types';
 
 export const items: Array<Project> = [
 	{
-		slug: 'slick-portfolio-svelte',
+		slug: 'portofolio',
 		color: '#5e95e3',
 		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore non dolores voluptatibus vitae praesentium aperiam, iure laboriosam repellendus sunt explicabo pariatur totam enim, nihil animi quisquam. Sit vero quod laborum!',
+			'This is my personal portfolio website that you are surfing on right now. Its purpose is my personal journey as a developer, a collection of my career projects that have gotten me to where I am, and a showcase of my web development skills.<br><br>The website is built mainly with the svelte library and the use of typescript. It required good knowledge of HTML for formatting, CSS and Sass for style, and JavaScript for script.',
 		shortDescription:
-			'This is my personal portfolio website that you are surfiiing, I hope you like it!',
+			'This is my personal portfolio website that you are surfiiing on, I hope you like it!',
 		links: [{ to: 'https://users.it.teithe.gr/~it154608', label: 'Site' }, {to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
 		logo: Assets.Site,
 		name: 'Portofolio',
 		period: {
 			from: new Date(2024, 10, 26)
 		},
-		skills: getSkills('svelte', 'ts', 'html', 'css', 'javascript', 'sass'),
+		skills: getSkills('svelte', 'ts', 'html', 'css', 'js', 'sass'),
 		type: 'My Personal Website'
 	},
 	{
-		slug: 'adroid-app',
+		slug: 'kchc-app',
 		color: 'white',
 		description:
-			'A fanmade made app',
+			'KCHC app is an application created to record both the new artists that are emerging in the alternative scene of Katerini, and to preserve its history, with old music bands, even with records that have been found and do not exist on music platforms.<br><br>The application contains a list of artists, all the information found about them and a music player to play the rare archive found and not available elsewhere on the internet.<br><br>The app was created using C# and Xamarin in .NET Framework in collaboration with another colleague and fan of Katerinian music scene.',
 		shortDescription:
 			'The Android App for finding every KCHC artist.',
 		links: [{ to: 'https://github.com/GSmyrlis/KCHC_219_App', label: 'GitHub' }],
 		logo: Assets.kchc,
-		name: 'KCHC App',
+		name: 'KCHC',
 		period: {
 			from: new Date(2023, 10, 14)
 		},
-		skills: getSkills('c#', 'json', '.NET', 'xamarin'),
+		skills: getSkills('csharp', 'json', '.NET', 'xamarin'),
 		type: 'Android Application'
 	},
 	{
-		slug: 'game',
+		slug: 'dank souls',
 		color: 'blue',
 		description:
-			'An one month project!',
+			'Dank Souls is an indie game project inspired by the (obvious) Dark Souls in a more simplified form mainly to get in touch with the game develoment.<br><br>It\'s built on the Core Engine with graphics using Unreal Machine and the scripts written in Lua.',
 		shortDescription:
 			'An indie third-person action role-playing game!',
 		links: [{to: 'https://www.coregames.com/games/652fb7/daaank-souls', label: 'CORE'} ],
@@ -70,17 +70,17 @@ export const items: Array<Project> = [
 		]
 	},
 	{
-		slug: '3d-portofolio',
+		slug: 'blender-portofolio',
 		color: 'orange',
 		description:
-			'A fanmade made app',
+			'To create an animation video I had create 3 objects in Blender from the scratch, with the modeling, the rigging till the camerra movement at the end.',
 		shortDescription:
-			'Portofolio of 3D models created on Blender.',
+			'Portofolio of 3D models created in Blender.',
 		links: [],
 		logo: Assets.blender,
 		name: '3D Modeling',
 		period: {
-			from: new Date(2022, 5, 30), to: new Date(2022, 4, 31)// TODO
+			from: new Date(2022, 4, 30), to: new Date(2022, 5, 29)// TODO
 		},
 		skills: getSkills('blender'),
 		type: 'Blender Portofolio',

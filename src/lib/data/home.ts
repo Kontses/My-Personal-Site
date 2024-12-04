@@ -24,4 +24,4 @@ export const links: Array<{ platform: Platform; link: string }> = [
 	}
 ];
 
-export const skills = getSkills('js', 'css', 'html', 'sass', 'svelte', 'ts', 'java', 'c#', 'c++', 'lua', 'unix');
+export const skills = getSkills('js', 'csharp', 'css', 'html', 'sass', 'svelte', 'ts', 'java', 'c#', 'c++', 'lua', 'unix');
