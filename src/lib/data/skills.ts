@@ -110,7 +110,7 @@ export const items = [
 	defineSkill({
 		slug: 'svelte',
 		color: 'orange',
-		description: 'Svelte is a free and open-source front end component framework or language is not a monolithic JavaScript library imported by applications: instead, Svelte compiles HTML templates to specialized code that manipulates the DOM directly, which may reduce the size of transferred files and give better client performance.<br><br> I used it a lot for creating websites, along with it and the SUPER FC\*KNG BEAUTIFULL website you are currently surfing on.',
+		description: 'Svelte is a free and open-source front end component framework or language is not a monolithic JavaScript library imported by applications: instead, Svelte compiles HTML templates to specialized code that manipulates the DOM directly, which may reduce the size of transferred files and give better client performance.<br><br>I used it a lot for creating websites, along with it and the SUPER FC\*KNG BEAUTIFULL website you are currently surfing on.',
 		logo: Assets.Svelte,
 		name: 'Svelte',
 		category: 'library'
@@ -119,16 +119,16 @@ export const items = [
 		slug: 'wordpress',
 		color: 'blue',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'WordPress is free and open source software used to create websites, blogs or applications. It is written in PHP and MySQL. It is often used as a content management system. It has many features, including an architecture for additional functionality, and a template system.<br><br>I learned to use wordpress when I worked for the Artsound & Lights e-shop in my internship, in which we had equipped it with the appropriate plugins for e-commerce and other automated actions.',
 		logo: Assets.Wordpress,
 		name: 'Wordpress',
 		category: 'markup-style'
 	}),
 	defineSkill({
 		slug: 'xml',
-		color: 'black',
+		color: 'blue',
 		description:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent orci enim, congue sit amet justo eget, consequat sollicitudin libero. Etiam iaculis lectus tempor, hendrerit enim in, luctus arcu. Maecenas id enim et nibh ullamcorper auctor ac eu est. Donec imperdiet, diam quis malesuada faucibus, nibh ex gravida sapien, posuere pharetra nunc libero tristique turpis. Sed egestas laoreet semper. In hac habitasse platea dictumst. Praesent vitae est nec felis maximus facilisis. Duis luctus dui id urna tristique varius. Ut vulputate leo arcu, non bibendum arcu pulvinar eget. Fusce semper elit ut congue lacinia. Suspendisse magna diam, tempus vitae interdum eget, dictum vitae nisl. Praesent quis fringilla tortor. Donec vitae sagittis dui.',
+			'XML is a markup language that contains a set of rules for encoding text electronically. It was designed with an emphasis on simplicity, generality and usefulness on the Internet. It is a text data format, with strong Unicode support for all the world\'s languages.<br><br>I used XML a lot in the Artsound & Lights e-shop, I received several files with tables that recorded all the products of the shop and their information, both from this shop and from all the suppliers of the company. I made an interface for comparisons between them, and I was working out their items as needed, for example comparing prices during a discount period.',
 		logo: Assets.XML,
 		name: 'XML',
 		category: 'markup-style'
@@ -136,7 +136,7 @@ export const items = [
 	defineSkill({
 		slug: 'unix',
 		color: 'white',
-		description: 'asdasdasdasd',
+		description: 'Unix is a family of multitasking, multi-user computer operating systems. The Unix kernel is the core component of the Unix operating system, responsible for managing the system\'s resources and facilitating communication between hardware and software components. It acts as a bridge between applications and the hardware, ensuring efficient and smooth operation of the system.<br><br>My first experience with unix commands was through university when we were taught the capabilities of the kernel. Later, in my job as IT Support Engineer for Metro in Thessaloniki, we used Linux computer systems and all software maintenance was done with unix commands, for example installing newer versions of software or saving log files and searching them using wildcards.',
 		logo: Assets.unix,
 		name: 'Unix',
 		category: 'op'
@@ -144,15 +144,15 @@ export const items = [
 	defineSkill({
 		slug: 'json',
 		color: 'white',
-		description: 'asdasdasdasd',
+		description: 'JSON is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is primarily used to transmit data between a server and a web application, serving as an alternative to XML.<br><br>I used JSON on an Android application via .NET to add data.',
 		logo: Assets.json,
 		name: 'JSON',
 		category: 'markup-style'
 	}),
 	defineSkill({
 		slug: '.NET',
-		color: 'putple',
-		description: 'asdasdasdasd',
+		color: 'white',
+		description: '.NET is a free, cross-platform, open-source developer platform for building many kinds of applications. It can run programs written in multiple languages, with C# being the most popular. It relies on a high-performance runtime that is used in production by many high-scale apps<br><br>In .NET the main project I have been working on is a music android application for recording the alternative music scene of my city Katerini. It is in co-development with a colleague and contains everything from information about the artists, to a music player for playing audio and connecting an API to update the concerts.',
 		logo: Assets.dotnet,
 		name: '.NET',
 		category: 'framework'
@@ -160,23 +160,23 @@ export const items = [
 	defineSkill({
 		slug: 'xamarin',
 		color: 'blue',
-		description: 'asdasdasdasd',
+		description: 'Xamarin provides software development tools that allow a user to develop applications for Android, iOS and Windows using C# language. Xamarin is built on the .NET Framework. It allows one to create apps that easily run across multiple platforms.<br><br>In .NET I use Xamarin to create a music android application for recording the alternative music scene of my city Katerini. It is in co-development with a colleague and contains everything from information about the artists, to a music player for playing audio and connecting an API to update the concerts.',
 		logo: Assets.xamarin,
 		name: 'Xamarin',
 		category: 'library'
 	}),
 	defineSkill({
-		slug: 'unreal',
+		slug: 'unreal engine',
 		color: 'black',
-		description: 'asdasdasdasd',
+		description: 'Unreal Engine is a 3D computer graphics game engine developed by Epic Games. Initially developed for PC first-person shooters, it has since been used in a variety of genres of games and has been adopted by other industries, most notably the film and television industry. Unreal Engine is written in C++ and features a high degree of portability, supporting a wide range of desktop, mobiles, console, and virtual reality platforms.<br><br>It is used in the indie game Dank Souls, which I have created with Core and I use a lot of assets and libraries from Unreal Engine.',
 		logo: Assets.unreal,
 		name: 'Unreal Engine',
 		category: 'soft'
 	}),
 	defineSkill({
 		slug: 'lua',
-		color: 'purple',
-		description: 'asdasdasdasd',
+		color: 'white',
+		description: 'Lua is a lightweight, high-level, multi-paradigm programming language designed mainly for embedded use in applications. Lua is cross-platform software, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C application programming interface (API) to embed it into applications.<br><br>It is used in the indie game Dank Souls, which I have created with Core to run all the script code.',
 		logo: Assets.lua,
 		name: 'Lua',
 		category: 'pro-lang'
@@ -184,7 +184,7 @@ export const items = [
 	defineSkill({
 		slug: 'blender',
 		color: 'orange',
-		description: 'asdasdasdasd',
+		description: 'Blender is a free and open-source 3D computer graphics software tool. It is used for creating animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and, formerly, video games.<br><br>I\'ve used it for modeling objects, rigging and animation on a fanmade animation project.',
 		logo: Assets.blender,
 		name: 'Blender',
 		category: 'soft'
@@ -192,7 +192,7 @@ export const items = [
 	defineSkill({
 		slug: 'juce',
 		color: 'green',
-		description: 'asdasdasdasd',
+		description: 'JUCE is an open-source cross-platform C++ application framework for desktop and mobile applications, including VST, VST3, AU, AUv3, LV2 and AAX audio plug-ins.<br><br>I have used to create a reverb plugin which processes the sound and gives the effect of space. Ideal for sound engineers, music studios, artists and games.',
 		logo: Assets.juce,
 		name: 'Juce',
 		category: 'framework'
@@ -200,7 +200,7 @@ export const items = [
 	defineSkill({
 		slug: 'unity',
 		color: 'white',
-		description: 'asdasdasdasd',
+		description: 'Unity is a cross-platform game engine, has since been gradually extended to support a variety of desktop, mobile, console, augmented reality, and virtual reality platforms. It is particularly popular for iOS and Android mobile game development, is considered easy to use for beginner developers, and is popular for indie game development.<br><br>I have used Unity to create an augmented reality (AR) application, along with the use of the Vuforia library. When the camera identified a specific target, 3D graphics were displayed on the screen.',
 		logo: Assets.unity,
 		name: 'Unity',
 		category: 'soft'
@@ -208,7 +208,7 @@ export const items = [
 	defineSkill({
 		slug: 'vuforia',
 		color: 'green',
-		description: 'asdasdasdasd',
+		description: 'Vuforia Engine is the most widely used platform for AR development, with support for the majority of phones, tablets, and eyewear. Developers can easily add advanced computer vision functionality to Android, iOS, and UWP apps, to create AR experiences that realistically interact with objects and the environment.<br><br>I used it to create an augmented reality (AR) application in Unity. When the camera identified a specific target, 3D graphics were displayed on the screen.',
 		logo: Assets.vuforia,
 		name: 'Vuforia',
 		category: 'library'
@@ -216,7 +216,7 @@ export const items = [
 	defineSkill({
 		slug: 'Photoshop',
 		color: 'blue',
-		description: 'asdasdasdasd',
+		description: 'Adobe Photoshop is the industry-leading digital image editing and design application that offers the tools to create anything you can imagine.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
 		logo: Assets.Photoshop,
 		name: 'Photoshop',
 		category: 'soft'
