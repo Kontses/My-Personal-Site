@@ -73,7 +73,7 @@ export const items: Array<Project> = [
 		slug: 'blender-portofolio',
 		color: 'orange',
 		description:
-			'To create an animation video I had create 3 objects in Blender from the scratch, with the modeling, the rigging till the camerra movement at the end.',
+			'To create an animation video I had create 3 objects in Blender from the scratch, with the modeling, the rigging till the camera movement at the end.',
 		shortDescription:
 			'Portofolio of 3D models created in Blender.',
 		links: [],
@@ -87,15 +87,15 @@ export const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'Model 1',
-				src: '/Blender Portofolio/Obj_1.jpg'			// TODO
+				src: '/Blender/Obj_1.jpg'
 			},
 			{
-				label: 'Model 2',								// TODO
-				src: ''
+				label: 'Model 2',
+				src: '/Blender/Obj_2.jpg'
 			},
 			{
-				label: 'Model 3',								// nata peasw ston server kai na ta linkarw me url
-				src: 'https://github.com/Kontses/My-Personal-Site/blob/main/static/Blender%20Portofolio/Obj_1.jpg'
+				label: 'Model 3',
+				src: '/Blender/Obj_3.jpg'
 			}
 		]
 	}
