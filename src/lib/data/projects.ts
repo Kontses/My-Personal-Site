@@ -10,11 +10,11 @@ export const items: Array<Project> = [
 			'This is my personal portfolio website that you are surfing on right now. Its purpose is my personal journey as a developer, a collection of my career projects that have gotten me to where I am, and a showcase of my web development skills.<br><br>The website is built mainly with the svelte library and the use of typescript. It required good knowledge of HTML for formatting, CSS and Sass for style, and JavaScript for script.',
 		shortDescription:
 			'This is my personal portfolio website that you are surfiiing on, I hope you like it!',
-		links: [{ to: 'https://users.it.teithe.gr/~it154608', label: 'Site' }, {to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
+		links: [{ to: 'kontses.github.io/My-Personal-Site/', label: 'Site' }, {to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
 		logo: Assets.Site,
 		name: 'Portofolio',
 		period: {
-			from: new Date(2024, 10, 26)
+			from: new Date(2024, 10, 27), to: new Date(2024, 11, 9)
 		},
 		skills: getSkills('svelte', 'ts', 'html', 'css', 'js', 'sass'),
 		type: 'My Personal Website'
@@ -91,11 +91,11 @@ export const items: Array<Project> = [
 			},
 			{
 				label: 'Model 2',								// TODO
-				src: 'C:/Users/μαρια/Documents/VS Code/My-Personal-Site/static/Blender Portofolio/Obj_1.jpg'
+				src: ''
 			},
 			{
 				label: 'Model 3',								// nata peasw ston server kai na ta linkarw me url
-				src: ''
+				src: 'https://github.com/Kontses/My-Personal-Site/blob/main/static/Blender%20Portofolio/Obj_1.jpg'
 			}
 		]
 	}
