@@ -87,6 +87,7 @@ const Assets = {
 	juce: a('juce.png'),
 	unity: a('unity.jpg'),
 	vuforia: a('vuforia.png'),
+	kali: a('kali.png'),
 
 	//icons
 	ConservatoryOfStavroupolis: a('ConservatoryOfStavroupolis.jpg'),

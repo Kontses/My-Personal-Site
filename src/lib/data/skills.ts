@@ -142,6 +142,14 @@ export const items = [
 		category: 'op'
 	}),
 	defineSkill({
+		slug: 'kali',
+		color: 'blue',
+		description: 'Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering.',
+		logo: Assets.kali,
+		name: 'Kali Linux',
+		category: 'op'
+	}),
+	defineSkill({
 		slug: 'json',
 		color: 'white',
 		description: 'JSON is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is primarily used to transmit data between a server and a web application, serving as an alternative to XML.<br><br>I used JSON on an Android application via .NET to add data.',
