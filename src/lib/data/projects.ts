@@ -28,7 +28,7 @@ export const items: Array<Project> = [
 		shortDescription:
 			'This is a 3D reverb plugin made with the JUCE DSP module',
 		links: [{ to: 'https://github.com/Kontses/3D-Reverb', label: 'GitHub' } ],
-		logo: `${base}/3D-Reverb.jpg`,
+		logo: Assets.juce,
 		name: '3D Reverb',
 		period: {
 			from: new Date(2025, 1, 1), to: new Date(2025, 3, 14)
