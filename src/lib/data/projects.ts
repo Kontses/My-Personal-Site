@@ -1,6 +1,7 @@
 import Assets from './assets';
 import { getSkills } from './skills';
 import type { Project } from '../types';
+import { base } from '$app/paths';
 
 export const items: Array<Project> = [
 	{
@@ -87,15 +88,15 @@ export const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'Model 1',
-				src: '/Blender/Obj_1.jpg'
+				src: `${base}/Blender/Obj_1.jpg`
 			},
 			{
 				label: 'Model 2',
-				src: '/Blender/Obj_2.jpg'
+				src: `${base}/Blender/Obj_2.jpg`
 			},
 			{
 				label: 'Model 3',
-				src: '/Blender/Obj_3.jpg'
+				src: `${base}/Blender/Obj_3.jpg`
 			}
 		]
 	}
