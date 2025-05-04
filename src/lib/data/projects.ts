@@ -21,6 +21,28 @@ export const items: Array<Project> = [
 		type: 'My Personal Website'
 	},
 	{
+		slug: '3D-Reverb',
+		color: '#5e95e3',
+		description:
+			'This is a 3D reverb plugin made with the JUCE DSP module. It is a reverb plugin that allows you to create a 3D reverb effect with Height, Width, and Depth parameters, and a Spectrum Visualizer via Fast Fourier Transform method to see the effect in real time.',
+		shortDescription:
+			'This is a 3D reverb plugin made with the JUCE DSP module',
+		links: [{ to: 'https://github.com/Kontses/3D-Reverb', label: 'GitHub' } ],
+		logo: Assets.juce,
+		name: '3D Reverb',
+		period: {
+			from: new Date(2025, 1, 1), to: new Date(2025, 3, 14)
+		},
+		skills: getSkills('juce', 'cpp'),
+		type: 'Sound Plugin',
+		screenshots: [
+			{
+				label: 'Screen 1',
+				src: `${base}/static/3D-Reverb.jpg`
+			}
+		]
+	},
+	{
 		slug: 'kchc-app',
 		color: 'white',
 		description:
