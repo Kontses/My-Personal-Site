@@ -10,7 +10,7 @@ export const items: Array<Project> = [
 			'This is my personal portfolio website that you are surfing on right now. Its purpose is my personal journey as a developer, a collection of my career projects that have gotten me to where I am, and a showcase of my web development skills.<br><br>The website is built mainly with the svelte library and the use of typescript. It required good knowledge of HTML for formatting, CSS and Sass for style, and JavaScript for script.',
 		shortDescription:
 			'This is my personal portfolio website that you are surfiiing on, I hope you like it!',
-		links: [{ to: 'kontses.github.io/My-Personal-Site/', label: 'Site' }, {to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
+		links: [{ to: 'https://kontses.github.io/My-Personal-Site/', label: 'Site' }, {to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
 		logo: Assets.Site,
 		name: 'Portofolio',
 		period: {
