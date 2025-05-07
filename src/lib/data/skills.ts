@@ -174,7 +174,7 @@ export const items = [
 		category: 'library'
 	}),
 	defineSkill({
-		slug: 'unreal engine',
+		slug: 'unreal',
 		color: 'black',
 		description: 'Unreal Engine is a 3D computer graphics game engine developed by Epic Games. Initially developed for PC first-person shooters, it has since been used in a variety of genres of games and has been adopted by other industries, most notably the film and television industry. Unreal Engine is written in C++ and features a high degree of portability, supporting a wide range of desktop, mobiles, console, and virtual reality platforms.<br><br>It is used in the indie game Dank Souls, which I have created with Core and I use a lot of assets and libraries from Unreal Engine.',
 		logo: Assets.unreal,
