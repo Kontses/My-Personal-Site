@@ -17,7 +17,7 @@ export const items: Array<Project> = [
 		period: {
 			from: new Date(2025, 1, 1), to: new Date(2025, 3, 14)
 		},
-		skills: getSkills('juce', 'cpp'),
+		skills: getSkills('juce', 'c++'),
 		type: 'Sound Plugin',
 		screenshots: [
 			{
