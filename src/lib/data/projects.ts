@@ -71,7 +71,7 @@ export const items: Array<Project> = [
 		period: {
 			from: new Date(2023, 9, 3), to: new Date(2023, 10, 2)
 		},
-		skills: getSkills('unreal engine','lua'),
+		skills: getSkills('unreal','lua'),
 		type: 'Indie Game',
 		screenshots: [
 			{
