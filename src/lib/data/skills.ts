@@ -144,7 +144,7 @@ export const items = [
 	defineSkill({
 		slug: 'kali',
 		color: 'blue',
-		description: 'Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering.',
+		description: 'Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering.<br><br>I have only dealt with Kali Linux as an amateur as a security enthusiast with its basic tools for penetration. I would like to develop these skills further in the future.',
 		logo: Assets.kali,
 		name: 'Kali Linux',
 		category: 'op'
