@@ -2,7 +2,7 @@
 	import Carrousel from '$lib/components/Carrousel/Carrousel.svelte';
 	import Icon from '$lib/components/Icon/Icon.svelte';
 	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
-	import MatrixRain from '$lib/components/MatrixRain/MatrixRain.svelte'; // Added MatrixRain import
+	// Removed MatrixRain import from here
 	import { titleSuffix } from '@data/app';
 	import { links, description, lastName, name, title, skills } from '@data/home';
 	import { items as skillsItems } from '@data/skills';
@@ -21,7 +21,7 @@
 <svelte:head>
 	<title>{useTitle(title, titleSuffix)}</title>
 </svelte:head>
-<MatrixRain />
+<!-- Removed MatrixRain component from here -->
 <div
 	class="col self-center flex-1 md:flex-row md:slef-stretch justify-center lg:justify-between items-center p-y-0px p-x-10px"
 >

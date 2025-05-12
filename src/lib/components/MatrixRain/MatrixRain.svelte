@@ -1,7 +1,11 @@
+{#if isVisible}
 <canvas bind:this={canvas}></canvas>
+{/if}
 
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
+
+  export let isVisible = true;
 
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D | null;
@@ -15,17 +19,19 @@
   }
 
   let columns: Column[] = [];
-  let animationFrameId: number;
+  let animationFrameId: number | undefined = undefined;
   let lastUpdateTime = 0;
   const animationSpeed = 75; // Milliseconds - Increase for slower rain, decrease for faster. Default was effectively ~16ms (60fps)
 
-  onMount(() => {
-    if (!canvas) return;
+  let resizeHandler: (() => void) | undefined = undefined;
+
+  const startRain = () => {
+    if (!canvas || !isVisible) return;
     ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const setup = () => {
-      if (!canvas || !ctx) return;
+      if (!canvas || !ctx || !isVisible) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 
@@ -49,7 +55,13 @@
     };
 
     const draw = (currentTime: number) => {
-      if (!ctx || !canvas) return;
+      if (!ctx || !canvas || !isVisible) {
+        if (animationFrameId) {
+          cancelAnimationFrame(animationFrameId);
+          animationFrameId = undefined;
+        }
+        return;
+      }
 
       animationFrameId = requestAnimationFrame(draw); // Request next frame
 
@@ -87,19 +99,51 @@
     setup();
     animationFrameId = requestAnimationFrame(draw); // Initial call to draw
 
-    const handleResize = () => {
-      cancelAnimationFrame(animationFrameId);
+    resizeHandler = () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
       setup();
-      animationFrameId = requestAnimationFrame(draw);
+      if (isVisible) {
+        animationFrameId = requestAnimationFrame(draw);
+      }
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', resizeHandler);
+  };
 
-    return () => {
+  const stopRain = () => {
+    if (animationFrameId) {
       cancelAnimationFrame(animationFrameId);
-      window.removeEventListener('resize', handleResize);
+      animationFrameId = undefined;
+    }
+    if (resizeHandler) {
+      window.removeEventListener('resize', resizeHandler);
+      resizeHandler = undefined;
+    }
+    if (ctx && canvas) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas when stopping
+    }
+  };
+
+  onMount(() => {
+    if (isVisible) {
+      startRain();
+    }
+    return () => {
+      stopRain();
     };
   });
+
+  $: {
+    if (canvas) { // Ensure canvas is mounted
+      if (isVisible && !animationFrameId) {
+        startRain();
+      } else if (!isVisible && animationFrameId) {
+        stopRain();
+      }
+    }
+  }
 </script>
 
 <style>

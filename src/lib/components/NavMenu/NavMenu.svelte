@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { theme, toggleTheme } from '$lib/stores/theme';
+	import { isMatrixVisible, toggleMatrixVisibility } from '$lib/stores/matrix';
 	import { items } from '@data/navbar';
 	import * as HOME from '@data/home';
 
@@ -49,15 +50,28 @@
 			class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"
 		>
 			<div class="row hidden md:flex">
+				<button
+					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
+					on:click={() => toggleMatrixVisibility()}
+					title={$isMatrixVisible ? 'Hide Matrix Rain' : 'Show Matrix Rain'}
+				>
+					{#if $isMatrixVisible}
+						<UIcon icon="i-carbon-rain" />
+					{:else}
+						<UIcon icon="i-carbon-cloud" />
+					{/if}
+				</button>
 				<a
 					href={`${base}/search`}
 					class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"
+					title="Search"
 				>
 					<UIcon icon="i-carbon-search" />
 				</a>
 				<button
 					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
 					on:click={() => toggleTheme()}
+					title={$theme ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
 				>
 					{#if $theme}
 						<UIcon icon="i-carbon-moon" />
@@ -91,6 +105,18 @@
 			{/each}
 		</div>
 		<div class="col gap-2 m-t-7">
+			<button
+				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)]"
+				on:click={() => { toggleMatrixVisibility(); toggleExpanded(false); }}
+			>
+				{#if $isMatrixVisible}
+					<UIcon icon="i-carbon-rain" />
+					<span>Hide Matrix Rain</span>
+				{:else}
+					<UIcon icon="i-carbon-cloud" />
+					<span>Show Matrix Rain</span>
+				{/if}
+			</button>
 			<a
 				href={`${base}/search`}
 				class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"
@@ -100,8 +126,8 @@
 				<span>Search</span>
 			</a>
 			<button
-				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
-				on:click={() => toggleTheme()}
+				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)]"
+				on:click={() => { toggleTheme(); toggleExpanded(false); }}
 			>
 				{#if $theme}
 					<UIcon icon="i-carbon-moon" />
