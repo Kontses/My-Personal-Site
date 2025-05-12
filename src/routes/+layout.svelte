@@ -13,7 +13,10 @@
 	onMount(() => onHydrated());
 </script>
 
-<div class={`body contents ${$theme ? 'theme-dark' : 'theme-light'}`}>
+<div
+	class={`body contents ${$theme ? 'theme-dark' : 'theme-light'}`}
+	style={`background-color: ${$isMatrixVisible ? 'transparent' : 'var(--main)'};`}
+>
 	<MatrixRain isVisible={$isMatrixVisible} /> <!-- Use the store value -->
 	<header class="top-bar">
 		<NavMenu />

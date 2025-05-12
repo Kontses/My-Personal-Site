@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export const isMatrixVisible = writable(false); // Default to hidden
+export const isMatrixVisible = writable(true); // Default to visible
 
 export function toggleMatrixVisibility() {
 	isMatrixVisible.update((currentValue) => !currentValue);

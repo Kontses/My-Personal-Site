@@ -144,14 +144,11 @@
 <style lang="scss">
 	.nav-menu {
 		display: flex;
-		justify-content: center;
-		position: sticky;
-		top: 0px;
-		z-index: 10;
-		padding: 0px 10px;
-		height: 50px;
-		border-bottom: 1px solid var(--secondary);
-		background-color: var(--main);
+		justify-content: center; /* This will center the 'nav.container' within the .nav-menu div */
+		width: 100%; /* Ensure .nav-menu takes full width of its parent (.top-bar) */
+		/* position: sticky, top, z-index, height, border-bottom, background-color are handled by .top-bar in +layout.svelte */
+		/* padding: 0px 10px; Removed to let the inner .container handle padding */
+		height: 50px; /* Keep height for alignment if necessary, or inherit/auto */
 
 		&-item {
 			text-decoration: none;
