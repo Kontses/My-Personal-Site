@@ -114,7 +114,7 @@
 			</div>
 		</div>
 		{#if $showMatrixWarning}
-			<div class="matrix-warning">{$matrixWarningMessage}</div>
+			<div class="matrix-warning" class:light-theme-warning={!$theme}>{$matrixWarningMessage}</div>
 		{/if}
 	</nav>
 	<div class={`nav-menu-mobile ${expanded ? 'nav-menu-mobile-open' : ''} md:hidden`}>
@@ -231,5 +231,11 @@
 		z-index: 1000;
 		text-align: center; /* Center the text inside the warning box */
 		/* Adjust right and potentially add a max-width if needed for alignment */
+	}
+
+	.light-theme-warning {
+		background-color: rgba(255, 255, 255, 0.9);
+		color: black;
+		border: 1px solid rgba(0, 0, 0, 0.2);
 	}
 </style>
