@@ -3,6 +3,7 @@
 	import { theme, toggleTheme } from '$lib/stores/theme';
 	import { isMatrixVisible, toggleMatrixVisibility } from '$lib/stores/matrix';
 	import { items } from '@data/navbar';
+	import { writable } from 'svelte/store';
 	import * as HOME from '@data/home';
 
 	import { base } from '$app/paths';
@@ -12,12 +13,34 @@
 	$: currentRoute = $page.url.pathname;
 
 	let expanded = false;
+	const showMatrixWarning = writable(false);
+	const matrixWarningMessage = writable('');
 
 	const toggleExpanded = (v?: boolean) => {
 		if (typeof v === 'undefined') {
 			expanded = !expanded;
 		} else {
 			expanded = v;
+		}
+	};
+
+	const handleThemeToggle = () => {
+		if ($theme && $isMatrixVisible) {
+			$matrixWarningMessage = 'No no, we don\'t do that when it\'s rainning';
+			$showMatrixWarning = true;
+			setTimeout(() => ($showMatrixWarning = false), 3000); // Hide after 3 seconds
+		} else {
+			toggleTheme();
+		}
+	};
+
+	const handleMatrixToggle = () => {
+		if (!$theme && !$isMatrixVisible) {
+			$matrixWarningMessage = 'Don\'t start the rain when we are enjoying the light';
+			$showMatrixWarning = true;
+			setTimeout(() => ($showMatrixWarning = false), 3000); // Hide after 3 seconds
+		} else {
+			toggleMatrixVisibility();
 		}
 	};
 </script>
@@ -52,7 +75,7 @@
 			<div class="row hidden md:flex">
 				<button
 					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
-					on:click={() => toggleMatrixVisibility()}
+					on:click={() => handleMatrixToggle()}
 					title={$isMatrixVisible ? 'Hide Matrix Rain' : 'Show Matrix Rain'}
 				>
 					{#if $isMatrixVisible}
@@ -70,7 +93,7 @@
 				</a>
 				<button
 					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
-					on:click={() => toggleTheme()}
+					on:click={() => handleThemeToggle()}
 					title={$theme ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
 				>
 					{#if $theme}
@@ -90,6 +113,9 @@
 				/>
 			</div>
 		</div>
+		{#if $showMatrixWarning}
+			<div class="matrix-warning">{$matrixWarningMessage}</div>
+		{/if}
 	</nav>
 	<div class={`nav-menu-mobile ${expanded ? 'nav-menu-mobile-open' : ''} md:hidden`}>
 		<div class="flex-col flex-1 self-center h-full justify-center m-t-7">
@@ -107,7 +133,7 @@
 		<div class="col gap-2 m-t-7">
 			<button
 				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)]"
-				on:click={() => { toggleMatrixVisibility(); toggleExpanded(false); }}
+				on:click={() => { handleMatrixToggle(); toggleExpanded(false); }}
 			>
 				{#if $isMatrixVisible}
 					<UIcon icon="i-carbon-rain" />
@@ -127,7 +153,7 @@
 			</a>
 			<button
 				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)]"
-				on:click={() => { toggleTheme(); toggleExpanded(false); }}
+				on:click={() => { handleThemeToggle(); toggleExpanded(false); }}
 			>
 				{#if $theme}
 					<UIcon icon="i-carbon-moon" />
@@ -192,5 +218,18 @@
 			opacity: 1;
 			transform: translateY(0vh);
 		}
+	}
+
+	.matrix-warning {
+		position: absolute;
+		top: 50px; /* Position below the nav bar (nav bar height is approx 50px) */
+		right: 0; /* Align to the right edge of the nav bar */
+		background-color: rgba(0, 0, 0, 0.8);
+		color: white;
+		padding: 10px 20px;
+		border-radius: 5px;
+		z-index: 1000;
+		text-align: center; /* Center the text inside the warning box */
+		/* Adjust right and potentially add a max-width if needed for alignment */
 	}
 </style>
