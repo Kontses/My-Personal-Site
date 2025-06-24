@@ -27,6 +27,28 @@ export const items: Array<Project> = [
 		]
 	},
 	{
+		slug: 'Metro Manuals',
+		color: 'blue',
+		description:
+			'This is a 3D reverb plugin made with the JUCE DSP module. It is a reverb plugin that allows you to create a 3D reverb effect with Height, Width, and Depth parameters, and a Spectrum Visualizer via Fast Fourier Transform method to see the effect in real time.',
+		shortDescription:
+			'An Android application for scanning QR codes, viewing and management manuals (PDF) in an industrial environment',
+		links: [{ to: 'https://github.com/Kontses/DocFlutter/releases/tag/v0.1', label: 'GitHub' } ],
+		logo: `${base}/3D-Reverb.png`, 	// na allaksw fwtografia
+		name: 'Metro Manuals',
+		period: {
+			from: new Date(2025, 4, 1), to: new Date(2025, 4, 22)
+		},
+		skills: getSkills('dart','flutter', 'c++'),
+		type: '',
+		screenshots: [
+			{
+				label: 'Screen 1',
+				src: `${base}/3D-Reverb.png`	// na allaksw fwtografia
+			}
+		]
+	},
+	{
 		slug: 'portofolio',
 		color: '#5e95e3',
 		description:

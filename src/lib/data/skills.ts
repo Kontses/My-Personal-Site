@@ -97,6 +97,27 @@ export const items = [
 		logo: Assets.CSS,
 		name: 'CSS',
 		category: 'markup-style'
+		
+	}),
+	defineSkill({
+		slug: 'dart',
+		color: 'cyan',
+		description:
+			'Dart is a programming language developed by Google It can be used to develop web and mobile apps as well as server and desktop applications.<br><br>Dart is an object-oriented, class-based, garbage-collected language with C-style syntax. It can compile to machine code, JavaScript, or WebAssembly. It supports interfaces, mixins, abstract classes, reified generics and type inference.',
+		logo: Assets.Dart,
+		name: 'Dart',
+		category: 'pro-lang'
+		
+	}),
+	defineSkill({
+		slug: 'flutter',
+		color: 'blue',
+		description:
+			'Flutter is an open-source UI software development kit created by Google. It can be used to develop cross platform applications from a single codebase for the Web, Android, iOS, Linux, macOS, and Windows.',
+		logo: Assets.Flutter,
+		name: 'Flutter',
+		category: 'framework'
+		
 	}),
 	defineSkill({
 		slug: 'sass',
