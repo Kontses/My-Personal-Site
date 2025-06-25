@@ -10,7 +10,7 @@ export const items: Array<Project> = [
 		description:
 			'This is a 3D reverb plugin made with the JUCE DSP module. It is a reverb plugin that allows you to create a 3D reverb effect with Height, Width, and Depth parameters, and a Spectrum Visualizer via Fast Fourier Transform method to see the effect in real time.',
 		shortDescription:
-			'This is a 3D reverb plugin made with the JUCE DSP module',
+			'This is a 3D reverb plugin made with the JUCE DSP module.',
 		links: [{ to: 'https://github.com/Kontses/3D-Reverb', label: 'GitHub' } ],
 		logo: `${base}/3D-Reverb.png`,
 		name: '3D Reverb',
@@ -79,6 +79,28 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('svelte', 'ts', 'html', 'css', 'js', 'sass'),
 		type: 'Personal Website'
+	},
+	{
+		slug: 'Whyfi',
+		color: 'yellow',
+		description:
+			'Whyfi is a graphical user interface (GUI) application for Windows, written in Python using the PyQt5 library. The purpose of the application is to scan for available Wi-Fi networks, display their basic information (SSID, BSSID, Signal Strength, Security) and allow you to connect to them, as well as retrieve passwords for saved network profiles.',
+		shortDescription:
+			'Scan and display all available Wi-Fi networks and show passwords.',
+		links: [ {to: 'https://github.com/Kontses/Whyfi', label: 'GitHub'} ],
+		logo: `${base}/Screenshots/whyfi.png`,
+		name: 'Whyfi',
+		period: {
+			from: new Date(2025, 5, 18), to: new Date(2025, 5, 18)
+		},
+		skills: getSkills('html', 'python'),
+		type: 'Security',
+		screenshots: [
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/whyfi.png`
+			}
+		]
 	},
 	{
 		slug: 'kchc-app',

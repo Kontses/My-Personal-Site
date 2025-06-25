@@ -55,6 +55,14 @@ export const items = [
 		category: 'pro-lang'
 	}),
 	defineSkill({
+		slug: 'python',
+		color: 'yellow',
+		description: 'Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.\n Python is dynamically type-checked and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.',
+		logo: Assets.Python,
+		name: 'Python',
+		category: 'pro-lang'
+	}),
+	defineSkill({
 		slug: 'c++',
 		color: 'blue',
 		description: 'C++ is a general purpose object-oriented programming language, enabling you to create modular and reusable code, that was developed as an extension of C.<br><br>In JUCE Frammework i write an audio plugin using only C++.',
