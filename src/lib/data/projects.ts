@@ -28,23 +28,39 @@ export const items: Array<Project> = [
 	},
 	{
 		slug: 'Metro Manuals',
-		color: 'blue',
+		color: 'white',
 		description:
-			'This is a 3D reverb plugin made with the JUCE DSP module. It is a reverb plugin that allows you to create a 3D reverb effect with Height, Width, and Depth parameters, and a Spectrum Visualizer via Fast Fourier Transform method to see the effect in real time.',
+			'An Android application for scanning QR codes, viewing and management manuals (PDF) in an industrial environment.',
 		shortDescription:
-			'An Android application for scanning QR codes, viewing and management manuals (PDF) in an industrial environment',
+			'An Android application for scanning QR codes, viewing and management manuals (PDF) in an industrial environment.',
 		links: [{ to: 'https://github.com/Kontses/DocFlutter/releases/tag/v0.1', label: 'GitHub' } ],
-		logo: `${base}/3D-Reverb.png`, 	// na allaksw fwtografia
+		logo: `${base}/metro-manuals.png`,
 		name: 'Metro Manuals',
 		period: {
 			from: new Date(2025, 4, 1), to: new Date(2025, 4, 22)
 		},
 		skills: getSkills('dart','flutter', 'c++'),
-		type: '',
+		type: 'Android Application',
 		screenshots: [
 			{
 				label: 'Screen 1',
-				src: `${base}/3D-Reverb.png`	// na allaksw fwtografia
+				src: `${base}/Screenshots/1.jpg`
+			},
+			{
+				label: 'Screen 2',
+				src: `${base}/Screenshots/2.jpg`
+			},
+			{
+				label: 'Screen 3',
+				src: `${base}/Screenshots/3.jpg`
+			},
+			{
+				label: 'Screen 4',
+				src: `${base}/Screenshots/4.jpg`
+			},
+			{
+				label: 'Screen 5',
+				src: `${base}/Screenshots/5.jpg`
 			}
 		]
 	},
@@ -62,7 +78,7 @@ export const items: Array<Project> = [
 			from: new Date(2024, 10, 27), to: new Date(2024, 11, 9)
 		},
 		skills: getSkills('svelte', 'ts', 'html', 'css', 'js', 'sass'),
-		type: 'My Personal Website'
+		type: 'Personal Website'
 	},
 	{
 		slug: 'kchc-app',
