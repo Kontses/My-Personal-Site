@@ -13,7 +13,7 @@
 {#if show}
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div
-		class="fixed inset-0px top-51px bg-[#000000dd] col-center p-50px"
+		class="fixed inset-0px top-51px bg-[#00000080] col-center p-50px"
 		on:click={onClose}
 		on:click={(e) => e.stopPropagation()}
 		on:keydown

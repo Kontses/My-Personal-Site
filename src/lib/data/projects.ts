@@ -43,23 +43,23 @@ export const items: Array<Project> = [
 		type: 'Android Application',
 		screenshots: [
 			{
-				label: 'Screen 1',
+				label: 'Screenshot 1',
 				src: `${base}/Screenshots/1.jpg`
 			},
 			{
-				label: 'Screen 2',
+				label: 'Screenshot 2',
 				src: `${base}/Screenshots/2.jpg`
 			},
 			{
-				label: 'Screen 3',
+				label: 'Screenshot 3',
 				src: `${base}/Screenshots/3.jpg`
 			},
 			{
-				label: 'Screen 4',
+				label: 'Screenshot 4',
 				src: `${base}/Screenshots/4.jpg`
 			},
 			{
-				label: 'Screen 5',
+				label: 'Screenshot 5',
 				src: `${base}/Screenshots/5.jpg`
 			}
 		]
