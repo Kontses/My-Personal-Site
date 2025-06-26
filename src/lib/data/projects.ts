@@ -18,7 +18,7 @@ export const items: Array<Project> = [
 			from: new Date(2025, 1, 1), to: new Date(2025, 3, 14)
 		},
 		skills: getSkills('juce', 'c++'),
-		type: 'Sound Plugin',
+		type: 'VST Plugin',
 		screenshots: [
 			{
 				label: 'Screen 1',
@@ -27,8 +27,24 @@ export const items: Array<Project> = [
 		]
 	},
 	{
+		slug: 'laterna',
+		color: 'purple',
+		description:
+			'This is an real-time streaming platform similar to Spotify without counting plays of tracks and listeners with the aim of not comparing artists to each other.<br><br>- Frontend: React with TypeScript, Vite, Tailwind CSS, Shadcn UI, Three.js<br>- Backend: Node.js with Express, Node-cron, Express Fileupload<br>- Database: MongoDB<br>- Authentication: Custom JWT<br>- File Storage: Cloudinary<br>- Real-time communication: Socket.io',
+		shortDescription:
+			'This is a Spotify similar application in React and Node.js',
+		links: [{ to: 'https://laterna-git-master-kontses-projects.vercel.app/', label: 'Site' }, {to: 'https://github.com/Kontses/Laterna', label: 'GitHub'} ],
+		logo: `${base}/laterna-logo.png`,
+		name: 'Laterna',
+		period: {
+			from: new Date(2025, 4, 29), to: new Date(2025, 5, 26)
+		},
+		skills: getSkills('react', 'ts', 'js', 'css', 'threejs', 'nodejs', 'socketio'),
+		type: 'Web Applications'
+	},
+	{
 		slug: 'Metro Manuals',
-		color: 'white',
+		color: 'blue',
 		description:
 			'An Android application for scanning QR codes, viewing and management manuals (PDF) in an industrial environment.',
 		shortDescription:
@@ -39,7 +55,7 @@ export const items: Array<Project> = [
 		period: {
 			from: new Date(2025, 4, 1), to: new Date(2025, 4, 22)
 		},
-		skills: getSkills('dart','flutter', 'c++'),
+		skills: getSkills('dart','flutter', 'c++', 'firebase'),
 		type: 'Android Application',
 		screenshots: [
 			{
@@ -94,7 +110,7 @@ export const items: Array<Project> = [
 			from: new Date(2025, 5, 18), to: new Date(2025, 5, 18)
 		},
 		skills: getSkills('html', 'python'),
-		type: 'Security',
+		type: 'Security Application',
 		screenshots: [
 			{
 				label: 'Screenshot',
@@ -113,7 +129,7 @@ export const items: Array<Project> = [
 		logo: Assets.kchc,
 		name: 'KCHC',
 		period: {
-			from: new Date(2023, 10, 14)
+			from: new Date(2023, 10, 14), to: new Date(2024, 9, 30)
 		},
 		skills: getSkills('csharp', 'json', '.NET', 'xamarin'),
 		type: 'Android Application'

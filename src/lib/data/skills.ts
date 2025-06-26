@@ -145,6 +145,38 @@ export const items = [
 		category: 'library'
 	}),
 	defineSkill({
+		slug: 'react',
+		color: 'lightblue',
+		description: 'React (also known as React.js) is a free and open-source front-end JavaScript library that aims to make building user interfaces based on components more "seamless". It is maintained by Meta and a community of individual developers and companies.',
+		logo: Assets.ReactJs,
+		name: 'React',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'threejs',
+		color: 'white',
+		description: 'Three.js is a cross-browser JavaScript library and application programming interface (API) used to create and display animated 3D computer graphics in a web browser using WebGL.',
+		logo: Assets.threejs,
+		name: 'Three.js',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'nodejs',
+		color: 'green',
+		description: 'Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.',
+		logo: Assets.NodeJs,
+		name: 'Node.js',
+		category: 'library'
+	}),
+	defineSkill({
+		slug: 'socketio',
+		color: 'white',
+		description: 'Socket.IO is a library that enables low-latency, bidirectional and event-based communication between a client and a server.',
+		logo: Assets.socketio,
+		name: 'Socket.io',
+		category: 'library'
+	}),
+	defineSkill({
 		slug: 'wordpress',
 		color: 'blue',
 		description:
@@ -152,6 +184,14 @@ export const items = [
 		logo: Assets.Wordpress,
 		name: 'Wordpress',
 		category: 'markup-style'
+	}),
+	defineSkill({
+		slug: 'firebase',
+		color: 'orange',
+		description: 'Firebase is a mobile and web application development platform developed by Google. It provides a suite of tools and services to help developers build, improve, and grow their apps. Firebase simplifies backend development tasks, allowing developers to focus on the user experience and core features of their applications.',
+		logo: Assets.Firebase,
+		name: 'Firebase',
+		category: ''
 	}),
 	defineSkill({
 		slug: 'xml',

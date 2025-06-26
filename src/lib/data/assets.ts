@@ -88,6 +88,9 @@ const Assets = {
 	unity: a('unity.jpg'),
 	vuforia: a('vuforia.png'),
 	kali: a('kali.png'),
+	threejs: a('threejs.png'),
+	socketio: a('Socket-io.png'),
+
 
 	//icons
 	ConservatoryOfStavroupolis: a('ConservatoryOfStavroupolis.jpg'),
