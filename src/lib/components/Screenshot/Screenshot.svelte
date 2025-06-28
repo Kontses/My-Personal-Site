@@ -40,14 +40,14 @@
 					<UIcon icon={'i-carbon-close'} />
 				</button>
 			</div>
-			<div class="col w-full rounded-xl flex-grow max-w-full">
+			<div class="col w-full rounded-xl max-w-full max-h-full">
 				{#if screenshot?.type === MediaType.Video}
-					<video class="w-full h-full object-contain" src={screenshot?.src} controls autoplay loop>
+					<video class="w-full max-h-full object-contain" src={screenshot?.src} controls autoplay loop>
 						<track kind="captions" srclang="en" label="English" />
 						Your browser does not support the video tag.
 					</video>
 				{:else}
-					<img class="w-full h-full object-contain" src={screenshot?.src} alt={screenshot?.label} />
+					<img class="w-full max-h-full object-contain" src={screenshot?.src} alt={screenshot?.label} />
 				{/if}
 			</div>
 			<p
