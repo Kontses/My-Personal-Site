@@ -2,6 +2,7 @@ import Assets from './assets';
 import { getSkills } from './skills';
 import type { Project } from '../types';
 import { base } from '$app/paths';
+import { MediaType } from '../types';
 
 export const items: Array<Project> = [
 	{
@@ -21,8 +22,14 @@ export const items: Array<Project> = [
 		type: 'VST Plugin',
 		screenshots: [
 			{
-				label: 'Screen 1',
-				src: `${base}/3D-Reverb.png`
+				label: 'Screenshot',
+				src: `${base}/3D-Reverb.png`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Video',
+				src: `${base}/3d-reverb-drums-demo.mp4`,
+				type: MediaType.Video
 			}
 		]
 	},
@@ -60,23 +67,28 @@ export const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'Screenshot 1',
-				src: `${base}/Screenshots/1.jpg`
+				src: `${base}/Screenshots/1.jpg`,
+				type: MediaType.Image
 			},
 			{
 				label: 'Screenshot 2',
-				src: `${base}/Screenshots/2.jpg`
+				src: `${base}/Screenshots/2.jpg`,
+				type: MediaType.Image
 			},
 			{
 				label: 'Screenshot 3',
-				src: `${base}/Screenshots/3.jpg`
+				src: `${base}/Screenshots/3.jpg`,
+				type: MediaType.Image
 			},
 			{
 				label: 'Screenshot 4',
-				src: `${base}/Screenshots/4.jpg`
+				src: `${base}/Screenshots/4.jpg`,
+				type: MediaType.Image
 			},
 			{
 				label: 'Screenshot 5',
-				src: `${base}/Screenshots/5.jpg`
+				src: `${base}/Screenshots/5.jpg`,
+				type: MediaType.Image
 			}
 		]
 	},
@@ -94,7 +106,14 @@ export const items: Array<Project> = [
 			from: new Date(2024, 10, 27), to: new Date(2024, 11, 9)
 		},
 		skills: getSkills('svelte', 'ts', 'html', 'css', 'js', 'sass'),
-		type: 'Personal Website'
+		type: 'Personal Website',
+		screenshots: [
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/whyfi.png`,
+				type: MediaType.Image
+			}
+		]
 	},
 	{
 		slug: 'Whyfi',
@@ -114,7 +133,8 @@ export const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'Screenshot',
-				src: `${base}/Screenshots/whyfi.png`
+				src: `${base}/Screenshots/whyfi.png`,
+				type: MediaType.Image
 			}
 		]
 	},
@@ -152,19 +172,23 @@ export const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'Screen 1',
-				src: 'https://manticoreprod-ms.azureedge.net/screenshots/652fb77f8c5c48868b8708ef3783777a_0_3aFUZBIgbD9pMqw83Tf1Sf_B1AF3BB56ED524231F190843FDA14878D75AAD5D.jpg'
+				src: 'https://manticoreprod-ms.azureedge.net/screenshots/652fb77f8c5c48868b8708ef3783777a_0_3aFUZBIgbD9pMqw83Tf1Sf_B1AF3BB56ED524231F190843FDA14878D75AAD5D.jpg',
+				type: MediaType.Image
 			},
 			{
 				label: 'Screen 2',
-				src: 'https://manticoreprod-ms.azureedge.net/screenshots/652fb77f8c5c48868b8708ef3783777a_1_3aFUZBIgbD9pMqw83Tf1Sf_20D11048A32C23E8CECFCF2D347D07B3884D694F.jpg'
+				src: 'https://manticoreprod-ms.azureedge.net/screenshots/652fb77f8c5c48868b8708ef3783777a_1_3aFUZBIgbD9pMqw83Tf1Sf_20D11048A32C23E8CECFCF2D347D07B3884D694F.jpg',
+				type: MediaType.Image
 			},
 			{
 				label: 'Screen 3',
-				src: 'https://manticoreprod-ms.azureedge.net/screenshots/652fb77f8c5c48868b8708ef3783777a_2_3aFUZBIgbD9pMqw83Tf1Sf_8DF61E93C598E2B3A07B207901576A772612BA33.jpg'
+				src: 'https://manticoreprod-ms.azureedge.net/screenshots/652fb77f8c5c48868b8708ef3783777a_2_3aFUZBIgbD9pMqw83Tf1Sf_8DF61E93C598E2B3A07B207901576A772612BA33.jpg',
+				type: MediaType.Image
 			},
 			{
 				label: 'Screen 4',
-				src: 'https://manticoreprod-ms.azureedge.net/screenshots/652fb77f8c5c48868b8708ef3783777a_3_3aFUZBIgbD9pMqw83Tf1Sf_A0C0E932766C25F8401334E258F4AF9B2ACE2DBF.jpg'
+				src: 'https://manticoreprod-ms.azureedge.net/screenshots/652fb77f8c5c48868b8708ef3783777a_3_3aFUZBIgbD9pMqw83Tf1Sf_A0C0E932766C25F8401334E258F4AF9B2ACE2DBF.jpg',
+				type: MediaType.Image
 			}
 		]
 	},
@@ -186,15 +210,18 @@ export const items: Array<Project> = [
 		screenshots: [
 			{
 				label: 'Model 1',
-				src: `${base}/Blender/Obj_1.jpg`
+				src: `${base}/Blender/Obj_1.jpg`,
+				type: MediaType.Image
 			},
 			{
 				label: 'Model 2',
-				src: `${base}/Blender/Obj_2.jpg`
+				src: `${base}/Blender/Obj_2.jpg`,
+				type: MediaType.Image
 			},
 			{
 				label: 'Model 3',
-				src: `${base}/Blender/Obj_3.jpg`
+				src: `${base}/Blender/Obj_3.jpg`,
+				type: MediaType.Image
 			}
 		]
 	}

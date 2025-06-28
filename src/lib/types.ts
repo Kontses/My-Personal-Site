@@ -12,6 +12,11 @@ export enum Platform {
 
 export type Icon = `i-${string}-${string}`;
 
+export enum MediaType {
+	Image = 'image',
+	Video = 'video'
+}
+
 export enum ContractType {
 	FullTime = 'Full-time',
 	PartTime = 'Part-time',
@@ -29,7 +34,7 @@ export interface Item<S extends string = string> {
 	logo: Asset;
 	shortDescription: string;
 	description: string;
-	screenshots?: Array<{ src: string; label: string }>;
+	screenshots?: Array<{ src: string; label: string; type?: MediaType }>;
 }
 
 export interface Link {

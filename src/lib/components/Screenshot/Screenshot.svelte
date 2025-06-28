@@ -1,7 +1,8 @@
 <script lang="ts">
 	import UIcon from '../Icon/UIcon.svelte';
+	import { MediaType } from '../../types';
 
-	export let screenshot: { src: string; label: string } | undefined = undefined;
+	export let screenshot: { src: string; label: string; type?: MediaType } | undefined = undefined;
 
 	export let onClose = () => {
 		screenshot = undefined;
@@ -23,7 +24,7 @@
 	>
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
-			class="w-full w-100% md:w-80% lg:w-70% col text-center gap-5 bg-[var(--main)] border-solid border-1px border-[var(--border)] p-5 rounded-xl"
+			class="w-full w-100% md:w-80% lg:w-70% col text-center gap-5 bg-[var(--main)] border-solid border-1px border-[var(--border)] p-5 rounded-xl max-h-[calc(100vh-151px)] overflow-auto"
 			on:click={(e) => e.stopPropagation()}
 			on:keydown
 			on:keypress
@@ -34,17 +35,21 @@
 				<button
 					class="cursor-pointer aspect-square rounded-full border-[var(--border)] border-1px bg-[transparent] border-solid hover:border-[var(--border-hover)]"
 					on:click={onClose}
-					on:keydown
 					on:keypress
 					on:keyup
 				>
 					<UIcon icon={'i-carbon-close'} />
 				</button>
 			</div>
-			<div
-				class="aspect-video col bg-contain w-100% rounded-xl bg-no-repeat bg-contains bg-center"
-				style={`background-image: url(${screenshot?.src});`}
-			/>
+			<div class="col w-full rounded-xl flex-grow max-w-full">
+				{#if screenshot?.type === MediaType.Video}
+					<video class="w-full h-full object-contain" src={screenshot?.src} controls autoplay loop>
+						Your browser does not support the video tag.
+					</video>
+				{:else}
+					<img class="w-full h-full object-contain" src={screenshot?.src} alt={screenshot?.label} />
+				{/if}
+			</div>
 			<p
 				class="font-italic m-t-auto m-x-auto bg-[var(--main-60)] border-solid border-1px border-[var(--border)] p-x-5 p-2 rounded-xl"
 			>
