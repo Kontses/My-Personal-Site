@@ -16,20 +16,19 @@
 	<div
 		class="fixed inset-0px top-51px bg-[#00000080] col-center p-50px"
 		on:click={onClose}
-		on:click={(e) => e.stopPropagation()}
-		on:keydown
-		on:keypress
-		on:keyup
-		on:keyup
+		on:keydown={onClose}
+		on:keypress={onClose}
+		on:keyup={onClose}
+		tabindex="0"
+		role="button"
 	>
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
 			class="w-full w-100% md:w-80% lg:w-70% col text-center gap-5 bg-[var(--main)] border-solid border-1px border-[var(--border)] p-5 rounded-xl max-h-[calc(100vh-151px)] overflow-auto"
 			on:click={(e) => e.stopPropagation()}
-			on:keydown
-			on:keypress
-			on:keyup
-			on:keyup
+			on:keydown={(e) => e.stopPropagation()}
+			on:keypress={(e) => e.stopPropagation()}
+			on:keyup={(e) => e.stopPropagation()}
 		>
 			<div class="self-end">
 				<button
@@ -44,6 +43,7 @@
 			<div class="col w-full rounded-xl flex-grow max-w-full">
 				{#if screenshot?.type === MediaType.Video}
 					<video class="w-full h-full object-contain" src={screenshot?.src} controls autoplay loop>
+						<track kind="captions" srclang="en" label="English" />
 						Your browser does not support the video tag.
 					</video>
 				{:else}

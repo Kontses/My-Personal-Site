@@ -101,6 +101,9 @@
 							<div
 								class="col-center gap-3 overflow-hidden w-100% h-100% rounded-10px"
 								on:click={() => (screenIndex = index)}
+								on:keydown
+								on:keypress
+								on:keyup
 							>
 								{#if item.type === MediaType.Video}
 									<div
