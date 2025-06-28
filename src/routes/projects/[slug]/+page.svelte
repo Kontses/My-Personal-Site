@@ -4,6 +4,7 @@
 	import { title } from '@data/projects';
 
 	import type { Project } from '$lib/types';
+	import { MediaType } from '$lib/types';
 
 	import CardLogo from '$lib/components/Card/CardLogo.svelte';
 	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
@@ -100,15 +101,20 @@
 							<div
 								class="col-center gap-3 overflow-hidden w-100% h-100% rounded-10px"
 								on:click={() => (screenIndex = index)}
-								on:keydown
-								on:keypress
-								on:keyup
-								on:keyup
 							>
-								<div
-									class="screenshot aspect-video bg-contain w-100% cursor-pointer"
-									style={`background-image: url(${item.src});`}
-								/>
+								{#if item.type === MediaType.Video}
+									<div
+										class="col-center aspect-video w-100% cursor-pointer bg-contain bg-no-repeat bg-center"
+										style={`background-image: url(${item.thumbnailSrc || ''}); background-color: ${item.thumbnailSrc ? 'transparent' : 'var(--main-60)'}`}
+									>
+										<UIcon icon="i-carbon-play" classes="text-4em text-[var(--tertiary-text)]" />
+									</div>
+								{:else}
+									<div
+										class="screenshot aspect-video bg-contain w-100% cursor-pointer"
+										style={`background-image: url(${item.src});`}
+									/>
+								{/if}
 								<p class="text-[var(--tertiary-text)] font-300">{item.label}</p>
 							</div>
 						{/each}

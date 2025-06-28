@@ -21,15 +21,16 @@ export const items: Array<Project> = [
 		skills: getSkills('juce', 'c++'),
 		type: 'VST Plugin',
 		screenshots: [
-			{
+		/*	{
 				label: 'Screenshot',
 				src: `${base}/3D-Reverb.png`,
 				type: MediaType.Image
-			},
+			},	*/
 			{
 				label: 'Video',
 				src: `${base}/3d-reverb-drums-demo.mp4`,
-				type: MediaType.Video
+				type: MediaType.Video,
+				thumbnailSrc: `${base}/3D-Reverb.png`
 			}
 		]
 	},
