@@ -76,6 +76,7 @@ const Assets = {
 	unix: a('shell_unix_code.png'),
 	Wordpress: a('wordpress.png'),
 	XML: a('xml.png'),
+	MDX: a('mdx.png'),
 	csharp: a('c-sharp.svg'),
 	json: a('jason.png'),
 	dotnet: a('dotnet.png'),

@@ -6,6 +6,24 @@ import { MediaType } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'escape',
+		color: '#751111FF',
+		description:
+			'Escape is a website for a music team with music/video streaming capabilities and blog features. It is built with React, TypeScript, and Tailwind CSS.',
+		shortDescription:
+			'A website for a music team with music/video streaming capabilities and blog features.',
+		links: [{ to: 'https://aztek-smoky.vercel.app/', label: 'Site' },
+				{ to: 'https://github.com/Kontses/Escape', label: 'GitHub' } ],
+		logo: `${base}/escape.png`,
+		name: 'Escape',
+		period: {
+			from: new Date(2025, 5, 26), to: new Date(2025, 9, 3)
+		},
+		skills: getSkills('ts', 'js', 'react', 'css', 'mdx'),
+		type: 'Web Applications',
+		screenshots: []
+	},
+	{
 		slug: '3D-Reverb',
 		color: '#5e95e3',
 		description:
@@ -49,7 +67,25 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('react', 'ts', 'js', 'css', 'threejs', 'nodejs', 'socketio'),
 		type: 'Web Applications'
-	}, /*
+	}, 
+	{	
+		slug: 'Countdown',
+		color: 'purple',
+		description:
+			'A beautiful and modern web application for creating countdown timers for your important events!<br><br>This project is built with:<ul><li>Frontend: React 18 + TypeScript</li><li>Build Tool: Vite</li><li>Styling: Tailwind CSS + shadcn/ui</li><li>Database: Supabase (PostgreSQL)</li><li>Deployment: Vercel</li><li>Icons: Lucide React</li></ul>',
+		shortDescription:
+			'A beautiful and modern web application for creating countdown timers for your important events!',
+		links: [{ to: 'https://countdown-opal-five.vercel.app//', label: 'Site' },
+				{to: 'https://github.com/Kontses/Countdown', label: 'GitHub'} ],
+		logo: `${base}/countdown.png`,
+		name: 'Countdown',
+		period: {
+			from: new Date(2025, 7, 18), to: new Date(2025, 7, 18)
+		},
+		skills: getSkills('ts', 'js', 'react', 'vite', 'tailwind', 'css', 'nodejs'),
+		type: 'Web Applications'
+	}, 
+	/*
 	{
 		slug: 'Metro Manuals',
 		color: 'blue',
@@ -93,14 +129,15 @@ export const items: Array<Project> = [
 			}
 		]
 	}, */
-	{
+	{	
 		slug: 'portofolio',
 		color: '#5e95e3',
 		description:
 			'This is my personal portfolio website that you are surfing on right now. Its purpose is my personal journey as a developer, a collection of my career projects that have gotten me to where I am, and a showcase of my web development skills.<br><br>The website is built mainly with the svelte library and the use of typescript. It required good knowledge of HTML for formatting, CSS and Sass for style, and JavaScript for script.',
 		shortDescription:
 			'This is my personal portfolio website that you are surfiiing on, I hope you like it!',
-		links: [{ to: 'https://kontses.github.io/My-Personal-Site/', label: 'Site' }, {to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
+		links: [{ to: 'https://kontses.github.io/My-Personal-Site/', label: 'Site' },
+				{ to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
 		logo: Assets.Site,
 		name: 'Portofolio',
 		period: {

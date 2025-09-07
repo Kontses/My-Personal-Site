@@ -183,7 +183,7 @@ export const items = [
 			'WordPress is free and open source software used to create websites, blogs or applications. It is written in PHP and MySQL. It is often used as a content management system. It has many features, including an architecture for additional functionality, and a template system.<br><br>I learned to use wordpress when I worked for the Artsound & Lights e-shop in my internship, in which we had equipped it with the appropriate plugins for e-commerce and other automated actions.',
 		logo: Assets.Wordpress,
 		name: 'Wordpress',
-		category: 'markup-style'
+		category: 'library'
 	}),
 	defineSkill({
 		slug: 'firebase',
@@ -200,6 +200,15 @@ export const items = [
 			'XML is a markup language that contains a set of rules for encoding text electronically. It was designed with an emphasis on simplicity, generality and usefulness on the Internet. It is a text data format, with strong Unicode support for all the world\'s languages.<br><br>I used XML a lot in the Artsound & Lights e-shop, I received several files with tables that recorded all the products of the shop and their information, both from this shop and from all the suppliers of the company. I made an interface for comparisons between them, and I was working out their items as needed, for example comparing prices during a discount period.',
 		logo: Assets.XML,
 		name: 'XML',
+		category: 'markup-style'
+	}),
+	defineSkill({
+		slug: 'mdx',
+		color: 'black',
+		description:
+			'MDX allows you to use JSX in your markdown content. You can import components, such as interactive charts or alerts, and embed them within your content. This makes writing long-form content with components a blast.',
+		logo: Assets.MDX,
+		name: 'MDX',
 		category: 'markup-style'
 	}),
 	defineSkill({
