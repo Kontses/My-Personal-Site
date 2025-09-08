@@ -85,7 +85,6 @@ export const items: Array<Project> = [
 		skills: getSkills('ts', 'js', 'react', 'vite', 'tailwind', 'css', 'nodejs'),
 		type: 'Web Applications'
 	}, 
-	/*
 	{
 		slug: 'Metro Manuals',
 		color: 'blue',
@@ -128,7 +127,7 @@ export const items: Array<Project> = [
 				type: MediaType.Image
 			}
 		]
-	}, */
+	}, 
 	{	
 		slug: 'portofolio',
 		color: '#5e95e3',
