@@ -87,7 +87,6 @@ export interface Education<S extends string = string> extends Item<S> {
 
 export interface Qualification<S extends string = string> extends Item<S> {
 	organization: string;
-	location: string;
 	period: {
 		from: Date;
 		to?: Date;

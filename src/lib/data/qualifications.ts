@@ -5,7 +5,6 @@ export const items: Array<Qualification> = [
 	{
 		degree: 'Certified Svelte Developer',
 		description: '',
-		location: 'Online',
 		logo: Assets.Svelte,
 		name: '',
 		organization: 'Svelte Community',
@@ -15,16 +14,15 @@ export const items: Array<Qualification> = [
 		subjects: ['Svelte', 'SvelteKit', 'JavaScript', 'TypeScript']
 	},
 	{
-		degree: 'Certified TypeScript Professional',
+		degree: 'Ο μικρός Ευκλείδης',
 		description: '',
-		location: 'Online',
-		logo: Assets.TypeScript,
+		logo: Assets.eme,
 		name: '',
-		organization: 'TypeScript Org',
-		period: { from: new Date(2022, 5) },
+		organization: 'Hellenic Mathematical Society',
+		period: { from: new Date(2009, 9) },
 		shortDescription: '',
-		slug: 'ts-pro',
-		subjects: ['TypeScript', 'JavaScript', 'OOP']
+		slug: '',
+		subjects: ['Mathematics']
 	}
 ];
 

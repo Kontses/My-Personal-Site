@@ -21,7 +21,6 @@
 			return (
 				it.degree.toLowerCase().includes(s) ||
 				it.description.toLowerCase().includes(s) ||
-				it.location.toLowerCase().includes(s) ||
 				it.name.toLowerCase().includes(s) ||
 				it.organization.toLowerCase().includes(s) ||
 				it.subjects.some((it) => it.toLowerCase().includes(s))
@@ -67,11 +66,6 @@
 								<div class="text-[1.3em]">{qualification.degree}</div>
 								<div>{qualification.organization}</div>
 								<div class="col text-[0.9em]">
-									<CardDivider />
-									<div class="row items-center gap-2">
-										<UIcon icon="i-carbon-location" />
-										{qualification.location}
-									</div>
 									<CardDivider />
 									<div class="row items-center gap-2">
 										<UIcon icon="i-carbon-calendar" />

@@ -100,7 +100,8 @@ const Assets = {
 	Traxis: a('traxis_engineering_logo.jpg'),
 	Artsound: a('artsound.jpg'),
 	Site: a('home.png'),
-	kchc: a('KCHC.jpg')
+	kchc: a('KCHC.jpg'),
+	eme: a('eme.png')
 	
 };
 
