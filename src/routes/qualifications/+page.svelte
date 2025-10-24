@@ -65,6 +65,7 @@
 								/>
 								<div class="text-[1.3em]">{qualification.degree}</div>
 								<div>{qualification.organization}</div>
+								<div class="text-[0.9em] mt-2">{qualification.shortDescription}</div>
 								<div class="col text-[0.9em]">
 									<CardDivider />
 									<div class="row items-center gap-2">

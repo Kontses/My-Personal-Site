@@ -101,7 +101,8 @@ const Assets = {
 	Artsound: a('artsound.jpg'),
 	Site: a('home.png'),
 	kchc: a('KCHC.jpg'),
-	eme: a('eme.png')
+	eme: a('eme.png'),
+	kagouro: a('kagouro.jpg')
 	
 };
 

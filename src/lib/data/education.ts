@@ -9,7 +9,7 @@ export const items: Array<Education> = [
 		logo: Assets.IHU,
 		name: '',
 		organization: 'International Hellenic University',
-		period: { from: new Date(2016, 1, 3), to: new Date(2025, 1, 1) },
+		period: { from: new Date(2016, 1, 4), to: new Date(2025, 1, 1) },
 		shortDescription: '',
 		slug: 'dummy-education-item',
 		subjects: ['Algorithm', 'Assembly', 'C++', 'C#', 'Java', 'Python', 'Prolog', 'SQL', ]
