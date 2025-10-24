@@ -8,10 +8,10 @@ export const items: Array<Qualification> = [
 		logo: Assets.Svelte,
 		name: '',
 		organization: 'Svelte Community',
-		period: { from: new Date(2023, 10) },
+		period: { from: new Date(2023, 2) },
 		shortDescription: '',
 		slug: 'svelte-developer',
-		subjects: ['Svelte', 'SvelteKit', 'JavaScript', 'TypeScript']
+		subjects: ['Mathematics']
 	},
 	{
 		degree: 'Ο μικρός Ευκλείδης',
@@ -19,7 +19,7 @@ export const items: Array<Qualification> = [
 		logo: Assets.eme,
 		name: '',
 		organization: 'Hellenic Mathematical Society',
-		period: { from: new Date(2009, 9) },
+		period: { from: new Date(2009, 3) },
 		shortDescription: '',
 		slug: '',
 		subjects: ['Mathematics']
