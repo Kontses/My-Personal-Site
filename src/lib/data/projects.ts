@@ -6,6 +6,35 @@ import { MediaType } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'bookfainder',
+		color: '#7c1515ff',
+		description:
+			'Book Fainder is an intelligent book recommendation system that allows users to describe their desired book in natural language (Prompt), such as: "I want Greek poetry".<br><br>The application will select the most suitable book from the database based on relevance, quality and user intent.<br><br>Users can save their favorite books in personal lists (public or private) and add their friends.',
+		shortDescription:
+			'Discover your next book with AI. Describe what you\'re looking for and get personalized book recommendations from real book data.',
+		links: [{ to: 'https://www.bookfainder.com/', label: 'Site' },
+		{ to: 'https://github.com/Kontses/Book-Fainder', label: 'GitHub' }],
+		logo: `${base}/book-fainder.png`,
+		name: 'Book Fainder',
+		period: {
+			from: new Date(2025, 10, 1), to: new Date(2025, 10, 30)
+		},
+		skills: getSkills('ts', 'react', 'css'),
+		type: 'Web Applications',
+		screenshots: [
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/book_fainder_1.png`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/book_fainder_2.png`,
+				type: MediaType.Image
+			}
+		]
+	},
+	{
 		slug: 'escape',
 		color: '#751111FF',
 		description:
@@ -13,7 +42,7 @@ export const items: Array<Project> = [
 		shortDescription:
 			'A website for a music team with music/video streaming capabilities and blog features.',
 		links: [{ to: 'https://aztek-smoky.vercel.app/', label: 'Site' },
-				{ to: 'https://github.com/Kontses/Escape', label: 'GitHub' } ],
+		{ to: 'https://github.com/Kontses/Escape', label: 'GitHub' }],
 		logo: `${base}/escape.png`,
 		name: 'Escape',
 		period: {
@@ -30,7 +59,7 @@ export const items: Array<Project> = [
 			'This is a 3D reverb plugin made with the JUCE DSP module. It is a reverb plugin that allows you to create a 3D reverb effect with Height, Width, and Depth parameters, and a Spectrum Visualizer via Fast Fourier Transform method to see the effect in real time.',
 		shortDescription:
 			'This is a 3D reverb plugin made with the JUCE DSP module.',
-		links: [{ to: 'https://github.com/Kontses/3D-Reverb', label: 'GitHub' } ],
+		links: [{ to: 'https://github.com/Kontses/3D-Reverb', label: 'GitHub' }],
 		logo: `${base}/3D-Reverb.png`,
 		name: '3D Reverb',
 		period: {
@@ -39,11 +68,11 @@ export const items: Array<Project> = [
 		skills: getSkills('juce', 'c++'),
 		type: 'VST Plugin',
 		screenshots: [
-		/*	{
-				label: 'Screenshot',
-				src: `${base}/3D-Reverb.png`,
-				type: MediaType.Image
-			},	*/
+			/*	{
+					label: 'Screenshot',
+					src: `${base}/3D-Reverb.png`,
+					type: MediaType.Image
+				},	*/
 			{
 				label: 'Video',
 				src: `${base}/3d-reverb-drums-demo.mp4`,
@@ -59,7 +88,7 @@ export const items: Array<Project> = [
 			'This is an real-time streaming platform similar to Spotify without counting plays of tracks and listeners with the aim of not comparing artists to each other.<br><br>- Frontend: React with TypeScript, Vite, Tailwind CSS, Shadcn UI, Three.js<br>- Backend: Node.js with Express, Node-cron, Express Fileupload<br>- Database: MongoDB<br>- Authentication: Custom JWT<br>- File Storage: Cloudinary<br>- Real-time communication: Socket.io',
 		shortDescription:
 			'This is a Spotify similar application in React and Node.js',
-		links: [{ to: 'https://laterna-git-master-kontses-projects.vercel.app/', label: 'Site' }, {to: 'https://github.com/Kontses/Laterna', label: 'GitHub'} ],
+		links: [{ to: 'https://laterna-git-master-kontses-projects.vercel.app/', label: 'Site' }, { to: 'https://github.com/Kontses/Laterna', label: 'GitHub' }],
 		logo: `${base}/laterna-logo.png`,
 		name: 'Laterna',
 		period: {
@@ -67,8 +96,8 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('react', 'ts', 'js', 'css', 'threejs', 'nodejs', 'socketio'),
 		type: 'Web Applications'
-	}, 
-	{	
+	},
+	{
 		slug: 'Countdown',
 		color: 'purple',
 		description:
@@ -76,7 +105,7 @@ export const items: Array<Project> = [
 		shortDescription:
 			'A beautiful and modern web application for creating countdown timers for your important events!',
 		links: [{ to: 'https://countdown-opal-five.vercel.app//', label: 'Site' },
-				{to: 'https://github.com/Kontses/Countdown', label: 'GitHub'} ],
+		{ to: 'https://github.com/Kontses/Countdown', label: 'GitHub' }],
 		logo: `${base}/countdown.png`,
 		name: 'Countdown',
 		period: {
@@ -84,7 +113,7 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('ts', 'js', 'react', 'vite', 'tailwind', 'css', 'nodejs'),
 		type: 'Web Applications'
-	}, 
+	},
 	{
 		slug: 'Metro Manuals',
 		color: 'blue',
@@ -92,13 +121,13 @@ export const items: Array<Project> = [
 			'An Android application for scanning QR codes, viewing and management manuals (PDF) in an industrial environment.',
 		shortDescription:
 			'An Android application for scanning QR codes, viewing and management manuals (PDF) in an industrial environment.',
-		links: [{ to: 'https://github.com/Kontses/DocFlutter/releases/tag/v0.1', label: 'GitHub' } ],
+		links: [{ to: 'https://github.com/Kontses/DocFlutter/releases/tag/v0.1', label: 'GitHub' }],
 		logo: `${base}/metro-manuals.png`,
 		name: 'Metro Manuals',
 		period: {
 			from: new Date(2025, 4, 1), to: new Date(2025, 4, 22)
 		},
-		skills: getSkills('dart','flutter', 'c++', 'firebase'),
+		skills: getSkills('dart', 'flutter', 'c++', 'firebase'),
 		type: 'Android Application',
 		screenshots: [
 			{
@@ -127,8 +156,8 @@ export const items: Array<Project> = [
 				type: MediaType.Image
 			}
 		]
-	}, 
-	{	
+	},
+	{
 		slug: 'portofolio',
 		color: '#5e95e3',
 		description:
@@ -136,7 +165,7 @@ export const items: Array<Project> = [
 		shortDescription:
 			'This is my personal portfolio website that you are surfiiing on, I hope you like it!',
 		links: [{ to: 'https://kontses.github.io/My-Personal-Site/', label: 'Site' },
-				{ to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub'} ],
+		{ to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub' }],
 		logo: Assets.Site,
 		name: 'Portofolio',
 		period: {
@@ -159,7 +188,7 @@ export const items: Array<Project> = [
 			'Whyfi is a graphical user interface (GUI) application for Windows, written in Python using the PyQt5 library. The purpose of the application is to scan for available Wi-Fi networks, display their basic information (SSID, BSSID, Signal Strength, Security) and allow you to connect to them, as well as retrieve passwords for saved network profiles.',
 		shortDescription:
 			'Scan and display all available Wi-Fi networks and show passwords.',
-		links: [ {to: 'https://github.com/Kontses/Whyfi', label: 'GitHub'} ],
+		links: [{ to: 'https://github.com/Kontses/Whyfi', label: 'GitHub' }],
 		logo: `${base}/Screenshots/whyfi.png`,
 		name: 'Whyfi',
 		period: {
@@ -198,13 +227,13 @@ export const items: Array<Project> = [
 			'Dank Souls is an indie game project inspired by the (obvious) Dark Souls in a more simplified form mainly to get in touch with the game develoment.<br><br>It\'s built on the Core Engine with graphics using Unreal Machine and the scripts written in Lua.',
 		shortDescription:
 			'An indie third-person action role-playing game!',
-		links: [{to: 'https://www.coregames.com/games/652fb7/daaank-souls', label: 'CORE'} ],
+		links: [{ to: 'https://www.coregames.com/games/652fb7/daaank-souls', label: 'CORE' }],
 		logo: Assets.core,
 		name: 'Dank Souls',
 		period: {
 			from: new Date(2023, 9, 3), to: new Date(2023, 10, 2)
 		},
-		skills: getSkills('unreal','lua'),
+		skills: getSkills('unreal', 'lua'),
 		type: 'Indie Game',
 		screenshots: [
 			{
