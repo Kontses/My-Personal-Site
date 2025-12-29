@@ -322,6 +322,14 @@ export const items = [
 		logo: Assets.supabase,
 		name: 'Supabase',
 		category: 'database'
+	}),
+	defineSkill({
+		slug: 'mongodb',
+		color: 'green',
+		description: 'MongoDB is a NoSQL database that is used to store and manage data in a tabular format. It is a popular tool for data analysis, reporting, and visualization.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
+		logo: Assets.MongoDB,
+		name: 'MongoDB',
+		category: 'database'
 	})
 ] as const;
 
