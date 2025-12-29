@@ -19,7 +19,7 @@ export const items: Array<Project> = [
 		period: {
 			from: new Date(2025, 11, 29), to: new Date(2025, 11, 30)
 		},
-		skills: getSkills('ts', 'react', 'css'),
+		skills: getSkills('ts', 'react', 'css', 'supabase'),
 		type: 'Web Applications',
 		screenshots: [
 			{
@@ -180,7 +180,7 @@ export const items: Array<Project> = [
 		period: {
 			from: new Date(2025, 7, 18), to: new Date(2025, 7, 18)
 		},
-		skills: getSkills('ts', 'js', 'react', 'vite', 'tailwind', 'css', 'nodejs'),
+		skills: getSkills('ts', 'js', 'react', 'vite', 'tailwind', 'css', 'nodejs','supabase'),
 		type: 'Web Applications'
 	},*/
 	{

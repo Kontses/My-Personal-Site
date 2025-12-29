@@ -314,6 +314,14 @@ export const items = [
 		logo: Assets.Excel,
 		name: 'Excel',
 		category: 'database'
+	}),
+	defineSkill({
+		slug: 'supabase',
+		color: 'green',
+		description: 'Supabase is an open-source Backend-as-a-Service (BaaS) platform that provides developers with a ready-to-use backend for building modern applications.<br><br>It offers a PostgreSQL database with real-time features, user authentication, file storage, and serverless functions, simplifying backend development so developers can focus on the frontend. It\'s known for its flexibility, working with any framework, and allowing self-hosting or using their managed service.',
+		logo: Assets.supabase,
+		name: 'Supabase',
+		category: 'database'
 	})
 ] as const;
 

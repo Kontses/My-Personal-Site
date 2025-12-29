@@ -92,6 +92,7 @@ const Assets = {
 	threejs: a('threejs.png'),
 	socketio: a('Socket-io.png'),
 	Excel: a('excel.png'),
+	supabase: a('supabase.png'),
 
 	//icons
 	ConservatoryOfStavroupolis: a('ConservatoryOfStavroupolis.jpg'),
