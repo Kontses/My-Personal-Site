@@ -36,15 +36,15 @@
 		if (!hasShownHint) {
 			clearTimeout(matrixHintTimeout);
 			matrixHintTimeout = setTimeout(() => {
-				$matrixWarningMessage = 'If the rain is too much, you can turn it off';
+				$matrixWarningMessage = 'If the rain is too strong, you can turn it off';
 				$showMatrixWarning = true;
 				localStorage.setItem('matrix-hint-shown', 'true');
 
 				setTimeout(() => {
-					if ($matrixWarningMessage === 'If the rain is too much, you can turn it off') {
+					if ($matrixWarningMessage === 'If the rain is too strong, you can turn it off') {
 						$showMatrixWarning = false;
 					}
-				}, 5000);
+				}, 7000);
 			}, 3000);
 		}
 	};
