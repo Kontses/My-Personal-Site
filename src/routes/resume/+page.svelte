@@ -1,18 +1,20 @@
 <script>
-	import { data, title, lastModified } from '@data/resume';
+	import { data as cvUrl, title } from '@data/resume';
 
 	import Chip from '$lib/components/Chip/Chip.svelte';
 	import CommonPage from '$lib/components/CommonPage.svelte';
+
+	export let data;
 </script>
 
 <CommonPage {title}>
 	<div class="resume">
-		{#if data}
+		{#if cvUrl}
 			<div class="resume-content">
-				<a href={data} download>
+				<a href={cvUrl} download>
 					<Chip size={'1.25em'}>Download</Chip>
 				</a>
-				<p class="last-edit-text">Last Edit: {lastModified}</p>
+				<p class="last-edit-text">Last Edit: {data.lastModified}</p>
 			</div>
 		{:else}
 			<Chip>Ooops! no CV at the moment.</Chip>
