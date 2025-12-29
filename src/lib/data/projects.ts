@@ -6,6 +6,35 @@ import { MediaType } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'nbg-analytics',
+		color: '#52aac7ff',
+		description:
+			'A modern web application for the analysis and visualization of banking transactions from the National Bank of Greece (NBG). The application allows users to upload Excel files (.xlsx) exported from e-banking and view statistics and graphs.',
+		shortDescription:
+			'A modern web application for the analysis and visualization of banking transactions from the National Bank of Greece (NBG).',
+		links: [{ to: 'https://nbg-analytics.vercel.app/', label: 'Site' },
+		{ to: 'https://github.com/Kontses/NBG-Analytics', label: 'GitHub' }],
+		logo: `${base}/nbg-icon.png`,
+		name: 'NBG Analytics',
+		period: {
+			from: new Date(2025, 11, 29), to: new Date(2025, 11, 30)
+		},
+		skills: getSkills('ts', 'react', 'css'),
+		type: 'Web Applications',
+		screenshots: [
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/nbg_1.jpg`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/nbg_2.jpg`,
+				type: MediaType.Image
+			}
+		]
+	},
+	{
 		slug: 'bookfainder',
 		color: '#7c1515ff',
 		description:
@@ -17,7 +46,7 @@ export const items: Array<Project> = [
 		logo: `${base}/book-fainder.png`,
 		name: 'Book Fainder',
 		period: {
-			from: new Date(2025, 10, 1), to: new Date(2025, 10, 30)
+			from: new Date(2025, 10, 1), to: new Date(2025, 11, 29)
 		},
 		skills: getSkills('ts', 'react', 'css'),
 		type: 'Web Applications',
