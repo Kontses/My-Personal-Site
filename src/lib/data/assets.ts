@@ -91,7 +91,7 @@ const Assets = {
 	kali: a('kali.png'),
 	threejs: a('threejs.png'),
 	socketio: a('Socket-io.png'),
-
+	Excel: a('excel.png'),
 
 	//icons
 	ConservatoryOfStavroupolis: a('ConservatoryOfStavroupolis.jpg'),
@@ -103,7 +103,7 @@ const Assets = {
 	kchc: a('KCHC.jpg'),
 	eme: a('eme.png'),
 	kagouro: a('kagouro.jpg')
-	
+
 };
 
 export default Assets;

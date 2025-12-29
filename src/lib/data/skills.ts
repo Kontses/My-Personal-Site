@@ -105,7 +105,7 @@ export const items = [
 		logo: Assets.CSS,
 		name: 'CSS',
 		category: 'markup-style'
-		
+
 	}),
 	defineSkill({
 		slug: 'dart',
@@ -115,7 +115,7 @@ export const items = [
 		logo: Assets.Dart,
 		name: 'Dart',
 		category: 'pro-lang'
-		
+
 	}),
 	defineSkill({
 		slug: 'flutter',
@@ -125,7 +125,7 @@ export const items = [
 		logo: Assets.Flutter,
 		name: 'Flutter',
 		category: 'framework'
-		
+
 	}),
 	defineSkill({
 		slug: 'sass',
@@ -306,6 +306,14 @@ export const items = [
 		logo: Assets.Photoshop,
 		name: 'Photoshop',
 		category: 'soft'
+	}),
+	defineSkill({
+		slug: 'Excel',
+		color: 'green',
+		description: 'Excel is a spreadsheet application that is used to create and manage data in a tabular format. It is a popular tool for data analysis, reporting, and visualization.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
+		logo: Assets.Excel,
+		name: 'Excel',
+		category: 'database'
 	})
 ] as const;
 

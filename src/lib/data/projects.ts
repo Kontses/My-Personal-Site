@@ -35,6 +35,46 @@ export const items: Array<Project> = [
 		]
 	},
 	{
+		slug: 'afc',
+		color: '#21157cff',
+		description:
+			'A modern, fast and offline web application for reporting and monitoring faults in ATIMs and GATEs systems.<br><br>Designed to facilitate the daily workflow of field engineers, providing fast data entry, automatic suggestions and powerful reporting capabilities.',
+		shortDescription:
+			'A modern, fast, and offline-capable web application for reporting and monitoring faults in ATIMs and GATEs systems.',
+		links: [{ to: 'https://afc-report.vercel.app/', label: 'Site' },
+		{ to: 'https://afc-report.vercel.app/dashboard', label: 'Dashboard' },
+		{ to: 'https://github.com/Kontses/AFC-Report', label: 'GitHub' }],
+		logo: `${base}/traxis_logo_2.png`,
+		name: 'AFC Report',
+		period: {
+			from: new Date(2025, 11, 8), to: new Date(2025, 11, 28)
+		},
+		skills: getSkills('ts', 'react', 'css', 'Excel'),
+		type: 'Web Applications',
+		screenshots: [
+			{
+				label: 'Form',
+				src: `${base}/Screenshots/afc_1.jpg`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Dashboard',
+				src: `${base}/Screenshots/afc_2.jpg`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Dashboard',
+				src: `${base}/Screenshots/afc_3.jpg`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Data',
+				src: `${base}/Screenshots/afc_4.jpg`,
+				type: MediaType.Image
+			}
+		]
+	},
+	{
 		slug: 'escape',
 		color: '#751111FF',
 		description:
@@ -97,7 +137,7 @@ export const items: Array<Project> = [
 		skills: getSkills('react', 'ts', 'js', 'css', 'threejs', 'nodejs', 'socketio'),
 		type: 'Web Applications'
 	},
-	{
+	/*	{
 		slug: 'Countdown',
 		color: 'purple',
 		description:
@@ -113,7 +153,7 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('ts', 'js', 'react', 'vite', 'tailwind', 'css', 'nodejs'),
 		type: 'Web Applications'
-	},
+	},*/
 	{
 		slug: 'Metro Manuals',
 		color: 'blue',
