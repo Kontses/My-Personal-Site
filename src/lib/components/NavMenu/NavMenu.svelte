@@ -5,6 +5,7 @@
 	import { items } from '@data/navbar';
 	import { writable } from 'svelte/store';
 	import * as HOME from '@data/home';
+	import { browser } from '$app/environment';
 
 	import { base } from '$app/paths';
 	import UIcon from '../Icon/UIcon.svelte';
@@ -16,6 +17,38 @@
 	const showMatrixWarning = writable(false);
 	const matrixWarningMessage = writable('');
 
+	let matrixHintTimeout: any;
+
+	$: checkMatrixHint(currentRoute, $isMatrixVisible);
+
+	const checkMatrixHint = (route: string, isVisible: boolean) => {
+		if (!browser) return;
+
+		const isHome = route === '/' || route === `${base}/`;
+
+		if (!isHome || !isVisible) {
+			clearTimeout(matrixHintTimeout);
+			return;
+		}
+
+		const hasShownHint = localStorage.getItem('matrix-hint-shown');
+
+		if (!hasShownHint) {
+			clearTimeout(matrixHintTimeout);
+			matrixHintTimeout = setTimeout(() => {
+				$matrixWarningMessage = 'If the rain is too much, you can turn it off';
+				$showMatrixWarning = true;
+				localStorage.setItem('matrix-hint-shown', 'true');
+
+				setTimeout(() => {
+					if ($matrixWarningMessage === 'If the rain is too much, you can turn it off') {
+						$showMatrixWarning = false;
+					}
+				}, 5000);
+			}, 3000);
+		}
+	};
+
 	const toggleExpanded = (v?: boolean) => {
 		if (typeof v === 'undefined') {
 			expanded = !expanded;
@@ -26,7 +59,7 @@
 
 	const handleThemeToggle = () => {
 		if ($theme && $isMatrixVisible) {
-			$matrixWarningMessage = 'No no, we don\'t do that when it\'s rainning';
+			$matrixWarningMessage = "No no, we don't do that when it's rainning";
 			$showMatrixWarning = true;
 			setTimeout(() => ($showMatrixWarning = false), 3000); // Hide after 3 seconds
 		} else {
@@ -36,7 +69,7 @@
 
 	const handleMatrixToggle = () => {
 		if (!$theme && !$isMatrixVisible) {
-			$matrixWarningMessage = 'Don\'t start the rain when we are enjoying the light';
+			$matrixWarningMessage = "Don't start the rain when we are enjoying the light";
 			$showMatrixWarning = true;
 			setTimeout(() => ($showMatrixWarning = false), 3000); // Hide after 3 seconds
 		} else {
@@ -133,7 +166,10 @@
 		<div class="col gap-2 m-t-7">
 			<button
 				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)]"
-				on:click={() => { handleMatrixToggle(); toggleExpanded(false); }}
+				on:click={() => {
+					handleMatrixToggle();
+					toggleExpanded(false);
+				}}
 			>
 				{#if $isMatrixVisible}
 					<UIcon icon="i-carbon-rain" />
@@ -153,7 +189,10 @@
 			</a>
 			<button
 				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)]"
-				on:click={() => { handleThemeToggle(); toggleExpanded(false); }}
+				on:click={() => {
+					handleThemeToggle();
+					toggleExpanded(false);
+				}}
 			>
 				{#if $theme}
 					<UIcon icon="i-carbon-moon" />
