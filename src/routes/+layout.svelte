@@ -6,7 +6,7 @@
 	import { onHydrated, theme } from '$lib/stores/theme';
 	import { isMatrixVisible } from '$lib/stores/matrix'; // Import the store
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
+	import { goto, beforeNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { base } from '$app/paths';
 	import { blur } from 'svelte/transition';
@@ -26,12 +26,32 @@
 
 	let isVisible = true; // Control visibility manually for scroll transitions
 	let lastScrollTime = 0;
-	const scrollDelay = 1000; // 1 second delay between automatic navigations
+	const scrollDelay = 2500; // Increased delay to cover the full transition cycle (Out + In)
+
+	beforeNavigate(async ({ to, cancel }) => {
+		if (!to || !to.url) return;
+		if (to.url.pathname === $page.url.pathname) return;
+
+		// If content is hidden (transitioning), allow the navigation to proceed
+		// This handles the 'goto' call that happens inside the timeout below
+		if (!isVisible) return;
+
+		// Otherwise, intercept:
+		cancel();
+
+		// Start manual sequence
+		isVisible = false; // Trigger Blur Out
+
+		setTimeout(async () => {
+			await goto(to.url.href);
+			isVisible = true; // Trigger Blur In
+		}, 1200); // 1.2s wait to ensure 1s blur out is fully complete
+	});
 
 	const handleScroll = async (event: WheelEvent) => {
 		const now = Date.now();
 		if (now - lastScrollTime < scrollDelay) return;
-		// If we are already transitioning (invisible), don't trigger again
+		// If we are transitioning (invisible), ignore scroll
 		if (!isVisible) return;
 
 		const isScrollingDown = event.deltaY > 0;
@@ -75,12 +95,8 @@
 
 		if (targetRoute) {
 			lastScrollTime = now;
-			isVisible = false; // Trigger Fade Out
-			// Wait for the transition duration + buffer
-			setTimeout(async () => {
-				await goto(`${base}${targetRoute}`);
-				isVisible = true; // Trigger Fade In (new page)
-			}, 1000); // Match this to the blur duration
+			// Just trigger navigation, beforeNavigate will handle the transition
+			goto(`${base}${targetRoute}`);
 		}
 	};
 
