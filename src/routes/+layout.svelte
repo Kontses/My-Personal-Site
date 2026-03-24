@@ -5,6 +5,7 @@
 	import '$lib/index.scss';
 	import { onHydrated, theme } from '$lib/stores/theme';
 	import { isMatrixVisible } from '$lib/stores/matrix'; // Import the store
+	import { isTypewriterActive, typewriterKey } from '$lib/stores/typewriter'; // Import the store
 	import { onMount } from 'svelte';
 	import { goto, beforeNavigate } from '$app/navigation';
 	import { page } from '$app/stores';
@@ -67,6 +68,23 @@
 		const isAtTop = scrollTop <= 5;
 
 		const currentPath = $page.url.pathname;
+		
+		// Εάν γράφει η γραφομηχανή και ο χρήστης κάνει scroll down στην αρχική
+		if (currentPath === '/' && isScrollingDown && $isTypewriterActive) {
+			$isTypewriterActive = false; // Ολοκλήρωση κειμένου
+			
+			// Δίνουμε 1 δευτερόλεπτο "poise" πριν επιτραπεί το επόμενο scroll πλοήγησης
+			// Αυτό αποτρέπει την αλλαγή σελίδας από το ίδιο physical scroll wheel movement.
+			lastScrollTime = now - scrollDelay + 1000; 
+			return;
+		}
+
+		// Εάν ο χρήστης κάνει scroll up στην αρχική (ακόμα και αν είναι στην κορυφή)
+		if (currentPath === '/' && isScrollingUp && isAtTop) {
+			$typewriterKey += 1; // Επαναφορά (reset) της γραφομηχανής
+			lastScrollTime = now - scrollDelay + 1000; // Μικρό anti-spam
+			return;
+		}
 
 		// Find current route index
 		const normalizedPath =

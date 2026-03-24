@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import Carrousel from '$lib/components/Carrousel/Carrousel.svelte';
 	import Icon from '$lib/components/Icon/Icon.svelte';
 	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
@@ -9,8 +10,60 @@
 	import { useTitle } from '$lib/utils/helpers';
 	import { isBlank } from '@riadh-adrani/utils';
 	import { getPlatfromIcon } from '$lib/utils';
+	import { isTypewriterActive, typewriterKey } from '$lib/stores/typewriter';
 
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+
+	let displayedDescription = '';
+	let isTyping = false;
+	let timeoutId: ReturnType<typeof setTimeout>;
+
+	const startTypewriter = () => {
+		clearTimeout(timeoutId);
+		displayedDescription = '';
+		let i = 0;
+		const speed = 40; // ms ανά χαρακτήρα
+		
+		isTyping = true;
+		$isTypewriterActive = true;
+
+		const typeWriter = () => {
+			if (!isTyping) return;
+			
+			if (i < description.length) {
+				displayedDescription += description.charAt(i);
+				i++;
+				timeoutId = setTimeout(typeWriter, speed);
+			} else {
+				$isTypewriterActive = false;
+				isTyping = false;
+			}
+		};
+		
+		timeoutId = setTimeout(typeWriter, 100);
+	};
+
+	$: if ($typewriterKey > 0) {
+		startTypewriter();
+		setTimeout(() => { $typewriterKey = 0; }, 0);
+	}
+
+	onMount(() => {
+		const initTimeoutId = setTimeout(startTypewriter, 400); // Initial 400ms + 100ms = 500ms
+		
+		return () => {
+			isTyping = false;
+			$isTypewriterActive = false;
+			clearTimeout(timeoutId);
+			clearTimeout(initTimeoutId);
+		};
+	});
+
+	$: if (!$isTypewriterActive && isTyping) {
+		displayedDescription = description;
+		isTyping = false;
+		clearTimeout(timeoutId);
+	}
 
 	const isEmail = (email: string): boolean => {
 		const reg =
@@ -29,9 +82,19 @@
 >
 	<div class="md:flex-1 gap-10px">
 		<MainTitle classes="md:text-left ">{name} {lastName},</MainTitle>
-		<p class="text-[var(--tertiary-text)]  text-center md:text-left text-[1.2em] font-extralight">
-			{description}
-		</p>
+		<div class="grid relative">
+			<!-- Αόρατο πλήρες κείμενο για να κρατάει τον χώρο σταθερό (layout lock) -->
+			<p class="invisible text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1">
+				{description}
+			</p>
+			<!-- Ορατό κείμενο που πληκτρολογείται -->
+			<p class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1 z-10 m-0">
+				{displayedDescription}
+				{#if isTyping && displayedDescription.length < description.length}
+					<span class="cursor">|</span>
+				{/if}
+			</p>
+		</div>
 		<div class="row justify-center md:justify-start p-y-15px p-x-0px gap-2">
 			{#each links as link}
 				<a
@@ -71,6 +134,16 @@
 
 	.animate-bounce {
 		animation: bounce 2s infinite;
+	}
+
+	.cursor {
+		animation: blink 1s step-end infinite;
+		font-weight: bold;
+		color: var(--accent-text);
+	}
+
+	@keyframes blink {
+		50% { opacity: 0; }
 	}
 
 	@keyframes bounce {
