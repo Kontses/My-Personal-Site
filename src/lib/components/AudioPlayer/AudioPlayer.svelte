@@ -1,52 +1,36 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { isMatrixVisible } from '$lib/stores/matrix';
 	import { base } from '$app/paths';
+	import * as audioStore from '$lib/stores/audio';
 
 	export let src = `${base}/clubbed%20to%20death.mp3`;
 
-	let audio: HTMLAudioElement;
-	let isPlaying = false;
-	let volume = 0.5;
+	const { isPlaying, volume, analyserStore } = audioStore;
 
-	// Analyzer state
-	let audioContext: AudioContext;
-	let analyser: AnalyserNode;
-	let dataArray: Uint8Array;
-	let source: MediaElementAudioSourceNode;
+	// Local state for visualization
 	let canvas: HTMLCanvasElement;
 	let animationId: number;
+	let dataArray: Uint8Array;
 
-	const initAnalyzer = () => {
-		try {
-			if (audioContext) return;
-
-			audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-			analyser = audioContext.createAnalyser();
-			
-			// Try to connect, catch if already connected
-			source = audioContext.createMediaElementSource(audio);
-			source.connect(analyser);
-			analyser.connect(audioContext.destination);
-
-			analyser.fftSize = 128; // Increased for better resolution
-			const bufferLength = analyser.frequencyBinCount;
-			dataArray = new Uint8Array(bufferLength) as any;
-
-			console.log("Analyzer initialized");
-			draw();
-		} catch (e) {
-			console.error("Analyzer init failed:", e);
-		}
-	};
+	// Start playing when matrix becomes visible (after scroll)
+	$: if ($isMatrixVisible && !$isPlaying) {
+		audioStore.startPlaying();
+	}
 
 	const draw = () => {
-		if (!canvas) return;
+		if (!canvas || !$analyserStore) return;
 		const ctx = canvas.getContext('2d');
 		if (!ctx) return;
 
 		animationId = requestAnimationFrame(draw);
-		analyser.getByteFrequencyData(dataArray as any);
+		
+		if (!dataArray || dataArray.length !== $analyserStore.frequencyBinCount) {
+			dataArray = new Uint8Array($analyserStore.frequencyBinCount) as any;
+		}
+		
+		$analyserStore.getByteFrequencyData(dataArray as any);
 
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -65,62 +49,37 @@
 		}
 	};
 
-	const togglePlay = () => {
-		if (!audio) return;
-		if (isPlaying) {
-			audio.pause();
-			isPlaying = false;
-		} else {
-			if (!audioContext) initAnalyzer();
-			if (audioContext && audioContext.state === 'suspended') audioContext.resume();
-			
-			audio.play().then(() => {
-				isPlaying = true;
-			}).catch(e => console.error("Play failed:", e));
-		}
-	};
-
-	const changeVolume = (e: Event) => {
-		volume = parseFloat((e.target as HTMLInputElement).value);
-		if (audio) {
-			audio.volume = volume;
-		}
-	};
-
-	// Determine the volume icon based on current volume level
-	$: volumeIcon = (volume === 0 
-		? "i-carbon-volume-mute" 
-		: volume < 0.5 
-			? "i-carbon-volume-down" 
-			: "i-carbon-volume-up") as `i-${string}-${string}`;
+	// Restart draw if analyser becomes available
+	$: if ($analyserStore && canvas && !animationId) {
+		draw();
+	}
 
 	onMount(() => {
-		if (audio) {
-			audio.volume = volume;
-			audio.onplay = () => { isPlaying = true; };
-			audio.onpause = () => { isPlaying = false; };
-		}
+		audioStore.initAudio(src);
+		if ($analyserStore) draw();
 	});
 
 	onDestroy(() => {
-		if (audio) {
-			audio.pause();
-		}
 		if (animationId) {
 			cancelAnimationFrame(animationId);
 		}
 	});
+
+	// Determine the volume icon based on current volume level
+	$: volumeIcon = ($volume === 0 
+		? "i-carbon-volume-mute" 
+		: $volume < 0.5 
+			? "i-carbon-volume-down" 
+			: "i-carbon-volume-up") as `i-${string}-${string}`;
 </script>
 
 <div class="audio-player">
-	<audio bind:this={audio} {src} loop crossorigin="anonymous"></audio>
-	
 	<div class="analyzer-container" title="Audio Analyzer">
 		<canvas bind:this={canvas} width="60" height="24"></canvas>
 	</div>
 
-	<button class="control-btn play-btn" on:click={togglePlay} title={isPlaying ? "Pause Music" : "Play Music"}>
-		{#if isPlaying}
+	<button class="control-btn play-btn" on:click={audioStore.togglePlay} title={$isPlaying ? "Pause Music" : "Play Music"}>
+		{#if $isPlaying}
 			<UIcon icon="i-carbon-pause-outline" />
 		{:else}
 			<UIcon icon="i-carbon-play-outline" />
@@ -137,12 +96,12 @@
 				<input 
 					type="range" 
 					min="0" max="1" step="0.01" 
-					bind:value={volume} 
-					on:input={changeVolume} 
+					value={$volume} 
+					on:input={(e) => audioStore.updateVolume(parseFloat(e.currentTarget.value))} 
 					class="volume-slider" 
 					title="Volume"
 				/>
-				<div class="volume-progress" style="height: {volume * 100}%"></div>
+				<div class="volume-progress" style="height: {$volume * 100}%"></div>
 			</div>
 		</div>
 	</div>

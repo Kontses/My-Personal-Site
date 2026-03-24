@@ -14,12 +14,40 @@
 	import { isMatrixVisible } from '$lib/stores/matrix';
 
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { base } from '$app/paths';
 
 	let displayedDescription = '';
 	let isTyping = false;
 	let timeoutId: ReturnType<typeof setTimeout>;
 
-	const startTypewriter = () => {
+	let typingAudio: HTMLAudioElement;
+	let nextLineAudio: HTMLAudioElement;
+	let audioStarted = false;
+
+	const ensureAudioPlays = async () => {
+		if (isTyping && typingAudio && typingAudio.paused) {
+			try {
+				await typingAudio.play();
+				audioStarted = true;
+				
+				// Warm up nextLineAudio to unlock it for later
+				if (nextLineAudio) {
+					const vol = nextLineAudio.volume;
+					nextLineAudio.volume = 0;
+					nextLineAudio.play().then(() => {
+						setTimeout(() => {
+							nextLineAudio.pause();
+							nextLineAudio.volume = vol;
+						}, 10);
+					}).catch(() => {});
+				}
+			} catch (e) {
+				// Still blocked
+			}
+		}
+	};
+
+	const startTypewriter = async () => {
 		clearTimeout(timeoutId);
 		displayedDescription = '';
 		let i = 0;
@@ -27,17 +55,42 @@
 		
 		isTyping = true;
 		$isTypewriterActive = true;
+		audioStarted = false;
+
+		// Start typing sound (loop)
+		if (typingAudio) {
+			typingAudio.currentTime = 0;
+			typingAudio.play().then(() => {
+				audioStarted = true;
+			}).catch((err) => {
+				audioStarted = false;
+				console.warn("Typing sound blocked by browser policy. Interaction required.", err);
+			});
+		}
 
 		const typeWriter = () => {
-			if (!isTyping) return;
+			if (!isTyping) {
+				if (typingAudio) typingAudio.pause();
+				return;
+			}
 			
 			if (i < description.length) {
-				displayedDescription += description.charAt(i);
+				const char = description.charAt(i);
+				
+				// Play next line sound 40ms (1 check ahead) before period, punctuation or newline
+				const nextChar = description.charAt(i + 1);
+				if ((nextChar === '.' || nextChar === '!' || nextChar === '?' || nextChar === '\n') && nextLineAudio) {
+					nextLineAudio.currentTime = 0;
+					nextLineAudio.play().catch(() => {});
+				}
+
+				displayedDescription += char;
 				i++;
 				timeoutId = setTimeout(typeWriter, speed);
 			} else {
 				$isTypewriterActive = false;
 				isTyping = false;
+				if (typingAudio) typingAudio.pause();
 			}
 		};
 		
@@ -53,17 +106,27 @@
 		$isMatrixVisible = false; // Disable Matrix Rain initially on the homepage
 		const initTimeoutId = setTimeout(startTypewriter, 400); // Initial 400ms + 100ms = 500ms
 		
+		// Rescue logic for autoplay policy
+		window.addEventListener('click', ensureAudioPlays);
+		window.addEventListener('keydown', ensureAudioPlays);
+		window.addEventListener('touchstart', ensureAudioPlays);
+		
 		return () => {
 			isTyping = false;
 			$isTypewriterActive = false;
+			if (typingAudio) typingAudio.pause();
 			clearTimeout(timeoutId);
 			clearTimeout(initTimeoutId);
+			window.removeEventListener('click', ensureAudioPlays);
+			window.removeEventListener('keydown', ensureAudioPlays);
+			window.removeEventListener('touchstart', ensureAudioPlays);
 		};
 	});
 
 	$: if (!$isTypewriterActive && isTyping) {
 		displayedDescription = description;
 		isTyping = false;
+		if (typingAudio) typingAudio.pause();
 		clearTimeout(timeoutId);
 	}
 
@@ -86,11 +149,11 @@
 		<MainTitle classes="md:text-left ">{name} {lastName},</MainTitle>
 		<div class="grid relative">
 			<!-- Αόρατο πλήρες κείμενο για να κρατάει τον χώρο σταθερό (layout lock) -->
-			<p class="invisible text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1">
+			<p class="invisible text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1" style="white-space: pre-line;">
 				{description}
 			</p>
 			<!-- Ορατό κείμενο που πληκτρολογείται -->
-			<p class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1 z-10 m-0">
+			<p class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1 z-10 m-0" style="white-space: pre-line;">
 				{displayedDescription}
 				{#if isTyping && displayedDescription.length < description.length}
 					<span class="cursor">|</span>
@@ -119,6 +182,9 @@
 		<span class="text-0.9em font-300 tracking-wider">SCROLL DOWN</span>
 	</div>
 </div>
+
+<audio bind:this={typingAudio} src={`${base}/typing%20effect.mp3`} loop></audio>
+<audio bind:this={nextLineAudio} src={`${base}/next%20line.mp3`}></audio>
 
 <style>
 	.scroll-down-hint {
