@@ -79,8 +79,22 @@
 			return;
 		}
 
-		// Εάν ο χρήστης κάνει scroll up στην αρχική (ακόμα και αν είναι στην κορυφή)
-		if (currentPath === '/' && isScrollingUp && isAtTop) {
+		// Εάν η γραφομηχανή τελείωσε, το Matrix είναι ΚΛΕΙΣΤΟ, και ο χρήστης κάνει scroll down
+		if (currentPath === '/' && isScrollingDown && !$isTypewriterActive && !$isMatrixVisible && isAtBottom) {
+			$isMatrixVisible = true; // Ενεργοποίηση Matrix Rain
+			lastScrollTime = now - scrollDelay + 1000; 
+			return;
+		}
+
+		// Εάν το Matrix είναι ΑΝΟΙΧΤΟ και ο χρήστης κάνει scroll up
+		if (currentPath === '/' && isScrollingUp && !$isTypewriterActive && $isMatrixVisible && isAtTop) {
+			$isMatrixVisible = false; // Απενεργοποίηση Matrix Rain
+			lastScrollTime = now - scrollDelay + 1000; 
+			return;
+		}
+
+		// Εάν το Matrix είναι ΚΛΕΙΣΤΟ και ο χρήστης κάνει scroll up
+		if (currentPath === '/' && isScrollingUp && isAtTop && !$isMatrixVisible) {
 			$typewriterKey += 1; // Επαναφορά (reset) της γραφομηχανής
 			lastScrollTime = now - scrollDelay + 1000; // Μικρό anti-spam
 			return;

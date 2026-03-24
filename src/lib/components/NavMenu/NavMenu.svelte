@@ -10,6 +10,7 @@
 	import { base } from '$app/paths';
 	import UIcon from '../Icon/UIcon.svelte';
 	import Icon from '../Icon/Icon.svelte';
+	import AudioPlayer from '../AudioPlayer/AudioPlayer.svelte';
 
 	$: currentRoute = $page.url.pathname;
 
@@ -103,9 +104,9 @@
 			{/each}
 		</div>
 		<div
-			class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"
+			class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-auto gap-1 text-1.15em"
 		>
-			<div class="row hidden md:flex">
+			<div class="row hidden md:flex items-center">
 				<button
 					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
 					on:click={() => handleMatrixToggle()}
@@ -135,6 +136,8 @@
 						<UIcon icon="i-carbon-sun" />
 					{/if}
 				</button>
+				<div class="h-full border-l border-white/10 mx-2"></div>
+				<AudioPlayer />
 			</div>
 			<div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer">
 				<!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -163,7 +166,11 @@
 				</a>
 			{/each}
 		</div>
-		<div class="col gap-2 m-t-7">
+		<div class="col gap-4 m-t-7 px-6">
+			<div class="row items-center gap-4 text-[var(--secondary-text)]">
+				<AudioPlayer />
+				<span class="text-0.9em">Background Music</span>
+			</div>
 			<button
 				class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)]"
 				on:click={() => {
@@ -211,8 +218,7 @@
 		display: flex;
 		justify-content: center; /* This will center the 'nav.container' within the .nav-menu div */
 		width: 100%; /* Ensure .nav-menu takes full width of its parent (.top-bar) */
-		/* position: sticky, top, z-index, height, border-bottom, background-color are handled by .top-bar in +layout.svelte */
-		/* padding: 0px 10px; Removed to let the inner .container handle padding */
+		position: relative;
 		height: 50px; /* Keep height for alignment if necessary, or inherit/auto */
 
 		&-item {

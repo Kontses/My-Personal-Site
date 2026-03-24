@@ -11,6 +11,7 @@
 	import { isBlank } from '@riadh-adrani/utils';
 	import { getPlatfromIcon } from '$lib/utils';
 	import { isTypewriterActive, typewriterKey } from '$lib/stores/typewriter';
+	import { isMatrixVisible } from '$lib/stores/matrix';
 
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
 
@@ -49,6 +50,7 @@
 	}
 
 	onMount(() => {
+		$isMatrixVisible = false; // Disable Matrix Rain initially on the homepage
 		const initTimeoutId = setTimeout(startTypewriter, 400); // Initial 400ms + 100ms = 500ms
 		
 		return () => {
