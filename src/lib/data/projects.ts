@@ -6,6 +6,25 @@ import { MediaType } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'greek-legislation-wiki',
+		color: '#05214E',
+		description:
+			'An advanced, automated Legal Information System for Greek legislation, leveraging Artificial Intelligence (LLMs) for document analysis and a Premium B2B web interface for exploration, visualization and navigation of the legal map of Greece.',
+		shortDescription:
+			'An advanced, automated Legal Information System for Greek legislation, leveraging Artificial Intelligence (LLMs) for document analysis and a Premium B2B web interface for exploration, visualization and navigation of the legal map of Greece.',
+		links: [{ to: 'https://greek-legislation-wiki-ui.vercel.app/', label: 'Site' },
+		{ to: 'https://github.com/Kontses/Greek-Legislation-Wiki-UI', label: 'GitHub' }],
+		logo: `${base}/greek-legislation-wiki.png`,
+		name: 'Greek Legislation Wiki',
+		period: {
+			from: new Date(2026, 4, 18), to: new Date(2026, 4, 20)
+		},
+		skills: getSkills('ts', 'react', 'css', 'nextjs', 'threejs', 'js'),
+		type: 'Web Applications',
+		screenshots: [
+		]
+	},
+	{
 		slug: 'nbg-analytics',
 		color: '#52aac7ff',
 		description:
