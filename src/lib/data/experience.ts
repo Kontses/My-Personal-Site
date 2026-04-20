@@ -4,14 +4,29 @@ import { ContractType, type Experience } from '../types';
 
 export const items: Array<Experience> = [
 	{
+		slug: 'traxis-2',
+		company: 'Traxis Engineering',
+		description: '',
+		contract: ContractType.Contract,
+		type: 'Project Engineer',
+		location: 'Thessaloniki',
+		period: { from: new Date(2025, 11, 1) },
+		skills: getSkills(),
+		name: 'Project Engineer',
+		color: 'red',
+		links: [{ to: 'https://traxis.gr/', label: 'Traxis' }],
+		logo: Assets.Traxis,
+		shortDescription: 'AFC Commisioning Engineering'
+	},
+	{
 		slug: 'traxis',
 		company: 'Traxis Engineering',
 		description: 'The ATS Support Engineer is a full-time role based for the Metro of Thessaloniki. Daily tasks include supporting the Automatic Train Supervision (ATS) systems, troubleshooting technical problems, carrying out system maintenance and ensuring the smooth operation of the railway systems at Metro\'s Operations Control Centre (OCC).',
 		contract: ContractType.Contract,
 		type: 'ATS Support Engineer',
 		location: 'Thessaloniki',
-		period: { from: new Date( 2024, 10, 26) },
-		skills: getSkills('unix'),
+		period: { from: new Date(2024, 10, 26), to: new Date(2025, 10, 31) },
+		skills: getSkills('unix', 'excel'),
 		name: 'IT Support Engineer',
 		color: 'red',
 		links: [{ to: 'https://traxis.gr/', label: 'Traxis' }],
