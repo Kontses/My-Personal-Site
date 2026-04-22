@@ -18,7 +18,7 @@ const categories = [
 	defineSkillCategory({ name: 'Dev Tools', slug: 'devtools' }),
 	defineSkillCategory({ name: 'Markup & Style', slug: 'markup-style' }),
 	defineSkillCategory({ name: 'Design', slug: 'design' }),
-	defineSkillCategory({ name: 'Soft Skills', slug: 'soft' }),
+	defineSkillCategory({ name: 'Software Skills', slug: 'software' }),
 	defineSkillCategory({ name: 'Operating Systems', slug: 'op' })
 ] as const;
 
@@ -257,7 +257,7 @@ export const items = [
 		description: 'Unreal Engine is a 3D computer graphics game engine developed by Epic Games. Initially developed for PC first-person shooters, it has since been used in a variety of genres of games and has been adopted by other industries, most notably the film and television industry. Unreal Engine is written in C++ and features a high degree of portability, supporting a wide range of desktop, mobiles, console, and virtual reality platforms.<br><br>It is used in the indie game Dank Souls, which I have created with Core and I use a lot of assets and libraries from Unreal Engine.',
 		logo: Assets.unreal,
 		name: 'Unreal Engine',
-		category: 'soft'
+		category: 'software'
 	}),
 	defineSkill({
 		slug: 'lua',
@@ -273,7 +273,7 @@ export const items = [
 		description: 'Blender is a free and open-source 3D computer graphics software tool. It is used for creating animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and, formerly, video games.<br><br>I\'ve used it for modeling objects, rigging and animation on a fanmade animation project.',
 		logo: Assets.blender,
 		name: 'Blender',
-		category: 'soft'
+		category: 'software'
 	}),
 	defineSkill({
 		slug: 'juce',
@@ -289,7 +289,7 @@ export const items = [
 		description: 'Unity is a cross-platform game engine, has since been gradually extended to support a variety of desktop, mobile, console, augmented reality, and virtual reality platforms. It is particularly popular for iOS and Android mobile game development, is considered easy to use for beginner developers, and is popular for indie game development.<br><br>I have used Unity to create an augmented reality (AR) application, along with the use of the Vuforia library. When the camera identified a specific target, 3D graphics were displayed on the screen.',
 		logo: Assets.unity,
 		name: 'Unity',
-		category: 'soft'
+		category: 'software'
 	}),
 	defineSkill({
 		slug: 'vuforia',
@@ -305,7 +305,7 @@ export const items = [
 		description: 'Adobe Photoshop is the industry-leading digital image editing and design application that offers the tools to create anything you can imagine.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
 		logo: Assets.Photoshop,
 		name: 'Photoshop',
-		category: 'soft'
+		category: 'software'
 	}),
 	defineSkill({
 		slug: 'Excel',
