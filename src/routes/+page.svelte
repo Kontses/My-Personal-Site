@@ -29,17 +29,20 @@
 			try {
 				await typingAudio.play();
 				audioStarted = true;
-				
+
 				// Warm up nextLineAudio to unlock it for later
 				if (nextLineAudio) {
 					const vol = nextLineAudio.volume;
 					nextLineAudio.volume = 0;
-					nextLineAudio.play().then(() => {
-						setTimeout(() => {
-							nextLineAudio.pause();
-							nextLineAudio.volume = vol;
-						}, 10);
-					}).catch(() => {});
+					nextLineAudio
+						.play()
+						.then(() => {
+							setTimeout(() => {
+								nextLineAudio.pause();
+								nextLineAudio.volume = vol;
+							}, 10);
+						})
+						.catch(() => {});
 				}
 			} catch (e) {
 				// Still blocked
@@ -52,7 +55,7 @@
 		displayedDescription = '';
 		let i = 0;
 		const speed = 40; // ms ανά χαρακτήρα
-		
+
 		isTyping = true;
 		$isTypewriterActive = true;
 		audioStarted = false;
@@ -60,12 +63,15 @@
 		// Start typing sound (loop)
 		if (typingAudio) {
 			typingAudio.currentTime = 0;
-			typingAudio.play().then(() => {
-				audioStarted = true;
-			}).catch((err) => {
-				audioStarted = false;
-				console.warn("Typing sound blocked by browser policy. Interaction required.", err);
-			});
+			typingAudio
+				.play()
+				.then(() => {
+					audioStarted = true;
+				})
+				.catch((err) => {
+					audioStarted = false;
+					console.warn('Typing sound blocked by browser policy. Interaction required.', err);
+				});
 		}
 
 		const typeWriter = () => {
@@ -73,13 +79,16 @@
 				if (typingAudio) typingAudio.pause();
 				return;
 			}
-			
+
 			if (i < description.length) {
 				const char = description.charAt(i);
-				
+
 				// Play next line sound 40ms (1 check ahead) before period, punctuation or newline
 				const nextChar = description.charAt(i + 1);
-				if ((nextChar === '.' || nextChar === '!' || nextChar === '?' || nextChar === '\n') && nextLineAudio) {
+				if (
+					(nextChar === '.' || nextChar === '!' || nextChar === '?' || nextChar === '\n') &&
+					nextLineAudio
+				) {
 					nextLineAudio.currentTime = 0;
 					nextLineAudio.play().catch(() => {});
 				}
@@ -93,24 +102,26 @@
 				if (typingAudio) typingAudio.pause();
 			}
 		};
-		
+
 		timeoutId = setTimeout(typeWriter, 100);
 	};
 
 	$: if ($typewriterKey > 0) {
 		startTypewriter();
-		setTimeout(() => { $typewriterKey = 0; }, 0);
+		setTimeout(() => {
+			$typewriterKey = 0;
+		}, 0);
 	}
 
 	onMount(() => {
 		$isMatrixVisible = false; // Disable Matrix Rain initially on the homepage
 		const initTimeoutId = setTimeout(startTypewriter, 400); // Initial 400ms + 100ms = 500ms
-		
+
 		// Rescue logic for autoplay policy
 		window.addEventListener('click', ensureAudioPlays);
 		window.addEventListener('keydown', ensureAudioPlays);
 		window.addEventListener('touchstart', ensureAudioPlays);
-		
+
 		return () => {
 			isTyping = false;
 			$isTypewriterActive = false;
@@ -149,11 +160,17 @@
 		<MainTitle classes="md:text-left ">{name} {lastName},</MainTitle>
 		<div class="grid relative">
 			<!-- Αόρατο πλήρες κείμενο για να κρατάει τον χώρο σταθερό (layout lock) -->
-			<p class="invisible text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1" style="white-space: pre-line;">
+			<p
+				class="invisible text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1"
+				style="white-space: pre-line;"
+			>
 				{description}
 			</p>
 			<!-- Ορατό κείμενο που πληκτρολογείται -->
-			<p class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1 z-10 m-0" style="white-space: pre-line;">
+			<p
+				class="text-[var(--tertiary-text)] text-center md:text-left text-[1.2em] font-extralight col-start-1 row-start-1 z-10 m-0"
+				style="white-space: pre-line;"
+			>
 				{displayedDescription}
 				{#if isTyping && displayedDescription.length < description.length}
 					<span class="cursor">|</span>
@@ -183,8 +200,8 @@
 	</div>
 </div>
 
-<audio bind:this={typingAudio} src={`${base}/typing%20effect.mp3`} loop></audio>
-<audio bind:this={nextLineAudio} src={`${base}/next%20line.mp3`}></audio>
+<audio bind:this={typingAudio} src={`${base}/typing%20effect.mp3`} loop />
+<audio bind:this={nextLineAudio} src={`${base}/next%20line.mp3`} />
 
 <style>
 	.scroll-down-hint {
@@ -211,7 +228,9 @@
 	}
 
 	@keyframes blink {
-		50% { opacity: 0; }
+		50% {
+			opacity: 0;
+		}
 	}
 
 	@keyframes bounce {

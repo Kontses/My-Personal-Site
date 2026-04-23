@@ -44,8 +44,6 @@ export const useImage = (url: string, base: string): string => `${base}${url}`;
 export const useTitle = (title: string, suffix: string) => `${title} | ${suffix}`;
 
 export function getTimeDiff(date1: Date, date2 = new Date(Date.now() + 1000 * 60 * 60 * 24)) {
-	
-	
 	const d1 = dayjs(date1);
 	const d2 = dayjs(date2);
 

@@ -136,7 +136,7 @@
 						<UIcon icon="i-carbon-sun" />
 					{/if}
 				</button>
-				<div class="h-full border-l border-white/10 mx-2"></div>
+				<div class="h-full border-l border-white/10 mx-2" />
 				<AudioPlayer />
 			</div>
 			<div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer">

@@ -68,28 +68,40 @@
 		const isAtTop = scrollTop <= 5;
 
 		const currentPath = $page.url.pathname;
-		
+
 		// Εάν γράφει η γραφομηχανή και ο χρήστης κάνει scroll down στην αρχική
 		if (currentPath === '/' && isScrollingDown && $isTypewriterActive) {
 			$isTypewriterActive = false; // Ολοκλήρωση κειμένου
-			
+
 			// Δίνουμε 1 δευτερόλεπτο "poise" πριν επιτραπεί το επόμενο scroll πλοήγησης
 			// Αυτό αποτρέπει την αλλαγή σελίδας από το ίδιο physical scroll wheel movement.
-			lastScrollTime = now - scrollDelay + 1000; 
+			lastScrollTime = now - scrollDelay + 1000;
 			return;
 		}
 
 		// Εάν η γραφομηχανή τελείωσε, το Matrix είναι ΚΛΕΙΣΤΟ, και ο χρήστης κάνει scroll down
-		if (currentPath === '/' && isScrollingDown && !$isTypewriterActive && !$isMatrixVisible && isAtBottom) {
+		if (
+			currentPath === '/' &&
+			isScrollingDown &&
+			!$isTypewriterActive &&
+			!$isMatrixVisible &&
+			isAtBottom
+		) {
 			$isMatrixVisible = true; // Ενεργοποίηση Matrix Rain
-			lastScrollTime = now - scrollDelay + 1000; 
+			lastScrollTime = now - scrollDelay + 1000;
 			return;
 		}
 
 		// Εάν το Matrix είναι ΑΝΟΙΧΤΟ και ο χρήστης κάνει scroll up
-		if (currentPath === '/' && isScrollingUp && !$isTypewriterActive && $isMatrixVisible && isAtTop) {
+		if (
+			currentPath === '/' &&
+			isScrollingUp &&
+			!$isTypewriterActive &&
+			$isMatrixVisible &&
+			isAtTop
+		) {
 			$isMatrixVisible = false; // Απενεργοποίηση Matrix Rain
-			lastScrollTime = now - scrollDelay + 1000; 
+			lastScrollTime = now - scrollDelay + 1000;
 			return;
 		}
 

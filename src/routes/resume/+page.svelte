@@ -13,10 +13,18 @@
 		{#if cvUrl}
 			<div class="resume-content">
 				<div class="pdf-container">
-					<object data={cvUrl} type="application/pdf" width="100%" height="100%" title="Resume PDF Preview">
+					<object
+						data={cvUrl}
+						type="application/pdf"
+						width="100%"
+						height="100%"
+						title="Resume PDF Preview"
+					>
 						<p class="text-center p-5">
-							Το πρόγραμμα περιήγησής σου δεν υποστηρίζει την ενσωματωμένη προβολή PDF. 
-							<a href={cvUrl} class="text-[var(--accent-text)] underline" download>Κατέβασε το CV εδώ</a>.
+							Το πρόγραμμα περιήγησής σου δεν υποστηρίζει την ενσωματωμένη προβολή PDF.
+							<a href={cvUrl} class="text-[var(--accent-text)] underline" download
+								>Κατέβασε το CV εδώ</a
+							>.
 						</p>
 					</object>
 				</div>
@@ -54,7 +62,7 @@
 		gap: 30px;
 		width: 100%;
 		max-width: 900px;
-		
+
 		.pdf-container {
 			width: 100%;
 			height: 70vh;

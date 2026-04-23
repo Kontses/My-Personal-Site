@@ -49,7 +49,8 @@ export const items = [
 	defineSkill({
 		slug: 'csharp',
 		color: 'purple',
-		description: 'C\u0023 is a modern, innovative, open-source, cross-platform object-oriented programming language where it was created by Microsoft through the .NET platform.<br>I met C\u0023 in the creation of the KCHC App, an android application using the Xamarin platform, and also on a Unity AR demo project.\n With the experience I gained I could use it to develop web apps, desktop apps, mobile apps, games and much more.',
+		description:
+			'C\u0023 is a modern, innovative, open-source, cross-platform object-oriented programming language where it was created by Microsoft through the .NET platform.<br>I met C\u0023 in the creation of the KCHC App, an android application using the Xamarin platform, and also on a Unity AR demo project.\n With the experience I gained I could use it to develop web apps, desktop apps, mobile apps, games and much more.',
 		logo: Assets.csharp,
 		name: 'C\u0023',
 		category: 'pro-lang'
@@ -57,7 +58,8 @@ export const items = [
 	defineSkill({
 		slug: 'python',
 		color: 'yellow',
-		description: 'Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.\n Python is dynamically type-checked and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.',
+		description:
+			'Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.\n Python is dynamically type-checked and garbage-collected. It supports multiple programming paradigms, including structured (particularly procedural), object-oriented and functional programming. It is often described as a "batteries included" language due to its comprehensive standard library.',
 		logo: Assets.Python,
 		name: 'Python',
 		category: 'pro-lang'
@@ -65,7 +67,8 @@ export const items = [
 	defineSkill({
 		slug: 'c++',
 		color: 'blue',
-		description: 'C++ is a general purpose object-oriented programming language, enabling you to create modular and reusable code, that was developed as an extension of C.<br><br>In JUCE Frammework i write an audio plugin using only C++.',
+		description:
+			'C++ is a general purpose object-oriented programming language, enabling you to create modular and reusable code, that was developed as an extension of C.<br><br>In JUCE Frammework i write an audio plugin using only C++.',
 		logo: Assets.Cpp,
 		name: 'C++',
 		category: 'pro-lang'
@@ -105,7 +108,6 @@ export const items = [
 		logo: Assets.CSS,
 		name: 'CSS',
 		category: 'markup-style'
-
 	}),
 	defineSkill({
 		slug: 'dart',
@@ -115,7 +117,6 @@ export const items = [
 		logo: Assets.Dart,
 		name: 'Dart',
 		category: 'pro-lang'
-
 	}),
 	defineSkill({
 		slug: 'flutter',
@@ -125,13 +126,12 @@ export const items = [
 		logo: Assets.Flutter,
 		name: 'Flutter',
 		category: 'framework'
-
 	}),
 	defineSkill({
 		slug: 'sass',
 		color: 'pink',
 		description:
-			'Sass is a stylesheet language that is interpreted or compiled into Cascading Style Sheets (CSS). It is a preprocessor that is used to create, maintain and maintainable CSS code.<br><br>I used it a lot for creating websites, along with it and the SUPER FC\*KNG website you are currently surfing on.',
+			'Sass is a stylesheet language that is interpreted or compiled into Cascading Style Sheets (CSS). It is a preprocessor that is used to create, maintain and maintainable CSS code.<br><br>I used it a lot for creating websites, along with it and the SUPER FC*KNG website you are currently surfing on.',
 		logo: Assets.Sass,
 		name: 'Sass',
 		category: 'markup-style'
@@ -139,7 +139,8 @@ export const items = [
 	defineSkill({
 		slug: 'svelte',
 		color: 'orange',
-		description: 'Svelte is a free and open-source front end component framework or language is not a monolithic JavaScript library imported by applications: instead, Svelte compiles HTML templates to specialized code that manipulates the DOM directly, which may reduce the size of transferred files and give better client performance.<br><br>I used it a lot for creating websites, along with it and the SUPER FC\*KNG BEAUTIFULL website you are currently surfing on.',
+		description:
+			'Svelte is a free and open-source front end component framework or language is not a monolithic JavaScript library imported by applications: instead, Svelte compiles HTML templates to specialized code that manipulates the DOM directly, which may reduce the size of transferred files and give better client performance.<br><br>I used it a lot for creating websites, along with it and the SUPER FC*KNG BEAUTIFULL website you are currently surfing on.',
 		logo: Assets.Svelte,
 		name: 'Svelte',
 		category: 'library'
@@ -147,7 +148,8 @@ export const items = [
 	defineSkill({
 		slug: 'react',
 		color: 'lightblue',
-		description: 'React (also known as React.js) is a free and open-source front-end JavaScript library that aims to make building user interfaces based on components more "seamless". It is maintained by Meta and a community of individual developers and companies.',
+		description:
+			'React (also known as React.js) is a free and open-source front-end JavaScript library that aims to make building user interfaces based on components more "seamless". It is maintained by Meta and a community of individual developers and companies.',
 		logo: Assets.ReactJs,
 		name: 'React',
 		category: 'library'
@@ -155,7 +157,8 @@ export const items = [
 	defineSkill({
 		slug: 'threejs',
 		color: 'white',
-		description: 'Three.js is a cross-browser JavaScript library and application programming interface (API) used to create and display animated 3D computer graphics in a web browser using WebGL.',
+		description:
+			'Three.js is a cross-browser JavaScript library and application programming interface (API) used to create and display animated 3D computer graphics in a web browser using WebGL.',
 		logo: Assets.threejs,
 		name: 'Three.js',
 		category: 'library'
@@ -163,7 +166,8 @@ export const items = [
 	defineSkill({
 		slug: 'nodejs',
 		color: 'green',
-		description: 'Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.',
+		description:
+			'Node.js is a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts.',
 		logo: Assets.NodeJs,
 		name: 'Node.js',
 		category: 'library'
@@ -171,7 +175,8 @@ export const items = [
 	defineSkill({
 		slug: 'socketio',
 		color: 'white',
-		description: 'Socket.IO is a library that enables low-latency, bidirectional and event-based communication between a client and a server.',
+		description:
+			'Socket.IO is a library that enables low-latency, bidirectional and event-based communication between a client and a server.',
 		logo: Assets.socketio,
 		name: 'Socket.io',
 		category: 'library'
@@ -188,7 +193,8 @@ export const items = [
 	defineSkill({
 		slug: 'firebase',
 		color: 'orange',
-		description: 'Firebase is a mobile and web application development platform developed by Google. It provides a suite of tools and services to help developers build, improve, and grow their apps. Firebase simplifies backend development tasks, allowing developers to focus on the user experience and core features of their applications.',
+		description:
+			'Firebase is a mobile and web application development platform developed by Google. It provides a suite of tools and services to help developers build, improve, and grow their apps. Firebase simplifies backend development tasks, allowing developers to focus on the user experience and core features of their applications.',
 		logo: Assets.Firebase,
 		name: 'Firebase',
 		category: ''
@@ -197,7 +203,7 @@ export const items = [
 		slug: 'xml',
 		color: 'blue',
 		description:
-			'XML is a markup language that contains a set of rules for encoding text electronically. It was designed with an emphasis on simplicity, generality and usefulness on the Internet. It is a text data format, with strong Unicode support for all the world\'s languages.<br><br>I used XML a lot in the Artsound & Lights e-shop, I received several files with tables that recorded all the products of the shop and their information, both from this shop and from all the suppliers of the company. I made an interface for comparisons between them, and I was working out their items as needed, for example comparing prices during a discount period.',
+			"XML is a markup language that contains a set of rules for encoding text electronically. It was designed with an emphasis on simplicity, generality and usefulness on the Internet. It is a text data format, with strong Unicode support for all the world's languages.<br><br>I used XML a lot in the Artsound & Lights e-shop, I received several files with tables that recorded all the products of the shop and their information, both from this shop and from all the suppliers of the company. I made an interface for comparisons between them, and I was working out their items as needed, for example comparing prices during a discount period.",
 		logo: Assets.XML,
 		name: 'XML',
 		category: 'markup-style'
@@ -214,7 +220,8 @@ export const items = [
 	defineSkill({
 		slug: 'unix',
 		color: 'white',
-		description: 'Unix is a family of multitasking, multi-user computer operating systems. The Unix kernel is the core component of the Unix operating system, responsible for managing the system\'s resources and facilitating communication between hardware and software components. It acts as a bridge between applications and the hardware, ensuring efficient and smooth operation of the system.<br><br>My first experience with unix commands was through university when we were taught the capabilities of the kernel. Later, in my job as IT Support Engineer for Metro in Thessaloniki, we used Linux computer systems and all software maintenance was done with unix commands, for example installing newer versions of software or saving log files and searching them using wildcards.',
+		description:
+			"Unix is a family of multitasking, multi-user computer operating systems. The Unix kernel is the core component of the Unix operating system, responsible for managing the system's resources and facilitating communication between hardware and software components. It acts as a bridge between applications and the hardware, ensuring efficient and smooth operation of the system.<br><br>My first experience with unix commands was through university when we were taught the capabilities of the kernel. Later, in my job as IT Support Engineer for Metro in Thessaloniki, we used Linux computer systems and all software maintenance was done with unix commands, for example installing newer versions of software or saving log files and searching them using wildcards.",
 		logo: Assets.unix,
 		name: 'Unix',
 		category: 'op'
@@ -222,7 +229,8 @@ export const items = [
 	defineSkill({
 		slug: 'kali',
 		color: 'blue',
-		description: 'Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering.<br><br>I have only dealt with Kali Linux as an amateur as a security enthusiast with its basic tools for penetration. I would like to develop these skills further in the future.',
+		description:
+			'Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering.<br><br>I have only dealt with Kali Linux as an amateur as a security enthusiast with its basic tools for penetration. I would like to develop these skills further in the future.',
 		logo: Assets.kali,
 		name: 'Kali Linux',
 		category: 'op'
@@ -230,7 +238,8 @@ export const items = [
 	defineSkill({
 		slug: 'json',
 		color: 'white',
-		description: 'JSON is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is primarily used to transmit data between a server and a web application, serving as an alternative to XML.<br><br>I used JSON on an Android application via .NET to add data.',
+		description:
+			'JSON is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It is primarily used to transmit data between a server and a web application, serving as an alternative to XML.<br><br>I used JSON on an Android application via .NET to add data.',
 		logo: Assets.json,
 		name: 'JSON',
 		category: 'markup-style'
@@ -238,7 +247,8 @@ export const items = [
 	defineSkill({
 		slug: '.NET',
 		color: 'white',
-		description: '.NET is a free, cross-platform, open-source developer platform for building many kinds of applications. It can run programs written in multiple languages, with C# being the most popular. It relies on a high-performance runtime that is used in production by many high-scale apps<br><br>In .NET the main project I have been working on is a music android application for recording the alternative music scene of my city Katerini. It is in co-development with a colleague and contains everything from information about the artists, to a music player for playing audio and connecting an API to update the concerts.',
+		description:
+			'.NET is a free, cross-platform, open-source developer platform for building many kinds of applications. It can run programs written in multiple languages, with C# being the most popular. It relies on a high-performance runtime that is used in production by many high-scale apps<br><br>In .NET the main project I have been working on is a music android application for recording the alternative music scene of my city Katerini. It is in co-development with a colleague and contains everything from information about the artists, to a music player for playing audio and connecting an API to update the concerts.',
 		logo: Assets.dotnet,
 		name: '.NET',
 		category: 'framework'
@@ -246,7 +256,8 @@ export const items = [
 	defineSkill({
 		slug: 'xamarin',
 		color: 'blue',
-		description: 'Xamarin provides software development tools that allow a user to develop applications for Android, iOS and Windows using C# language. Xamarin is built on the .NET Framework. It allows one to create apps that easily run across multiple platforms.<br><br>In .NET I use Xamarin to create a music android application for recording the alternative music scene of my city Katerini. It is in co-development with a colleague and contains everything from information about the artists, to a music player for playing audio and connecting an API to update the concerts.',
+		description:
+			'Xamarin provides software development tools that allow a user to develop applications for Android, iOS and Windows using C# language. Xamarin is built on the .NET Framework. It allows one to create apps that easily run across multiple platforms.<br><br>In .NET I use Xamarin to create a music android application for recording the alternative music scene of my city Katerini. It is in co-development with a colleague and contains everything from information about the artists, to a music player for playing audio and connecting an API to update the concerts.',
 		logo: Assets.xamarin,
 		name: 'Xamarin',
 		category: 'library'
@@ -254,7 +265,8 @@ export const items = [
 	defineSkill({
 		slug: 'unreal',
 		color: 'black',
-		description: 'Unreal Engine is a 3D computer graphics game engine developed by Epic Games. Initially developed for PC first-person shooters, it has since been used in a variety of genres of games and has been adopted by other industries, most notably the film and television industry. Unreal Engine is written in C++ and features a high degree of portability, supporting a wide range of desktop, mobiles, console, and virtual reality platforms.<br><br>It is used in the indie game Dank Souls, which I have created with Core and I use a lot of assets and libraries from Unreal Engine.',
+		description:
+			'Unreal Engine is a 3D computer graphics game engine developed by Epic Games. Initially developed for PC first-person shooters, it has since been used in a variety of genres of games and has been adopted by other industries, most notably the film and television industry. Unreal Engine is written in C++ and features a high degree of portability, supporting a wide range of desktop, mobiles, console, and virtual reality platforms.<br><br>It is used in the indie game Dank Souls, which I have created with Core and I use a lot of assets and libraries from Unreal Engine.',
 		logo: Assets.unreal,
 		name: 'Unreal Engine',
 		category: 'software'
@@ -262,7 +274,8 @@ export const items = [
 	defineSkill({
 		slug: 'lua',
 		color: 'white',
-		description: 'Lua is a lightweight, high-level, multi-paradigm programming language designed mainly for embedded use in applications. Lua is cross-platform software, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C application programming interface (API) to embed it into applications.<br><br>It is used in the indie game Dank Souls, which I have created with Core to run all the script code.',
+		description:
+			'Lua is a lightweight, high-level, multi-paradigm programming language designed mainly for embedded use in applications. Lua is cross-platform software, since the interpreter of compiled bytecode is written in ANSI C, and Lua has a relatively simple C application programming interface (API) to embed it into applications.<br><br>It is used in the indie game Dank Souls, which I have created with Core to run all the script code.',
 		logo: Assets.lua,
 		name: 'Lua',
 		category: 'pro-lang'
@@ -270,7 +283,8 @@ export const items = [
 	defineSkill({
 		slug: 'blender',
 		color: 'orange',
-		description: 'Blender is a free and open-source 3D computer graphics software tool. It is used for creating animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and, formerly, video games.<br><br>I\'ve used it for modeling objects, rigging and animation on a fanmade animation project.',
+		description:
+			"Blender is a free and open-source 3D computer graphics software tool. It is used for creating animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and, formerly, video games.<br><br>I've used it for modeling objects, rigging and animation on a fanmade animation project.",
 		logo: Assets.blender,
 		name: 'Blender',
 		category: 'software'
@@ -278,7 +292,8 @@ export const items = [
 	defineSkill({
 		slug: 'juce',
 		color: 'green',
-		description: 'JUCE is an open-source cross-platform C++ application framework for desktop and mobile applications, including VST, VST3, AU, AUv3, LV2 and AAX audio plug-ins.<br><br>I have used to create a reverb plugin which processes the sound and gives the effect of space. Ideal for sound engineers, music studios, artists and games.',
+		description:
+			'JUCE is an open-source cross-platform C++ application framework for desktop and mobile applications, including VST, VST3, AU, AUv3, LV2 and AAX audio plug-ins.<br><br>I have used to create a reverb plugin which processes the sound and gives the effect of space. Ideal for sound engineers, music studios, artists and games.',
 		logo: Assets.juce,
 		name: 'Juce',
 		category: 'framework'
@@ -286,7 +301,8 @@ export const items = [
 	defineSkill({
 		slug: 'unity',
 		color: 'white',
-		description: 'Unity is a cross-platform game engine, has since been gradually extended to support a variety of desktop, mobile, console, augmented reality, and virtual reality platforms. It is particularly popular for iOS and Android mobile game development, is considered easy to use for beginner developers, and is popular for indie game development.<br><br>I have used Unity to create an augmented reality (AR) application, along with the use of the Vuforia library. When the camera identified a specific target, 3D graphics were displayed on the screen.',
+		description:
+			'Unity is a cross-platform game engine, has since been gradually extended to support a variety of desktop, mobile, console, augmented reality, and virtual reality platforms. It is particularly popular for iOS and Android mobile game development, is considered easy to use for beginner developers, and is popular for indie game development.<br><br>I have used Unity to create an augmented reality (AR) application, along with the use of the Vuforia library. When the camera identified a specific target, 3D graphics were displayed on the screen.',
 		logo: Assets.unity,
 		name: 'Unity',
 		category: 'software'
@@ -294,7 +310,8 @@ export const items = [
 	defineSkill({
 		slug: 'vuforia',
 		color: 'green',
-		description: 'Vuforia Engine is the most widely used platform for AR development, with support for the majority of phones, tablets, and eyewear. Developers can easily add advanced computer vision functionality to Android, iOS, and UWP apps, to create AR experiences that realistically interact with objects and the environment.<br><br>I used it to create an augmented reality (AR) application in Unity. When the camera identified a specific target, 3D graphics were displayed on the screen.',
+		description:
+			'Vuforia Engine is the most widely used platform for AR development, with support for the majority of phones, tablets, and eyewear. Developers can easily add advanced computer vision functionality to Android, iOS, and UWP apps, to create AR experiences that realistically interact with objects and the environment.<br><br>I used it to create an augmented reality (AR) application in Unity. When the camera identified a specific target, 3D graphics were displayed on the screen.',
 		logo: Assets.vuforia,
 		name: 'Vuforia',
 		category: 'library'
@@ -302,7 +319,8 @@ export const items = [
 	defineSkill({
 		slug: 'Photoshop',
 		color: 'blue',
-		description: 'Adobe Photoshop is the industry-leading digital image editing and design application that offers the tools to create anything you can imagine.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
+		description:
+			'Adobe Photoshop is the industry-leading digital image editing and design application that offers the tools to create anything you can imagine.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
 		logo: Assets.Photoshop,
 		name: 'Photoshop',
 		category: 'software'
@@ -310,7 +328,8 @@ export const items = [
 	defineSkill({
 		slug: 'Excel',
 		color: 'green',
-		description: 'Excel is a spreadsheet application that is used to create and manage data in a tabular format. It is a popular tool for data analysis, reporting, and visualization.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
+		description:
+			'Excel is a spreadsheet application that is used to create and manage data in a tabular format. It is a popular tool for data analysis, reporting, and visualization.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
 		logo: Assets.Excel,
 		name: 'Excel',
 		category: 'database'
@@ -318,7 +337,8 @@ export const items = [
 	defineSkill({
 		slug: 'supabase',
 		color: 'green',
-		description: 'Supabase is an open-source Backend-as-a-Service (BaaS) platform that provides developers with a ready-to-use backend for building modern applications.<br><br>It offers a PostgreSQL database with real-time features, user authentication, file storage, and serverless functions, simplifying backend development so developers can focus on the frontend. It\'s known for its flexibility, working with any framework, and allowing self-hosting or using their managed service.',
+		description:
+			"Supabase is an open-source Backend-as-a-Service (BaaS) platform that provides developers with a ready-to-use backend for building modern applications.<br><br>It offers a PostgreSQL database with real-time features, user authentication, file storage, and serverless functions, simplifying backend development so developers can focus on the frontend. It's known for its flexibility, working with any framework, and allowing self-hosting or using their managed service.",
 		logo: Assets.supabase,
 		name: 'Supabase',
 		category: 'database'
@@ -326,7 +346,8 @@ export const items = [
 	defineSkill({
 		slug: 'mongodb',
 		color: 'green',
-		description: 'MongoDB is a NoSQL database that is used to store and manage data in a tabular format. It is a popular tool for data analysis, reporting, and visualization.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
+		description:
+			'MongoDB is a NoSQL database that is used to store and manage data in a tabular format. It is a popular tool for data analysis, reporting, and visualization.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
 		logo: Assets.MongoDB,
 		name: 'MongoDB',
 		category: 'database'

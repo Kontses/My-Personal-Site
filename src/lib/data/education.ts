@@ -12,7 +12,7 @@ export const items: Array<Education> = [
 		period: { from: new Date(2016, 1, 4), to: new Date(2025, 1, 1) },
 		shortDescription: '',
 		slug: 'dummy-education-item',
-		subjects: ['Algorithm', 'Assembly', 'C++', 'C#', 'Java', 'Python', 'Prolog', 'SQL', ]
+		subjects: ['Algorithm', 'Assembly', 'C++', 'C#', 'Java', 'Python', 'Prolog', 'SQL']
 	},
 	{
 		degree: ' Diploma in Classical Saxophone',
@@ -21,7 +21,7 @@ export const items: Array<Education> = [
 		logo: Assets.ConservatoryOfStavroupolis,
 		name: '',
 		organization: 'Conservatory of Stavroupolis',
-		period: { from: new Date(2015, 8, 6	), to: new Date(2022, 1, 1) },
+		period: { from: new Date(2015, 8, 6), to: new Date(2022, 1, 1) },
 		shortDescription: '',
 		slug: 'dummy-education-item-2',
 		subjects: ['Saxophone', 'Music Theory']

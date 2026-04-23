@@ -16,9 +16,52 @@
 	import CardDivider from '$lib/components/Card/CardDivider.svelte';
 	import Screenshot from '$lib/components/Screenshot/Screenshot.svelte';
 
+	import { onMount } from 'svelte';
+
 	export let data: { project?: Project };
 
 	const screenshots = data.project?.screenshots ?? [];
+	const models3d = data.project?.models3d ?? [];
+
+	let modelIndex = 0;
+
+	onMount(() => {
+		// model-viewer is now loaded via script tag in svelte:head
+	});
+
+	let viewerContainer: HTMLElement;
+	let modelViewerElement: any;
+	let showQRModal = false;
+	let currentUrl = '';
+
+	onMount(() => {
+		// model-viewer is now loaded via script tag in svelte:head
+		currentUrl = window.location.href;
+	});
+
+	function toggleFullscreen() {
+		if (!document.fullscreenElement) {
+			viewerContainer.requestFullscreen().catch((err) => {
+				console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+			});
+		} else {
+			document.exitFullscreen();
+		}
+	}
+
+	function handleARClick() {
+		const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+			navigator.userAgent
+		);
+
+		if (isMobile) {
+			if (modelViewerElement && typeof modelViewerElement.activateAR === 'function') {
+				modelViewerElement.activateAR();
+			}
+		} else {
+			showQRModal = true;
+		}
+	}
 
 	let screenIndex: number | undefined = undefined;
 
@@ -31,6 +74,15 @@
 </script>
 
 <TabTitle title={computedTitle} />
+
+<svelte:head>
+	{#if models3d.length > 0}
+		<script
+			type="module"
+			src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+		></script>
+	{/if}
+</svelte:head>
 
 <div class="pb-10 overflow-x-hidden col flex-1">
 	{#if data.project === undefined}
@@ -108,7 +160,9 @@
 								{#if item.type === MediaType.Video}
 									<div
 										class="col-center aspect-video w-100% cursor-pointer bg-contain bg-no-repeat bg-center"
-										style={`background-image: url(${item.thumbnailSrc || ''}); background-color: ${item.thumbnailSrc ? 'transparent' : 'var(--main-60)'}`}
+										style={`background-image: url(${item.thumbnailSrc || ''}); background-color: ${
+											item.thumbnailSrc ? 'transparent' : 'var(--main-60)'
+										}`}
 									>
 										<UIcon icon="i-carbon-play" classes="text-4em text-[var(--tertiary-text)]" />
 									</div>
@@ -128,10 +182,120 @@
 						<p class="font-300">No screenshots</p>
 					</div>
 				{/if}
+
+				{#if models3d.length > 0}
+					<div class="w-100% m-t-8">
+						<CardDivider />
+					</div>
+					<div class="px-10px m-y-5">
+						<div class="text-[var(--accent-text)] text-1.2em font-400 mb-2">3D Models</div>
+					</div>
+					<div class="px-10px flex flex-col items-center gap-5 m-t-5">
+						<div
+							bind:this={viewerContainer}
+							class="relative col-center overflow-hidden w-100% max-w-1000px rounded-10px"
+							style="background-color: var(--main-16);"
+						>
+							<!-- svelte-ignore a11y-missing-attribute -->
+							<!-- svelte-ignore a11y-unknown-aria-attribute -->
+							<model-viewer
+								bind:this={modelViewerElement}
+								src={models3d[modelIndex].src}
+								ios-src={models3d[modelIndex].src.replace('.glb', '.usdz')}
+								alt={models3d[modelIndex].label}
+								poster={models3d[modelIndex].src.replace('.glb', '.jpg')}
+								ar
+								ar-modes="webxr scene-viewer quick-look"
+								auto-rotate
+								camera-controls
+								environment-image="neutral"
+								shadow-intensity="1"
+								exposure="1"
+								style="width: 100%; height: 70vh; min-height: 500px;"
+							/>
+
+							<!-- AR View Button -->
+							<button 
+								class="absolute bottom-4 right-16 px-6 py-2 rounded-full text-white transition-all cursor-pointer backdrop-blur-md z-10 shimmer-btn shadow-lg" 
+								on:click={handleARClick}
+								title="View in AR"
+							>
+								<span class="text-0.9em font-600 tracking-wide">AR View</span>
+							</button>
+
+							<!-- Fullscreen Button -->
+							<button 
+								class="absolute bottom-4 right-4 bg-black/20 text-white/60 p-2 rounded-full hover:bg-black/50 hover:text-white transition-all cursor-pointer backdrop-blur-sm z-10 flex items-center justify-center w-36px h-36px border-none outline-none" 
+								on:click={toggleFullscreen}
+								title="Toggle Fullscreen"
+							>
+								<UIcon icon="i-carbon-maximize" classes="text-1.2em" />
+							</button>
+
+							<!-- Carousel Controls -->
+							{#if models3d.length > 1}
+								<button
+									class="absolute left-2 top-1/2 -translate-y-1/2 bg-[var(--main-80)] text-[var(--accent-text)] p-2 rounded-full hover:bg-[var(--main)] transition-colors cursor-pointer z-10"
+									on:click={() =>
+										(modelIndex = (modelIndex - 1 + models3d.length) % models3d.length)}
+								>
+									<UIcon icon="i-carbon-chevron-left" classes="text-2em" />
+								</button>
+								<button
+									class="absolute right-2 top-1/2 -translate-y-1/2 bg-[var(--main-80)] text-[var(--accent-text)] p-2 rounded-full hover:bg-[var(--main)] transition-colors cursor-pointer z-10"
+									on:click={() => (modelIndex = (modelIndex + 1) % models3d.length)}
+								>
+									<UIcon icon="i-carbon-chevron-right" classes="text-2em" />
+								</button>
+							{/if}
+						</div>
+						<p class="text-[var(--tertiary-text)] font-500 text-1.2em">
+							{models3d[modelIndex].label}
+						</p>
+					</div>
+				{/if}
 			</div>
 		</div>
 	{/if}
 </div>
+
+<!-- QR Code Modal for Desktop AR -->
+{#if showQRModal}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<!-- svelte-ignore a11y-no-static-element-interactions -->
+	<div
+		class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md transition-opacity"
+		on:click={() => (showQRModal = false)}
+	>
+		<div
+			class="relative flex flex-col items-center gap-4 bg-[var(--main-16)] border border-[var(--main-80)] p-8 rounded-2xl shadow-2xl max-w-sm w-[90%] text-center"
+			on:click|stopPropagation
+		>
+			<button
+				class="absolute top-4 right-4 text-[var(--tertiary-text)] hover:text-[var(--accent-text)] transition-colors cursor-pointer"
+				on:click={() => (showQRModal = false)}
+			>
+				<UIcon icon="i-carbon-close" classes="text-1.5em" />
+			</button>
+
+			<div class="p-3 bg-white rounded-xl mb-2">
+				<img
+					src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
+						currentUrl
+					)}`}
+					alt="QR Code to view in AR"
+					class="w-200px h-200px"
+				/>
+			</div>
+
+			<h3 class="text-xl text-[var(--accent-text)] font-600 m-0">View in AR</h3>
+			<p class="text-[var(--tertiary-text)] text-0.9em m-0">
+				Scan this QR code with your mobile device to open this page and view the 3D model in your
+				space.
+			</p>
+		</div>
+	</div>
+{/if}
 <Screenshot {screenshot} onClose={() => (screenIndex = undefined)} />
 
 <style lang="scss">
@@ -144,5 +308,31 @@
 		&:hover {
 			background-size: 120%;
 		}
+	}
+
+	@keyframes shimmer {
+		0% {
+			background-position: 200% center;
+		}
+		100% {
+			background-position: -200% center;
+		}
+	}
+	.shimmer-btn {
+		background: linear-gradient(
+			115deg,
+			rgba(0, 0, 0, 0.4) 0%,
+			rgba(0, 0, 0, 0.4) 40%,
+			rgba(255, 255, 255, 0.25) 50%,
+			rgba(0, 0, 0, 0.4) 60%,
+			rgba(0, 0, 0, 0.4) 100%
+		);
+		background-size: 200% 100%;
+		animation: shimmer 3s infinite linear;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+	}
+	.shimmer-btn:hover {
+		animation-duration: 1.5s;
+		border-color: rgba(255, 255, 255, 0.4);
 	}
 </style>

@@ -12,17 +12,19 @@ export const items: Array<Project> = [
 			'An advanced, automated Legal Information System for Greek legislation, leveraging Artificial Intelligence (LLMs) for document analysis and a Premium B2B web interface for exploration, visualization and navigation of the legal map of Greece.',
 		shortDescription:
 			'An advanced, automated Legal Information System for Greek legislation, leveraging Artificial Intelligence (LLMs) for document analysis and a Premium B2B web interface for exploration, visualization and navigation of the legal map of Greece.',
-		links: [{ to: 'https://greek-legislation-wiki-ui.vercel.app/', label: 'Site' },
-		{ to: 'https://github.com/Kontses/Greek-Legislation-Wiki-UI', label: 'GitHub' }],
+		links: [
+			{ to: 'https://greek-legislation-wiki-ui.vercel.app/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/Greek-Legislation-Wiki-UI', label: 'GitHub' }
+		],
 		logo: `${base}/greek-legislation-wiki.png`,
 		name: 'Greek Legislation Wiki',
 		period: {
-			from: new Date(2026, 4, 18), to: new Date(2026, 4, 20)
+			from: new Date(2026, 4, 18),
+			to: new Date(2026, 4, 20)
 		},
 		skills: getSkills('ts', 'react', 'css', 'nextjs', 'threejs', 'js'),
 		type: 'Web Applications',
-		screenshots: [
-		]
+		screenshots: []
 	},
 	{
 		slug: 'nbg-analytics',
@@ -31,12 +33,15 @@ export const items: Array<Project> = [
 			'A modern web application for the analysis and visualization of banking transactions from the National Bank of Greece (NBG). The application allows users to upload Excel files (.xlsx) exported from e-banking and view statistics and graphs.',
 		shortDescription:
 			'A modern web application for the analysis and visualization of banking transactions from the National Bank of Greece (NBG).',
-		links: [{ to: 'https://nbg-analytics.vercel.app/', label: 'Site' },
-		{ to: 'https://github.com/Kontses/NBG-Analytics', label: 'GitHub' }],
+		links: [
+			{ to: 'https://nbg-analytics.vercel.app/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/NBG-Analytics', label: 'GitHub' }
+		],
 		logo: `${base}/nbg-icon.png`,
 		name: 'NBG Analytics',
 		period: {
-			from: new Date(2025, 11, 29), to: new Date(2025, 11, 30)
+			from: new Date(2025, 11, 29),
+			to: new Date(2025, 11, 30)
 		},
 		skills: getSkills('ts', 'react', 'css', 'excel'),
 		type: 'Web Applications',
@@ -59,13 +64,16 @@ export const items: Array<Project> = [
 		description:
 			'Book Fainder is an intelligent book recommendation system that allows users to describe their desired book in natural language (Prompt), such as: "I want Greek poetry".<br><br>The application will select the most suitable book from the database based on relevance, quality and user intent.<br><br>Users can save their favorite books in personal lists (public or private) and add their friends.',
 		shortDescription:
-			'Discover your next book with AI. Describe what you\'re looking for and get personalized book recommendations from real book data.',
-		links: [{ to: 'https://www.bookfainder.com/', label: 'Site' },
-		{ to: 'https://github.com/Kontses/Book-Fainder', label: 'GitHub' }],
+			"Discover your next book with AI. Describe what you're looking for and get personalized book recommendations from real book data.",
+		links: [
+			{ to: 'https://www.bookfainder.com/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/Book-Fainder', label: 'GitHub' }
+		],
 		logo: `${base}/book-fainder.png`,
 		name: 'Book Fainder',
 		period: {
-			from: new Date(2025, 10, 1), to: new Date(2025, 11, 29)
+			from: new Date(2025, 10, 1),
+			to: new Date(2025, 11, 29)
 		},
 		skills: getSkills('ts', 'react', 'css', 'supabase'),
 		type: 'Web Applications',
@@ -89,13 +97,16 @@ export const items: Array<Project> = [
 			'A modern, fast and offline web application for reporting and monitoring faults in ATIMs and GATEs systems.<br><br>Designed to facilitate the daily workflow of field engineers, providing fast data entry, automatic suggestions and powerful reporting capabilities.',
 		shortDescription:
 			'A modern, fast, and offline-capable web application for reporting and monitoring faults in ATIMs and GATEs systems.',
-		links: [{ to: 'https://afc-report.vercel.app/', label: 'Site' },
-		{ to: 'https://afc-report.vercel.app/dashboard', label: 'Dashboard' },
-		{ to: 'https://github.com/Kontses/AFC-Report', label: 'GitHub' }],
+		links: [
+			{ to: 'https://afc-report.vercel.app/', label: 'Site' },
+			{ to: 'https://afc-report.vercel.app/dashboard', label: 'Dashboard' },
+			{ to: 'https://github.com/Kontses/AFC-Report', label: 'GitHub' }
+		],
 		logo: `${base}/traxis_logo_2.png`,
 		name: 'AFC Report',
 		period: {
-			from: new Date(2025, 11, 8), to: new Date(2025, 11, 28)
+			from: new Date(2025, 11, 8),
+			to: new Date(2025, 11, 28)
 		},
 		skills: getSkills('ts', 'react', 'css', 'Excel'),
 		type: 'Web Applications',
@@ -129,12 +140,15 @@ export const items: Array<Project> = [
 			'Escape is a website for a music team with music/video streaming capabilities and blog features. It is built with React, TypeScript, and Tailwind CSS.',
 		shortDescription:
 			'A website for a music team with music/video streaming capabilities and blog features.',
-		links: [{ to: 'https://aztek-smoky.vercel.app/', label: 'Site' },
-		{ to: 'https://github.com/Kontses/Escape', label: 'GitHub' }],
+		links: [
+			{ to: 'https://aztek-smoky.vercel.app/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/Escape', label: 'GitHub' }
+		],
 		logo: `${base}/escape.png`,
 		name: 'Escape',
 		period: {
-			from: new Date(2025, 5, 26), to: new Date(2025, 9, 3)
+			from: new Date(2025, 5, 26),
+			to: new Date(2025, 9, 3)
 		},
 		skills: getSkills('ts', 'js', 'react', 'css', 'mdx'),
 		type: 'Web Applications',
@@ -145,13 +159,13 @@ export const items: Array<Project> = [
 		color: '#5e95e3',
 		description:
 			'This is a 3D reverb plugin made with the JUCE DSP module. It is a reverb plugin that allows you to create a 3D reverb effect with Height, Width, and Depth parameters, and a Spectrum Visualizer via Fast Fourier Transform method to see the effect in real time.',
-		shortDescription:
-			'This is a 3D reverb plugin made with the JUCE DSP module.',
+		shortDescription: 'This is a 3D reverb plugin made with the JUCE DSP module.',
 		links: [{ to: 'https://github.com/Kontses/3D-Reverb', label: 'GitHub' }],
 		logo: `${base}/3D-Reverb.png`,
 		name: '3D Reverb',
 		period: {
-			from: new Date(2025, 1, 1), to: new Date(2025, 3, 14)
+			from: new Date(2025, 1, 1),
+			to: new Date(2025, 3, 14)
 		},
 		skills: getSkills('juce', 'c++'),
 		type: 'VST Plugin',
@@ -174,13 +188,16 @@ export const items: Array<Project> = [
 		color: 'purple',
 		description:
 			'This is an real-time streaming platform similar to Spotify without counting plays of tracks and listeners with the aim of not comparing artists to each other.<br><br>- Frontend: React with TypeScript, Vite, Tailwind CSS, Shadcn UI, Three.js<br>- Backend: Node.js with Express, Node-cron, Express Fileupload<br>- Database: MongoDB<br>- Authentication: Custom JWT<br>- File Storage: Cloudinary<br>- Real-time communication: Socket.io',
-		shortDescription:
-			'This is a Spotify similar application in React and Node.js',
-		links: [{ to: 'https://laterna-git-master-kontses-projects.vercel.app/', label: 'Site' }, { to: 'https://github.com/Kontses/Laterna', label: 'GitHub' }],
+		shortDescription: 'This is a Spotify similar application in React and Node.js',
+		links: [
+			{ to: 'https://laterna-git-master-kontses-projects.vercel.app/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/Laterna', label: 'GitHub' }
+		],
 		logo: `${base}/laterna-logo.png`,
 		name: 'Laterna',
 		period: {
-			from: new Date(2025, 4, 29), to: new Date(2025, 5, 26)
+			from: new Date(2025, 4, 29),
+			to: new Date(2025, 5, 26)
 		},
 		skills: getSkills('react', 'ts', 'js', 'css', 'threejs', 'nodejs', 'socketio', 'mongodb'),
 		type: 'Web Applications'
@@ -213,7 +230,8 @@ export const items: Array<Project> = [
 		logo: `${base}/metro-manuals.png`,
 		name: 'Metro Manuals',
 		period: {
-			from: new Date(2025, 4, 1), to: new Date(2025, 4, 22)
+			from: new Date(2025, 4, 1),
+			to: new Date(2025, 4, 22)
 		},
 		skills: getSkills('dart', 'flutter', 'c++', 'firebase'),
 		type: 'Android Application',
@@ -252,12 +270,15 @@ export const items: Array<Project> = [
 			'This is my personal portfolio website that you are surfing on right now. Its purpose is my personal journey as a developer, a collection of my career projects that have gotten me to where I am, and a showcase of my web development skills.<br><br>The website is built mainly with the svelte library and the use of typescript. It required good knowledge of HTML for formatting, CSS and Sass for style, and JavaScript for script.',
 		shortDescription:
 			'This is my personal portfolio website that you are surfiiing on, I hope you like it!',
-		links: [{ to: 'https://kontses.github.io/My-Personal-Site/', label: 'Site' },
-		{ to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub' }],
+		links: [
+			{ to: 'https://kontses.github.io/My-Personal-Site/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/My-Personal-Site', label: 'GitHub' }
+		],
 		logo: Assets.Site,
 		name: 'Portofolio',
 		period: {
-			from: new Date(2024, 10, 27), to: new Date(2024, 11, 9)
+			from: new Date(2024, 10, 27),
+			to: new Date(2024, 11, 9)
 		},
 		skills: getSkills('svelte', 'ts', 'html', 'css', 'js', 'sass'),
 		type: 'Personal Website',
@@ -274,13 +295,13 @@ export const items: Array<Project> = [
 		color: 'yellow',
 		description:
 			'Whyfi is a graphical user interface (GUI) application for Windows, written in Python using the PyQt5 library. The purpose of the application is to scan for available Wi-Fi networks, display their basic information (SSID, BSSID, Signal Strength, Security) and allow you to connect to them, as well as retrieve passwords for saved network profiles.',
-		shortDescription:
-			'Scan and display all available Wi-Fi networks and show passwords.',
+		shortDescription: 'Scan and display all available Wi-Fi networks and show passwords.',
 		links: [{ to: 'https://github.com/Kontses/Whyfi', label: 'GitHub' }],
 		logo: `${base}/Screenshots/whyfi.png`,
 		name: 'Whyfi',
 		period: {
-			from: new Date(2025, 5, 18), to: new Date(2025, 5, 18)
+			from: new Date(2025, 5, 18),
+			to: new Date(2025, 5, 18)
 		},
 		skills: getSkills('html', 'python'),
 		type: 'Security Application',
@@ -297,13 +318,13 @@ export const items: Array<Project> = [
 		color: 'white',
 		description:
 			'KCHC app is an application created to record both the new artists that are emerging in the alternative scene of Katerini, and to preserve its history, with old music bands, even with records that have been found and do not exist on music platforms.<br><br>The application contains a list of artists, all the information found about them and a music player to play the rare archive found and not available elsewhere on the internet.<br><br>The app was created using C# and Xamarin in .NET Framework in collaboration with another colleague and fan of Katerinian music scene.',
-		shortDescription:
-			'The Android App for finding every KCHC artist.',
+		shortDescription: 'The Android App for finding every KCHC artist.',
 		links: [{ to: 'https://github.com/GSmyrlis/KCHC_219_App', label: 'GitHub' }],
 		logo: Assets.kchc,
 		name: 'KCHC',
 		period: {
-			from: new Date(2023, 10, 14), to: new Date(2024, 9, 30)
+			from: new Date(2023, 10, 14),
+			to: new Date(2024, 9, 30)
 		},
 		skills: getSkills('csharp', 'json', '.NET', 'xamarin'),
 		type: 'Android Application'
@@ -312,14 +333,14 @@ export const items: Array<Project> = [
 		slug: 'dank souls',
 		color: 'blue',
 		description:
-			'Dank Souls is an indie game project inspired by the (obvious) Dark Souls in a more simplified form mainly to get in touch with the game develoment.<br><br>It\'s built on the Core Engine with graphics using Unreal Machine and the scripts written in Lua.',
-		shortDescription:
-			'An indie third-person action role-playing game!',
+			"Dank Souls is an indie game project inspired by the (obvious) Dark Souls in a more simplified form mainly to get in touch with the game develoment.<br><br>It's built on the Core Engine with graphics using Unreal Machine and the scripts written in Lua.",
+		shortDescription: 'An indie third-person action role-playing game!',
 		links: [{ to: 'https://www.coregames.com/games/652fb7/daaank-souls', label: 'CORE' }],
 		logo: Assets.core,
 		name: 'Dank Souls',
 		period: {
-			from: new Date(2023, 9, 3), to: new Date(2023, 10, 2)
+			from: new Date(2023, 9, 3),
+			to: new Date(2023, 10, 2)
 		},
 		skills: getSkills('unreal', 'lua'),
 		type: 'Indie Game',
@@ -351,13 +372,13 @@ export const items: Array<Project> = [
 		color: 'orange',
 		description:
 			'To create an animation video I had create 3 objects in Blender from the scratch, with the modeling, the rigging till the camera movement at the end.',
-		shortDescription:
-			'Portofolio of 3D models created in Blender.',
+		shortDescription: 'Portofolio of 3D models created in Blender.',
 		links: [],
 		logo: Assets.blender,
 		name: '3D Modeling',
 		period: {
-			from: new Date(2022, 4, 30), to: new Date(2022, 5, 29)
+			from: new Date(2022, 4, 30),
+			to: new Date(2022, 5, 29)
 		},
 		skills: getSkills('blender'),
 		type: 'Blender Portofolio',
@@ -376,6 +397,20 @@ export const items: Array<Project> = [
 				label: 'Model 3',
 				src: `${base}/Blender/Obj_3.jpg`,
 				type: MediaType.Image
+			}
+		],
+		models3d: [
+			{
+				label: 'Libys',
+				src: `${base}/Blender/Obj_1.glb`
+			},
+			{
+				label: 'Theoktonos',
+				src: `${base}/Blender/Obj_2.glb`
+			},
+			{
+				label: 'Evan',
+				src: `${base}/Blender/Obj_3.glb`
 			}
 		]
 	}

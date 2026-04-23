@@ -25,11 +25,11 @@
 		if (!ctx) return;
 
 		animationId = requestAnimationFrame(draw);
-		
+
 		if (!dataArray || dataArray.length !== $analyserStore.frequencyBinCount) {
 			dataArray = new Uint8Array($analyserStore.frequencyBinCount) as any;
 		}
-		
+
 		$analyserStore.getByteFrequencyData(dataArray as any);
 
 		ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -66,42 +66,50 @@
 	});
 
 	// Determine the volume icon based on current volume level
-	$: volumeIcon = ($volume === 0 
-		? "i-carbon-volume-mute" 
-		: $volume < 0.5 
-			? "i-carbon-volume-down" 
-			: "i-carbon-volume-up") as `i-${string}-${string}`;
+	$: volumeIcon = (
+		$volume === 0
+			? 'i-carbon-volume-mute'
+			: $volume < 0.5
+			? 'i-carbon-volume-down'
+			: 'i-carbon-volume-up'
+	) as `i-${string}-${string}`;
 </script>
 
 <div class="audio-player">
 	<div class="analyzer-container" title="Audio Analyzer">
-		<canvas bind:this={canvas} width="60" height="24"></canvas>
+		<canvas bind:this={canvas} width="60" height="24" />
 	</div>
 
-	<button class="control-btn play-btn" on:click={audioStore.togglePlay} title={$isPlaying ? "Pause Music" : "Play Music"}>
+	<button
+		class="control-btn play-btn"
+		on:click={audioStore.togglePlay}
+		title={$isPlaying ? 'Pause Music' : 'Play Music'}
+	>
 		{#if $isPlaying}
 			<UIcon icon="i-carbon-pause-outline" />
 		{:else}
 			<UIcon icon="i-carbon-play-outline" />
 		{/if}
 	</button>
-	
+
 	<div class="volume-container">
 		<button class="control-btn volume-btn">
 			<UIcon icon={volumeIcon} />
 		</button>
-		
+
 		<div class="volume-dropdown">
 			<div class="slider-wrapper">
-				<input 
-					type="range" 
-					min="0" max="1" step="0.01" 
-					value={$volume} 
-					on:input={(e) => audioStore.updateVolume(parseFloat(e.currentTarget.value))} 
-					class="volume-slider" 
+				<input
+					type="range"
+					min="0"
+					max="1"
+					step="0.01"
+					value={$volume}
+					on:input={(e) => audioStore.updateVolume(parseFloat(e.currentTarget.value))}
+					class="volume-slider"
 					title="Volume"
 				/>
-				<div class="volume-progress" style="height: {$volume * 100}%"></div>
+				<div class="volume-progress" style="height: {$volume * 100}%" />
 			</div>
 		</div>
 	</div>
@@ -226,8 +234,14 @@
 	}
 
 	@keyframes pulse {
-		0% { opacity: 0.8; }
-		50% { opacity: 1; }
-		100% { opacity: 0.8; }
+		0% {
+			opacity: 0.8;
+		}
+		50% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0.8;
+		}
 	}
 </style>

@@ -104,7 +104,6 @@ const Assets = {
 	kchc: a('KCHC.jpg'),
 	eme: a('eme.png'),
 	kagouro: a('kagouro.jpg')
-
 };
 
 export default Assets;

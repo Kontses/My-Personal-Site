@@ -48,6 +48,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"dayjs": "^1.11.10"
+		"@google/model-viewer": "^4.2.0",
+		"dayjs": "^1.11.10",
+		"three": "^0.184.0"
 	}
 }
