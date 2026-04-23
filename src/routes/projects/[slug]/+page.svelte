@@ -17,6 +17,7 @@
 	import Screenshot from '$lib/components/Screenshot/Screenshot.svelte';
 
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	export let data: { project?: Project };
 
@@ -196,23 +197,27 @@
 							class="relative col-center overflow-hidden w-100% max-w-1000px rounded-10px"
 							style="background-color: var(--main-16);"
 						>
-							<!-- svelte-ignore a11y-missing-attribute -->
-							<!-- svelte-ignore a11y-unknown-aria-attribute -->
-							<model-viewer
-								bind:this={modelViewerElement}
-								src={models3d[modelIndex].src}
-								ios-src={models3d[modelIndex].src.replace('.glb', '.usdz')}
-								alt={models3d[modelIndex].label}
-								poster={models3d[modelIndex].src.replace('.glb', '.jpg')}
-								ar
-								ar-modes="webxr scene-viewer quick-look"
-								auto-rotate
-								camera-controls
-								environment-image="neutral"
-								shadow-intensity="1"
-								exposure="1"
-								style="width: 100%; height: 70vh; min-height: 500px;"
-							/>
+							{#key modelIndex}
+								<!-- svelte-ignore a11y-missing-attribute -->
+								<!-- svelte-ignore a11y-unknown-aria-attribute -->
+								<div class="model-wrapper" in:fade={{ duration: 400, delay: 200 }} out:fade={{ duration: 400 }}>
+									<model-viewer
+										bind:this={modelViewerElement}
+										src={models3d[modelIndex].src}
+										ios-src={models3d[modelIndex].src.replace('.glb', '.usdz')}
+										alt={models3d[modelIndex].label}
+										poster={models3d[modelIndex].src.replace('.glb', '.jpg')}
+										ar
+										ar-modes="webxr scene-viewer quick-look"
+										auto-rotate
+										camera-controls
+										environment-image="neutral"
+										shadow-intensity="1"
+										exposure="1"
+										style="width: 100%; height: 70vh; min-height: 500px;"
+									/>
+								</div>
+							{/key}
 
 							<!-- AR View Button -->
 							<button 
@@ -334,5 +339,26 @@
 	.shimmer-btn:hover {
 		animation-duration: 1.5s;
 		border-color: rgba(255, 255, 255, 0.4);
+	}
+
+	.model-wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	/* Εξασφάλιση ότι το νέο μοντέλο θα εμφανίζεται πάνω από το παλιό κατά το transition αν χρειαστεί */
+	:global(.model-wrapper) {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	/* Το container πρέπει να έχει min-height για να μην καταρρέει κατά το transition */
+	.relative.col-center.overflow-hidden {
+		min-height: 500px;
+		height: 70vh;
 	}
 </style>
