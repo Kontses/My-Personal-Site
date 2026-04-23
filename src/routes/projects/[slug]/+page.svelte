@@ -207,6 +207,8 @@
 										ios-src={models3d[modelIndex].src.replace('.glb', '.usdz')}
 										alt={models3d[modelIndex].label}
 										poster={models3d[modelIndex].src.replace('.glb', '.jpg')}
+										loading="eager"
+										reveal="auto"
 										ar
 										ar-modes="webxr scene-viewer quick-look"
 										auto-rotate
