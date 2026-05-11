@@ -6,6 +6,27 @@ import { MediaType } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'KCHC Web Application',
+		color: '#1DA1B3',
+		description:
+			'A nostalgic web application that takes you back to the era of Windows 95! This project is a tribute to the artists of the Katerini scene, combining the city\'s culture with the classic aesthetics of the 90s.',
+		shortDescription:
+			'A nostalgic web application that takes you back to the era of Windows 95!',
+		links: [
+			{ to: 'https://kchc-mu.vercel.app/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/KCHC', label: 'GitHub' }
+		],
+		logo: Assets.kchc,
+		name: 'KCHC Web App',
+		period: {
+			from: new Date(2026, 5, 12),
+			to: new Date(2026, 5, 12)
+		},
+		skills: getSkills('ts', 'react', 'css', 'vite', 'js'),
+		type: 'Web Applications',
+		screenshots: []
+	},
+	{
 		slug: 'greek-legislation-wiki',
 		color: '#05214E',
 		description:
@@ -321,7 +342,7 @@ export const items: Array<Project> = [
 		shortDescription: 'The Android App for finding every KCHC artist.',
 		links: [{ to: 'https://github.com/GSmyrlis/KCHC_219_App', label: 'GitHub' }],
 		logo: Assets.kchc,
-		name: 'KCHC',
+		name: 'KCHC Android App',
 		period: {
 			from: new Date(2023, 10, 14),
 			to: new Date(2024, 9, 30)
