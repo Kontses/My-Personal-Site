@@ -182,7 +182,7 @@
 		align-items: center;
 		position: sticky;
 		top: 0;
-		z-index: 10;
+		z-index: 50;
 		background-color: var(--main);
 		/* padding-right: 10px; Removed as the button is no longer a direct child */
 		border-bottom: 1px solid var(--secondary);
