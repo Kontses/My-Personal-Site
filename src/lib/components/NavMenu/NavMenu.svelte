@@ -108,7 +108,7 @@
 		>
 			<div class="row hidden md:flex items-center">
 				<button
-					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
+					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2 self-stretch col-center"
 					on:click={() => handleMatrixToggle()}
 					title={$isMatrixVisible ? 'Hide Matrix Rain' : 'Show Matrix Rain'}
 				>
@@ -126,7 +126,7 @@
 					<UIcon icon="i-carbon-search" />
 				</a>
 				<button
-					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"
+					class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2 self-stretch col-center"
 					on:click={() => handleThemeToggle()}
 					title={$theme ? 'Switch to Light Theme' : 'Switch to Dark Theme'}
 				>

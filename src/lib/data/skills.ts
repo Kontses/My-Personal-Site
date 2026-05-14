@@ -263,15 +263,6 @@ export const items = [
 		category: 'library'
 	}),
 	defineSkill({
-		slug: 'unreal',
-		color: 'black',
-		description:
-			'Unreal Engine is a 3D computer graphics game engine developed by Epic Games. Initially developed for PC first-person shooters, it has since been used in a variety of genres of games and has been adopted by other industries, most notably the film and television industry. Unreal Engine is written in C++ and features a high degree of portability, supporting a wide range of desktop, mobiles, console, and virtual reality platforms.<br><br>It is used in the indie game Dank Souls, which I have created with Core and I use a lot of assets and libraries from Unreal Engine.',
-		logo: Assets.unreal,
-		name: 'Unreal Engine',
-		category: 'software'
-	}),
-	defineSkill({
 		slug: 'lua',
 		color: 'white',
 		description:
@@ -279,15 +270,6 @@ export const items = [
 		logo: Assets.lua,
 		name: 'Lua',
 		category: 'pro-lang'
-	}),
-	defineSkill({
-		slug: 'blender',
-		color: 'orange',
-		description:
-			"Blender is a free and open-source 3D computer graphics software tool. It is used for creating animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and, formerly, video games.<br><br>I've used it for modeling objects, rigging and animation on a fanmade animation project.",
-		logo: Assets.blender,
-		name: 'Blender',
-		category: 'software'
 	}),
 	defineSkill({
 		slug: 'juce',
@@ -299,12 +281,57 @@ export const items = [
 		category: 'framework'
 	}),
 	defineSkill({
+		slug: 'Figma',
+		color: 'purple',
+		description:
+			'Figma is a popular, cloud-based design and collaboration tool primarily used for creating user interfaces (UI) and user experiences (UX) for websites and mobile apps. It allows teams to design, prototype, and gather feedback in real-time within a web browser or desktop app.',
+		logo: Assets.Figma,
+		name: 'Figma',
+		category: 'software'
+	}),
+	defineSkill({
+		slug: 'Spline',
+		color: 'purple',
+		description:
+			'Spline is a web-based, collaborative 3D design platform designed to create interactive, real-time 3D scenes, models, and animations directly in the browser. It is often described as the "Figma of 3D," focusing on simplicity, ease of use, and integration into websites, making 3D design accessible to designers and web developers without needing complex software like Blender or Maya.',
+		logo: Assets.Spline,
+		name: 'Spline',
+		category: 'software'
+	}),
+	defineSkill({
+		slug: 'blender',
+		color: 'orange',
+		description:
+			"Blender is a free and open-source 3D computer graphics software tool. It is used for creating animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and, formerly, video games.<br><br>I've used it for modeling objects, rigging and animation on a fanmade animation project.",
+		logo: Assets.blender,
+		name: 'Blender',
+		category: 'software'
+	}),
+	defineSkill({
+		slug: 'Reality Scan',
+		color: 'white',
+		description:
+			'RealityScan is a free 3D scanning app developed by Epic Games that turns smartphone photos into high-fidelity 3D models. It uses photogrammetry to create photorealistic assets for games, VFX, or AR, with seamless integration into tools like Unreal Engine.',
+		logo: Assets.RealityScan,
+		name: 'Reality Scan',
+		category: 'software'
+	}),
+	defineSkill({
 		slug: 'unity',
 		color: 'white',
 		description:
 			'Unity is a cross-platform game engine, has since been gradually extended to support a variety of desktop, mobile, console, augmented reality, and virtual reality platforms. It is particularly popular for iOS and Android mobile game development, is considered easy to use for beginner developers, and is popular for indie game development.<br><br>I have used Unity to create an augmented reality (AR) application, along with the use of the Vuforia library. When the camera identified a specific target, 3D graphics were displayed on the screen.',
 		logo: Assets.unity,
 		name: 'Unity',
+		category: 'software'
+	}),
+	defineSkill({
+		slug: 'unreal',
+		color: 'black',
+		description:
+			'Unreal Engine is a 3D computer graphics game engine developed by Epic Games. Initially developed for PC first-person shooters, it has since been used in a variety of genres of games and has been adopted by other industries, most notably the film and television industry. Unreal Engine is written in C++ and features a high degree of portability, supporting a wide range of desktop, mobiles, console, and virtual reality platforms.<br><br>It is used in the indie game Dank Souls, which I have created with Core and I use a lot of assets and libraries from Unreal Engine.',
+		logo: Assets.unreal,
+		name: 'Unreal Engine',
 		category: 'software'
 	}),
 	defineSkill({
@@ -323,6 +350,24 @@ export const items = [
 			'Adobe Photoshop is the industry-leading digital image editing and design application that offers the tools to create anything you can imagine.<br><br>I hae a great skill and I used it to edit and create a lot of images all this years that I deal with the image and graphics.',
 		logo: Assets.Photoshop,
 		name: 'Photoshop',
+		category: 'software'
+	}),
+	defineSkill({
+		slug: 'Lightroom',
+		color: 'blue',
+		description:
+			'Adobe Lightroom is a cloud-based, AI-powered photo editing and organization service designed for photographers to edit, manage, store, and share images across desktop, mobile, and web. It enables non-destructive editing, meaning original files remain untouched while adjustments are saved, with 1TB of cloud storage included in its subscription plan.',
+		logo: Assets.Lightroom,
+		name: 'Lightroom',
+		category: 'software'
+	}),
+	defineSkill({
+		slug: 'Premiere Pro',
+		color: 'purple',
+		description:
+			'Adobe Premiere Pro is a leading, industry-standard video editing software application developed by Adobe, used to create professional-quality videos, films, television content, and online videos. It is a subscription-based, allowing users to cut, color grade, edit audio, and add effects.',
+		logo: Assets.Premiere,
+		name: 'Premiere Pro',
 		category: 'software'
 	}),
 	defineSkill({

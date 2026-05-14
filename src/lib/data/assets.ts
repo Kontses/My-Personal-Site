@@ -93,6 +93,10 @@ const Assets = {
 	socketio: a('Socket-io.png'),
 	Excel: a('excel.png'),
 	supabase: a('supabase.png'),
+	Figma: a('Figma.png'),
+	Spline: a('spline.png'),
+	RealityScan: a('reality_scan.png'),
+	Lightroom: a('lightroom.png'),
 
 	//icons
 	ConservatoryOfStavroupolis: a('ConservatoryOfStavroupolis.jpg'),
