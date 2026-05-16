@@ -16,8 +16,8 @@ export const items: Array<Project> = [
 		logo: `${base}/Lays-logo.png`,
 		name: 'Lay\'s Chips',
 		period: {
-			from: new Date(2026, 5, 16),
-			to: new Date(2026, 5, 16)
+			from: new Date(2026, 4, 16),
+			to: new Date(2026, 4, 16)
 		},
 		skills: getSkills('Figma'),
 		type: 'Web Applications',
@@ -64,8 +64,8 @@ export const items: Array<Project> = [
 		logo: Assets.kchc,
 		name: 'KCHC Web App',
 		period: {
-			from: new Date(2026, 5, 12),
-			to: new Date(2026, 5, 12)
+			from: new Date(2026, 4, 12),
+			to: new Date(2026, 4, 12)
 		},
 		skills: getSkills('ts', 'react', 'css', 'vite', 'js'),
 		type: 'Web Applications',
