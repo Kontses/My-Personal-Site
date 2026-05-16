@@ -6,6 +6,51 @@ import { MediaType } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'Lay\'s Chips',
+		color: '#B31D1D',
+		description:
+			'A re-imagination of Lay\'s Chips Greece website using Figma for professional e-commerce.<br><br>Full UI/UX design crafted by me in Figma.',
+		shortDescription:
+			'A re-imagination of Lay\'s Chips Greece website using Figma for professional e-commerce.',
+		links: [],
+		logo: `${base}/Lays-logo.png`,
+		name: 'Lay\'s Chips',
+		period: {
+			from: new Date(2026, 5, 16),
+			to: new Date(2026, 5, 16)
+		},
+		skills: getSkills('Figma'),
+		type: 'Web Applications',
+		screenshots: [
+			{
+				label: 'Screenshot 1',
+				src: `${base}/Screenshots/Lays_1.jpg`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Screenshot 2',
+				src: `${base}/Screenshots/Lays_2.jpg`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Screenshot 3',
+				src: `${base}/Screenshots/Lays_3.jpg`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Screenshot 4',
+				src: `${base}/Screenshots/Lays_4.jpg`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Video',
+				src: `${base}/lays_video.mp4`,
+				type: MediaType.Video,
+				thumbnailSrc: `${base}/Screenshots/Lays_1.jpg`
+			}
+		]
+	},
+	{
 		slug: 'KCHC Web Application',
 		color: '#1DA1B3',
 		description:
