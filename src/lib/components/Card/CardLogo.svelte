@@ -6,4 +6,4 @@
 	export let classes = '';
 </script>
 
-<img class={`rounded-${radius} ${classes} aspect-square`} {src} {alt} height={size} width={size} />
+<img class={`rounded-${radius} ${classes} aspect-square object-contain`} {src} {alt} height={size} width={size} />
