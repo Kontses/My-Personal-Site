@@ -12,14 +12,16 @@ export const items: Array<Project> = [
 			'A re-imagination of Lay\'s Chips Greece website using Figma for professional e-commerce.<br><br>Full UI/UX design crafted by me in Figma.',
 		shortDescription:
 			'A re-imagination of Lay\'s Chips Greece website using Figma for professional e-commerce.',
-		links: [],
+		links: [
+			{ to: 'https://lays-kontses-projects.vercel.app/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/Lays', label: 'GitHub' }],
 		logo: `${base}/Lays-logo.png`,
 		name: 'Lay\'s Chips',
 		period: {
 			from: new Date(2026, 4, 16),
 			to: new Date(2026, 4, 16)
 		},
-		skills: getSkills('Figma'),
+		skills: getSkills('Figma', 'react', 'css', 'ts', 'js', 'Photoshop'),
 		type: 'Web Applications',
 		screenshots: [
 			{
