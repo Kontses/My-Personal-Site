@@ -53,112 +53,6 @@ export const items: Array<Project> = [
 		]
 	},
 	{
-		slug: 'KCHC Web Application',
-		color: '#1DA1B3',
-		description:
-			'A nostalgic web application that takes you back to the era of Windows 95! This project is a tribute to the artists of the Katerini scene, combining the city\'s culture with the classic aesthetics of the 90s.',
-		shortDescription:
-			'A nostalgic web application that takes you back to the era of Windows 95!',
-		links: [
-			{ to: 'https://kchc-mu.vercel.app/', label: 'Site' },
-			{ to: 'https://github.com/Kontses/KCHC', label: 'GitHub' }
-		],
-		logo: Assets.kchc,
-		name: 'KCHC Web App',
-		period: {
-			from: new Date(2026, 4, 12),
-			to: new Date(2026, 4, 12)
-		},
-		skills: getSkills('ts', 'react', 'css', 'vite', 'js'),
-		type: 'Web Applications',
-		screenshots: []
-	},
-	{
-		slug: 'greek-legislation-wiki',
-		color: '#05214E',
-		description:
-			'An advanced, automated Legal Information System for Greek legislation, leveraging Artificial Intelligence (LLMs) for document analysis and a Premium B2B web interface for exploration, visualization and navigation of the legal map of Greece.',
-		shortDescription:
-			'An advanced, automated Legal Information System for Greek legislation, leveraging Artificial Intelligence (LLMs) for document analysis and a Premium B2B web interface for exploration, visualization and navigation of the legal map of Greece.',
-		links: [
-			{ to: 'https://greek-legislation-wiki-ui.vercel.app/', label: 'Site' },
-			{ to: 'https://github.com/Kontses/Greek-Legislation-Wiki-UI', label: 'GitHub' }
-		],
-		logo: `${base}/greek-legislation-wiki.png`,
-		name: 'Greek Legislation Wiki',
-		period: {
-			from: new Date(2026, 4, 18),
-			to: new Date(2026, 4, 20)
-		},
-		skills: getSkills('ts', 'react', 'css', 'nextjs', 'threejs', 'js'),
-		type: 'Web Applications',
-		screenshots: []
-	},
-	{
-		slug: 'nbg-analytics',
-		color: '#52aac7ff',
-		description:
-			'A modern web application for the analysis and visualization of banking transactions from the National Bank of Greece (NBG). The application allows users to upload Excel files (.xlsx) exported from e-banking and view statistics and graphs.',
-		shortDescription:
-			'A modern web application for the analysis and visualization of banking transactions from the National Bank of Greece (NBG).',
-		links: [
-			{ to: 'https://nbg-analytics.vercel.app/', label: 'Site' },
-			{ to: 'https://github.com/Kontses/NBG-Analytics', label: 'GitHub' }
-		],
-		logo: `${base}/nbg-icon.png`,
-		name: 'NBG Analytics',
-		period: {
-			from: new Date(2025, 11, 29),
-			to: new Date(2025, 11, 30)
-		},
-		skills: getSkills('ts', 'react', 'css', 'excel'),
-		type: 'Web Applications',
-		screenshots: [
-			{
-				label: 'Screenshot',
-				src: `${base}/Screenshots/nbg_1.jpg`,
-				type: MediaType.Image
-			},
-			{
-				label: 'Screenshot',
-				src: `${base}/Screenshots/nbg_2.jpg`,
-				type: MediaType.Image
-			}
-		]
-	},
-	{
-		slug: 'bookfainder',
-		color: '#7c1515ff',
-		description:
-			'Book Fainder is an intelligent book recommendation system that allows users to describe their desired book in natural language (Prompt), such as: "I want Greek poetry".<br><br>The application will select the most suitable book from the database based on relevance, quality and user intent.<br><br>Users can save their favorite books in personal lists (public or private) and add their friends.',
-		shortDescription:
-			"Discover your next book with AI. Describe what you're looking for and get personalized book recommendations from real book data.",
-		links: [
-			{ to: 'https://www.bookfainder.com/', label: 'Site' },
-			{ to: 'https://github.com/Kontses/Book-Fainder', label: 'GitHub' }
-		],
-		logo: `${base}/book-fainder.png`,
-		name: 'Book Fainder',
-		period: {
-			from: new Date(2025, 10, 1),
-			to: new Date(2025, 11, 29)
-		},
-		skills: getSkills('ts', 'react', 'css', 'supabase'),
-		type: 'Web Applications',
-		screenshots: [
-			{
-				label: 'Screenshot',
-				src: `${base}/Screenshots/book_fainder_1.png`,
-				type: MediaType.Image
-			},
-			{
-				label: 'Screenshot',
-				src: `${base}/Screenshots/book_fainder_2.png`,
-				type: MediaType.Image
-			}
-		]
-	},
-	{
 		slug: 'afc',
 		color: '#21157cff',
 		description:
@@ -221,6 +115,113 @@ export const items: Array<Project> = [
 		skills: getSkills('ts', 'js', 'react', 'css', 'mdx'),
 		type: 'Web Applications',
 		screenshots: []
+	},
+
+	{
+		slug: 'nbg-analytics',
+		color: '#52aac7ff',
+		description:
+			'A modern web application for the analysis and visualization of banking transactions from the National Bank of Greece (NBG). The application allows users to upload Excel files (.xlsx) exported from e-banking and view statistics and graphs.',
+		shortDescription:
+			'A modern web application for the analysis and visualization of banking transactions from the National Bank of Greece (NBG).',
+		links: [
+			{ to: 'https://nbg-analytics.vercel.app/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/NBG-Analytics', label: 'GitHub' }
+		],
+		logo: `${base}/nbg-icon.png`,
+		name: 'NBG Analytics',
+		period: {
+			from: new Date(2025, 11, 29),
+			to: new Date(2025, 11, 30)
+		},
+		skills: getSkills('ts', 'react', 'css', 'excel'),
+		type: 'Web Applications',
+		screenshots: [
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/nbg_1.jpg`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/nbg_2.jpg`,
+				type: MediaType.Image
+			}
+		]
+	},
+	{
+		slug: 'KCHC Web Application',
+		color: '#1DA1B3',
+		description:
+			'A nostalgic web application that takes you back to the era of Windows 95! This project is a tribute to the artists of the Katerini scene, combining the city\'s culture with the classic aesthetics of the 90s.',
+		shortDescription:
+			'A nostalgic web application that takes you back to the era of Windows 95!',
+		links: [
+			{ to: 'https://kchc-mu.vercel.app/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/KCHC', label: 'GitHub' }
+		],
+		logo: Assets.kchc,
+		name: 'KCHC 1995',
+		period: {
+			from: new Date(2026, 4, 12),
+			to: new Date(2026, 4, 12)
+		},
+		skills: getSkills('ts', 'react', 'css', 'vite', 'js'),
+		type: 'Web Applications',
+		screenshots: []
+	},
+	{
+		slug: 'greek-legislation-wiki',
+		color: '#05214E',
+		description:
+			'An advanced, automated Legal Information System for Greek legislation, leveraging Artificial Intelligence (LLMs) for document analysis and a Premium B2B web interface for exploration, visualization and navigation of the legal map of Greece.',
+		shortDescription:
+			'An advanced, automated Legal Information System for Greek legislation, leveraging Artificial Intelligence (LLMs) for document analysis and a Premium B2B web interface for exploration, visualization and navigation of the legal map of Greece.',
+		links: [
+			{ to: 'https://greek-legislation-wiki-ui.vercel.app/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/Greek-Legislation-Wiki-UI', label: 'GitHub' }
+		],
+		logo: `${base}/greek-legislation-wiki.png`,
+		name: 'Greek Legislation Wiki',
+		period: {
+			from: new Date(2026, 4, 18),
+			to: new Date(2026, 4, 20)
+		},
+		skills: getSkills('ts', 'react', 'css', 'nextjs', 'threejs', 'js'),
+		type: 'Web Applications',
+		screenshots: []
+	},
+	{
+		slug: 'bookfainder',
+		color: '#7c1515ff',
+		description:
+			'Book Fainder is an intelligent book recommendation system that allows users to describe their desired book in natural language (Prompt), such as: "I want Greek poetry".<br><br>The application will select the most suitable book from the database based on relevance, quality and user intent.<br><br>Users can save their favorite books in personal lists (public or private) and add their friends.',
+		shortDescription:
+			"Discover your next book with AI. Describe what you're looking for and get personalized book recommendations from real book data.",
+		links: [
+			{ to: 'https://www.bookfainder.com/', label: 'Site' },
+			{ to: 'https://github.com/Kontses/Book-Fainder', label: 'GitHub' }
+		],
+		logo: `${base}/book-fainder.png`,
+		name: 'Book Fainder',
+		period: {
+			from: new Date(2025, 10, 1),
+			to: new Date(2025, 11, 29)
+		},
+		skills: getSkills('ts', 'react', 'css', 'supabase'),
+		type: 'Web Applications',
+		screenshots: [
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/book_fainder_1.png`,
+				type: MediaType.Image
+			},
+			{
+				label: 'Screenshot',
+				src: `${base}/Screenshots/book_fainder_2.png`,
+				type: MediaType.Image
+			}
+		]
 	},
 	{
 		slug: '3D-Reverb',
