@@ -35,7 +35,7 @@ export const skills = getSkills(
 	'ts',
 	'java',
 	'c#',
-	'c++',
+	'cpp',
 	'dart',
 	'lua'
 );

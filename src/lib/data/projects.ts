@@ -236,7 +236,7 @@ export const items: Array<Project> = [
 			from: new Date(2025, 1, 1),
 			to: new Date(2025, 3, 14)
 		},
-		skills: getSkills('juce', 'c++'),
+		skills: getSkills('juce', 'cpp'),
 		type: 'VST Plugin',
 		screenshots: [
 			/*	{
@@ -302,7 +302,7 @@ export const items: Array<Project> = [
 			from: new Date(2025, 4, 1),
 			to: new Date(2025, 4, 22)
 		},
-		skills: getSkills('dart', 'flutter', 'c++', 'firebase'),
+		skills: getSkills('dart', 'flutter', 'cpp', 'firebase'),
 		type: 'Android Application',
 		screenshots: [
 			{

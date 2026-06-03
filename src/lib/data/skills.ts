@@ -65,7 +65,7 @@ export const items = [
 		category: 'pro-lang'
 	}),
 	defineSkill({
-		slug: 'c++',
+		slug: 'cpp',
 		color: 'blue',
 		description:
 			'C++ is a general purpose object-oriented programming language, enabling you to create modular and reusable code, that was developed as an extension of C.<br><br>In JUCE Frammework i write an audio plugin using only C++.',
