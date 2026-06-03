@@ -1,7 +1,7 @@
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
-const base = '/My-Personal-Site';
+const base = process.env.VERCEL ? '' : '/My-Personal-Site';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
