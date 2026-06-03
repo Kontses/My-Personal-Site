@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { data as cvUrl, title } from '@data/resume';
 
 	import Chip from '$lib/components/Chip/Chip.svelte';
@@ -14,7 +15,7 @@
 			<div class="resume-content">
 				<div class="pdf-container">
 					<object
-						data={cvUrl}
+						data={`${base}${cvUrl}?action=preview`}
 						type="application/pdf"
 						width="100%"
 						height="100%"
@@ -22,7 +23,7 @@
 					>
 						<p class="text-center p-5">
 							Το πρόγραμμα περιήγησής σου δεν υποστηρίζει την ενσωματωμένη προβολή PDF.
-							<a href={cvUrl} class="text-[var(--accent-text)] underline" download
+							<a href={`${base}${cvUrl}?action=download`} class="text-[var(--accent-text)] underline" download
 								>Κατέβασε το CV εδώ</a
 							>.
 						</p>
@@ -30,7 +31,7 @@
 				</div>
 
 				<div class="action-footer">
-					<a href={cvUrl} download class="decoration-none">
+					<a href={`${base}${cvUrl}?action=download`} download class="decoration-none">
 						<Chip size={'1.25em'}>
 							<div class="row items-center gap-2">
 								<UIcon icon="i-carbon-download" /> Download CV

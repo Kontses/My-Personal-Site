@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import dayjs from 'dayjs';
 
-export const prerender = true;
+export const prerender = false;
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {

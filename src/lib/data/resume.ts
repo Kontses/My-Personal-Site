@@ -1,3 +1,3 @@
-export const data = './CV.pdf';
+export const data = '/api/download-cv';
 
 export const title = 'Résumé';
