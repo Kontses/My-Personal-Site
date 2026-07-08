@@ -27,7 +27,7 @@ export const items: Array<Experience> = [
 		type: 'ATS Support Engineer',
 		location: 'Thessaloniki',
 		period: { from: new Date(2024, 10, 26), to: new Date(2025, 10, 31) },
-		skills: getSkills('unix', 'excel'),
+		skills: getSkills('unix', 'Excel'),
 		name: 'IT Support Engineer',
 		color: 'red',
 		links: [{ to: 'https://traxis.gr/', label: 'Traxis' }],
