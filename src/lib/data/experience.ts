@@ -6,17 +6,17 @@ export const items: Array<Experience> = [
 	{
 		slug: 'traxis-2',
 		company: 'Traxis Engineering',
-		description: '',
+		description: 'IT Systems Engineer Automated Fare Collection (AFC) is responsible for the continuous Operation, preventive and corrective Maintenance, and optimization of the AFC system for the Thessaloniki Metro. The role ensures high availability, security, and reliability of all ticketing infrastructure, station equipment, and back-office IT systems, operating under strict Service Level Agreements (SLAs). <br /><br /> Developed a Full-Stack Application using React, CSS, Apps Script API, to digitalize and centralize fault reporting during the maintenance phase, improving data accessibility.',
 		contract: ContractType.Contract,
-		type: 'System Engineer',
+		type: 'IT System Engineer & Internal Tools Developer',
 		location: 'Thessaloniki',
 		period: { from: new Date(2025, 11, 1) },
-		skills: getSkills(),
-		name: 'System Engineer',
+		skills: getSkills('react', 'ts', 'css', 'Excel'),
+		name: 'IT System Engineer & Internal Tools Developer',
 		color: 'red',
 		links: [{ to: 'https://traxis.gr/', label: 'Traxis' }],
 		logo: Assets.Traxis,
-		shortDescription: 'AFC Commisioning Engineering'
+		shortDescription: 'AFC System Engineer for Thessaloniki Metro and developer of Full-Stack applications to support the AFC system.',
 	},
 	{
 		slug: 'traxis',
