@@ -83,8 +83,9 @@ export async function sendTelemetryMessage(event: RequestEvent, actionText: stri
 
 	const phone = env.WHATSAPP_PHONE;
 	const apiKey = env.WHATSAPP_API_KEY;
+	const ENABLE_WHATSAPP = false;
 
-	if (phone && apiKey) {
+	if (ENABLE_WHATSAPP && phone && apiKey) {
 		try {
 			let emoji = '👀';
 			if (actionText.toLowerCase().includes('download')) {
