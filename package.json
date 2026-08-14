@@ -48,6 +48,9 @@
 		"vite": "^4.0.0"
 	},
 	"type": "module",
+	"engines": {
+		"node": "24.x"
+	},
 	"dependencies": {
 		"@google/model-viewer": "^4.2.0",
 		"@vercel/analytics": "^2.0.1",
